@@ -40,7 +40,7 @@ var SMData = {
       'id': "bish_sanyal",
       'title': "Challenges of Planning, Critical Challenges facing Cities of Global South, IIHS, and Challenges within the IIHS Curriculum Framework",
       'speaker': "Prof. Bish Sanyal",
-      'video': "../video/IIHS_Bish_Sanyal_Oct2009.mov",
+      'video': "https://iihs-tatemae.s3.amazonaws.com/IIHS_Bish_Sanyal_Oct2009.mov",
       'width': 320,
       'height': 240,
       'duration': 456,
