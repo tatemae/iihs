@@ -121,7 +121,7 @@ SMPlayer.create = function(file, duration, opts) {
         name: "player"
     };
 
-    swfobject.embedSWF("swf/player5.0.swf",
+    swfobject.embedSWF("swf/jwplayer.flash.swf",
                "player",
                opts.width,
                opts.height,
