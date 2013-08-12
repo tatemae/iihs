@@ -124,16 +124,26 @@ SMPlayer.create = function(file, duration, opts) {
     name: "player"
   };
 
-  swfobject.embedSWF(
-    "swf/jwplayer.flash.swf",
-    "player",
-    opts.width,
-    opts.height,
-    "9.0.115",
-    false,
-    flashvars,
-    params,
-    attributes);
+  var args = {
+    file: file,
+    width: opts.width,
+    height: opts.height,
+    image: opts.preview,
+    allowfullscreen: "true",
+    allowscriptaccess: "always"
+  };
+
+  jwplayer("player").setup(args);
+  // swfobject.embedSWF(
+  //   "swf/jwplayer.flash.swf",
+  //   "player",
+  //   opts.width,
+  //   opts.height,
+  //   "9.0.115",
+  //   false,
+  //   flashvars,
+  //   params,
+  //   attributes);
 };
 
 // takes a video identifier and returns the video data structure
