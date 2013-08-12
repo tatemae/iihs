@@ -359,7 +359,7 @@ SMPlayer.init = function(opts) {
     SMPlayer.onClose();
     return false;
   });
-  $('.video').live('click', function() {
+  $('.video').bind('click', function() {
     var clicked = this;
     var vid = SMPlayer.getVideo($(clicked).attr('rel'));
     if (vid != null) {
