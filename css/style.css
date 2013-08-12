@@ -1,13 +1,13 @@
 @import url('reset.css');
 
 .clearfix {
-    clear: both;
-    height: 1px;
+  clear: both;
+  height: 1px;
 }
 
 /* player elements */
 #player-frame, #posit, #SelocationIdentifier {
-   display: none;
+  display: none;
 }
 
 #player-control, #transcript-control {
@@ -16,143 +16,146 @@
 }
 
 #player-speaker {
-   font-color: #333;
-/*   font-size: 0.9em;*/
-   padding: 3px 0;
-   text-align: center;
+  font-color: #333;
+  /*   font-size: 0.9em;*/
+  padding: 3px 0;
+  text-align: center;
 }
 
 #transcript-control {
-   clear: right;
+  clear: right;
 }
 
 #transcript {
-    padding: 70px 5px 120px 0;
-    height: 20px;
+  padding: 70px 5px 120px 0;
+  height: 20px;
 }
 
 #transcript .error-message {
-    color: #100;
-    font-weight: bold;
-    text-align: center;
+  color: #100;
+  font-weight: bold;
+  text-align: center;
 }
 
 .pane {
-    clear: left;
-    line-height: 1.4em;
-    margin: 10px 0 0;
-    overflow-y: auto;
+  clear: left;
+  line-height: 1.4em;
+  margin: 10px 0 0;
+  overflow-y: auto;
 }
 
 #transcript-search {
-    display: none;
-    padding: 0 5px 0 0;
-    height: 210px;
+  display: none;
+  padding: 0 5px 0 0;
+  height: 210px;
 }
 
 #transcript span {
-    background-color: transparent;
-    border-bottom: 2px solid transparent;
-    opacity: 0.65;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  opacity: 0.65;
 }
 
 #transcript span.paused:hover {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #search-control {
-    text-align: right;
+  text-align: right;
 }
 
 #search-control input {
-    text-align: right;
-/* added to show border-style, border-width in MIT OCW*/
-    border-style:solid;
-    border-width:1px;
+  text-align: right;
+  /* added to show border-style, border-width in MIT OCW*/
+  border-style:solid;
+  border-width:1px;
 }
 
 #search {
-    color: #888;
-    padding: 1px;
-    text-align: left;
+  color: #888;
+  padding: 1px;
+  text-align: left;
 }
 
 #search-count {
-    color: #888;
-    font-size: 0.9em;
-    padding: 0 1em 0 0;
+  color: #888;
+  font-size: 0.9em;
+  padding: 0 1em 0 0;
 }
 
 #transcript-search .time {
-    color: #888;
-    font-size: 0.8em;
+  color: #888;
+  font-size: 0.8em;
 }
 
 #transcript-search .highlight {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #transcript-search div {
-    background-color: transparent;
-    cursor: pointer;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #transcript-search div:hover {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .control {
-    opacity: 0.65;
-    padding: 0.75em 0 0;
+  opacity: 0.65;
+  padding: 0.75em 0 0;
 }
 
 /* added to show border in MIT OCW */
 .control select {
-    color: #888;
-    border-style:solid;
-    border-width:1px;
+  color: #888;
+  border-style:solid;
+  border-width:1px;
 }
 
 .control label {
-    font-size; 0.95em;
-    padding-left: 0.5em;
+  font-size; 0.95em;
+  padding-left: 0.5em;
 }
 
 .control:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* added, for MIT OCW set to 0.85em to reduce size, makes up for change to page.css-body -- set as 1.0 em for standalone */
 #cee_box {
-    font-size: 1.0em;
+  font-size: 1.0em;
 }
+
 #cee_box > div#player-live-wrapper {
-    padding: 10px 10px 45px;
-    background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
+  padding: 10px 10px 45px;
+  background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
 }
 
 #cee_box > div.error {
-    background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
-    font-size: 120%;
-    padding: 10px 10px 45px;
-    text-align: center;
+  background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
+  font-size: 120%;
+  padding: 10px 10px 45px;
+  text-align: center;
 }
 
 #cee_box > #cee_title {
-    background: #efefef;
-    border-bottom: 1px solid #ddd;
-    color: #333;
-    height: 20px;
-    line-height: 20px;
-/* removed to tweak font size in MIT OCW */
-/*    font-size: 0.9em;*/
+  background: #efefef;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  height: 20px;
+  line-height: 20px;
+  /* removed to tweak font size in MIT OCW */
+  /*    font-size: 0.9em;*/
 }
 
 #cee_box > #cee_title h2::first-letter {
-/* remove, just use a larger letter of the same family */
-/*    font-family: "Georgia";*/
-    font-weight: bold;
-    font-size: 120%;
+  /* remove, just use a larger letter of the same family */
+  /*    font-family: "Georgia";*/
+  font-weight: bold;
+  font-size: 120%;
 }
 
-.video img {cursor:hand}
+.video img {
+  cursor:hand
+}
