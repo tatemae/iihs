@@ -56,7 +56,7 @@ SMPlayer.pauseListener = function(o) {
     var time = SMPlayer.secondsToTime(secs);
     $(this).attr('title', "skip to " + time + " mark");
   });
-  $('#transcript span').bind('click', function() {
+  $('#transcript span').on('click', function() {
     jwplayer("player").seek($(this).attr('id').substr(1));
   });
 };
@@ -64,9 +64,7 @@ SMPlayer.pauseListener = function(o) {
 // mode switching function based on play/pause state of JW Player
 SMPlayer.playListener = function(o) {
   if (o.oldstate === "PAUSED") {
-    $('#transcript span').unbind('click', function() {
-      jwplayer("player").seek($(this).attr('id').substr(1));
-    });
+    $('#transcript span').off();
     $('#transcript span').removeClass('paused');
     $('#transcript span').css('cursor', 'default').attr('title', null);
     $('#transcript span').filter(function() {
@@ -104,16 +102,6 @@ SMPlayer.create = function(file, duration, opts) {
   jwplayer("player").onTime(SMPlayer.positionListener);
   jwplayer("player").onPause(SMPlayer.pauseListener);
   jwplayer("player").onPlay(SMPlayer.playListener);
-  // swfobject.embedSWF(
-  //   "swf/jwplayer.flash.swf",
-  //   "player",
-  //   opts.width,
-  //   opts.height,
-  //   "9.0.115",
-  //   false,
-  //   flashvars,
-  //   params,
-  //   attributes);
 };
 
 // takes a video identifier and returns the video data structure
@@ -159,10 +147,10 @@ SMPlayer.setup = function(id) {
         SMPlayer.loadAudio(vid.audio[t]);
       }
     }
-    $('#transcript-locale-selector').bind('change', function() {
+    $('#transcript-locale-selector').on('change', function() {
       SMPlayer.loadTranscript($(this).val());
     });
-    $('#audio-locale-selector').bind('change', function() {
+    $('#audio-locale-selector').on('change', function() {
       SMPlayer.loadAudio($(this).val());
     });
   } else {
@@ -220,7 +208,7 @@ SMPlayer.doSearch = function(query) {
       result += '</div>\n';
       var jqresult = $(result);
       $('#transcript-search').append(jqresult);
-      jqresult.bind('click', function() {
+      jqresult.on('click', function() {
         jwplayer("player").seek(seek);
         $('#search-count').empty();
         $('#transcript-search').hide();
@@ -240,7 +228,7 @@ SMPlayer.onOpen = function(id) {
   $('#cee_box').height($('#cee_box').height() + $('#cee_title h2').height() - 20);
   $('#player-frame').empty();
   SMPlayer.setup(id);
-  $('#search').bind('focus', function() {
+  $('#search').on('focus', function() {
     if ($('#search').val() == "Search transcript") {
       $('#search').val('');
     } else {
@@ -249,7 +237,7 @@ SMPlayer.onOpen = function(id) {
     }
     $('#search').css('color', '#000');
   });
-  $('#search').bind('blur', function(e) {
+  $('#search').on('blur', function(e) {
     if ($('#search').val() == '') {
         $('#search').val('Search transcript').css('color', '#999');
     }
@@ -268,7 +256,7 @@ SMPlayer.onOpen = function(id) {
     };
     setTimeout(f, 200);
   });
-  $('#search').bind('keyup', function() {
+  $('#search').on('keyup', function() {
     SMPlayer.doSearch($(this).val());
   });
 };
@@ -277,6 +265,7 @@ SMPlayer.onOpen = function(id) {
 SMPlayer.onClose = function() {
   $('#player-frame').html($('#player-live-wrapper').clone().html());
   $.fn.ceebox.closebox(null, function() {
+    jwplayer("player").remove();
     $('#transcript-locale-selector').empty();
     $('#transcript').empty();
     $('#player-speaker').empty();
@@ -293,12 +282,6 @@ SMPlayer.makeVertical = function() {
   $('#transcript').css('height', '140px').css('padding-top', 0).css('padding-bottom', 0);
   $('#transcript-search').css('height', '140px');
   $('.control').css('text-align', 'center');
-};
-
-// remove potentially leaky items
-SMPlayer.dispose = function() {
-  $('#player').empty();
-  SMPlayer.player = null;
 };
 
 // public method to be called in the page within a
@@ -325,11 +308,7 @@ SMPlayer.init = function(opts) {
     opts.height = SMPlayer.defaults.horizontalHeight;
   }
   SMPlayer.create(null, 0);
-  $('#cee_closeBtn').live('click', function() {
-    SMPlayer.onClose();
-    return false;
-  });
-  $('.video').bind('click', function(e) {
+  $('.video').on('click', function(e) {
     e.preventDefault();
     var clicked = this;
     var vid = SMPlayer.getVideo($(clicked).attr('rel'));
@@ -360,6 +339,7 @@ SMPlayer.init = function(opts) {
         borderWidth: "0px",
         onload: function() {
           SMPlayer.onOpen($(clicked).attr('rel'));
+          $('#cee_closeBtn').on('click', SMPlayer.onClose);
           if(isVertical){
             $('#cee_box').addClass('vertical_player');
             $('#cee_box').css("top", "25%");
@@ -379,10 +359,3 @@ SMPlayer.init = function(opts) {
 SMPlayer.ceebox_template = function(vid) {
   return '<div id="cee_title"><h2>' + vid.title  + '</h2></div><div id="player-live-wrapper"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a>' + $('#player-frame').clone().html() + '</div>';
 };
-
-// fire unloading methods on page disposal
-$(window).unload(function() {
-    SMPlayer.dispose();
-    SMData = null;
-    SMPlayer = null;
-});
