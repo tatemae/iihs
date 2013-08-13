@@ -10,8 +10,9 @@ var SMPlayer = {
     "videoHeight": 240,
     "verticalWidth": 465,
     "verticalHeight": 555,
-    "horizontalWidth": 700,
+    "horizontalWidth": 666,
     "horizontalHeight": 370,
+    "widthFudge": 50,
     "preview": null
   },
   player: null
@@ -332,6 +333,15 @@ SMPlayer.init = function(opts) {
     e.preventDefault();
     var clicked = this;
     var vid = SMPlayer.getVideo($(clicked).attr('rel'));
+    var screenWidth = $(window).width();
+    var width = opts.width;
+    var isVertical = false;
+    if(screenWidth + SMPlayer.defaults.widthFudge < opts.width){
+      width = 350;
+      isVertical = true;
+    } else {
+      isVertical = false;
+    }
     if (vid != null) {
       $.fn.ceebox.popup(SMPlayer.ceebox_template(vid), {
         modal: true,
@@ -346,10 +356,17 @@ SMPlayer.init = function(opts) {
         animSpeed: 'slow',
         padding: 10,
         height: opts.height,
-        width: opts.width,
+        width: width,
         borderWidth: "0px",
         onload: function() {
           SMPlayer.onOpen($(clicked).attr('rel'));
+          if(isVertical){
+            $('#cee_box').addClass('vertical_player');
+            $('#cee_box').css("top", "25%");
+          } else {
+            $('#cee_box').removeClass('vertical_player');
+            $('#cee_box').css("top", "50%");
+          }
         }
       });
     } else {

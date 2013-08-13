@@ -10,9 +10,15 @@
   display: none;
 }
 
-#player-control, #transcript-control {
+#player-control {
   float: left;
-  width: 50%;
+  width: 320px;
+}
+
+#transcript-control {
+  float: left;
+  width: 315px;
+  margin-left: 10px;
 }
 
 #player-speaker {
@@ -26,6 +32,11 @@
   clear: right;
 }
 
+.vertical_player #player-control{
+ float:none;
+ margin:0 auto;
+}
+
 #transcript {
   padding: 70px 5px 120px 0;
   height: 20px;
@@ -35,6 +46,10 @@
   color: #100;
   font-weight: bold;
   text-align: center;
+}
+
+.control-selector {
+  padding-top: 5px;
 }
 
 .pane {
