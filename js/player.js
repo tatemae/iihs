@@ -17,25 +17,6 @@ var SMPlayer = {
   player: null
 };
 
-// 'magic' for the JW Player Javascript/Flash setup - a function called
-// playerReady must be defined.
-var playerReady;
-SMPlayer.ready = function(p) {
-    SMPlayer.player = window.document[p.id];
-    SMPlayer.addListeners();
-};
-
-// setup function for hooking into JW Player events
-SMPlayer.addListeners = function() {
-    if (SMPlayer.player) {
-      var p = SMPlayer.player;
-      p.addModelListener("TIME", "SMPlayer.positionListener");
-      p.addModelListener("STATE", "SMPlayer.stateListener");
-    } else {
-      setTimeout(SMPlayer.addListeners, 100);
-    }
-};
-
 // transcript highlighting function based on JW Player player position
 SMPlayer.positionListener = function(o) {
   SMPlayer.currentPosition = o.position;
@@ -66,21 +47,24 @@ SMPlayer.secondsToTime = function(t) {
 };
 
 // mode switching function based on play/pause state of JW Player
-SMPlayer.stateListener = function(o) {
-  if (o.newstate == "PAUSED") {
-    $('#transcript span').css('cursor', 'pointer').animate({'opacity': 1});
-    $('#transcript span').addClass('paused');
-    $('#transcript span').each(function() {
-      var secs = $(this).attr('id').substr(1);
-      var time = SMPlayer.secondsToTime(secs);
-      $(this).attr('title', "skip to " + time + " mark");
-    });
-    $('#transcript span').bind('click', function() {
-      SMPlayer.player.sendEvent("SEEK", $(this).attr('id').substr(1));
-    });
-  } else if (o.oldstate == "PAUSED" && o.newstate == "PLAYING") {
+SMPlayer.pauseListener = function(o) {
+  $('#transcript span').css('cursor', 'pointer').animate({'opacity': 1});
+  $('#transcript span').addClass('paused');
+  $('#transcript span').each(function() {
+    var secs = $(this).attr('id').substr(1);
+    var time = SMPlayer.secondsToTime(secs);
+    $(this).attr('title', "skip to " + time + " mark");
+  });
+  $('#transcript span').bind('click', function() {
+    jwplayer("player").seek($(this).attr('id').substr(1));
+  });
+};
+
+// mode switching function based on play/pause state of JW Player
+SMPlayer.playListener = function(o) {
+  if (o.oldstate === "PAUSED") {
     $('#transcript span').unbind('click', function() {
-      SMPlayer.player.sendEvent("SEEK", $(this).attr('id').substr(1));
+      jwplayer("player").seek($(this).attr('id').substr(1));
     });
     $('#transcript span').removeClass('paused');
     $('#transcript span').css('cursor', 'default').attr('title', null);
@@ -93,36 +77,15 @@ SMPlayer.stateListener = function(o) {
 // reloading JW Player Flash
 SMPlayer.create = function(file, duration, opts) {
   if (opts != null) {
-    if (typeof opts.width == "undefined" || opts.width == null) {
+    if (typeof opts.width === undefined || opts.width === null) {
       opts.width = SMPlayer.defaults.videoWidth;
     }
-    if (typeof opts.height == "undefined" || opts.height == null) {
+    if (typeof opts.height === undefined || opts.height === null) {
       opts.height = SMPlayer.defaults.videoHeight;
     }
   } else {
     opts = SMPlayer.defaults;
   }
-
-  var self = this;
-  var flashvars = {
-    "file": file,
-    "duration": duration,
-    "autostart": "true",
-    "playerready": SMPlayer.ready
-  };
-  if (typeof opts.preview != "undefined" && opts.preview != null) {
-    flashvars.image = opts.preview;
-  }
-
-  var params = {
-    allowfullscreen: "true",
-    allowscriptaccess: "always"
-  };
-
-  var attributes = {
-    id: "player",
-    name: "player"
-  };
 
   var args = {
     file: file,
@@ -130,10 +93,16 @@ SMPlayer.create = function(file, duration, opts) {
     height: opts.height,
     image: opts.preview,
     allowfullscreen: "true",
-    allowscriptaccess: "always"
+    allowscriptaccess: "always",
+    flashplayer: "swf/jwplayer.flash.swf",
+    autostart: true
   };
 
   jwplayer("player").setup(args);
+  // jwplayer("player").onReady(SMPlayer.ready);
+  jwplayer("player").onTime(SMPlayer.positionListener);
+  jwplayer("player").onPause(SMPlayer.pauseListener);
+  jwplayer("player").onPlay(SMPlayer.playListener);
   // swfobject.embedSWF(
   //   "swf/jwplayer.flash.swf",
   //   "player",
@@ -251,7 +220,7 @@ SMPlayer.doSearch = function(query) {
       var jqresult = $(result);
       $('#transcript-search').append(jqresult);
       jqresult.bind('click', function() {
-        SMPlayer.player.sendEvent("SEEK", seek);
+        jwplayer("player").seek(seek);
         $('#search-count').empty();
         $('#transcript-search').hide();
         $('#transcript').show();
