@@ -331,7 +331,7 @@ SMPlayer.init = function(opts) {
     opts.height = SMPlayer.defaults.horizontalHeight;
   }
   $(window).on('keyup', function(e) {
-    if (e.keyCode === 27) {
+    if (e.keyCode === 27 && jwplayer("player").getState()) {
       SMPlayer.onClose();
     }
   });
