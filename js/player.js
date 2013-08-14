@@ -330,6 +330,11 @@ SMPlayer.init = function(opts) {
     opts.width = SMPlayer.defaults.horizontalWidth;
     opts.height = SMPlayer.defaults.horizontalHeight;
   }
+  $(window).on('keyup', function(e) {
+    if (e.keyCode === 27) {
+      SMPlayer.onClose();
+    }
+  });
   $('.video').on('click', function(e) {
     e.preventDefault();
     var vidinfo = $(this).closest(".vidinfo");
