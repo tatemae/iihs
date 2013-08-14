@@ -83,14 +83,26 @@ SMPlayer.create = function(vid) {
   }
 
   var args = {
-    file: vid.video_src,
-    width: vid.width,
-    height: vid.height,
-    image: vid.preview_src,
     allowfullscreen: "true",
     allowscriptaccess: "always",
     flashplayer: "swf/jwplayer.flash.swf",
-    autostart: true
+    autostart: true,
+    playlist: [{
+      file: vid.video_src,
+      width: vid.width,
+      height: vid.height,
+      image: vid.preview_src,
+      tracks: [{ 
+        file: vid.captionvtt,
+        label: "vtt",
+        kind: "captions",
+        "default": true
+      },{
+        file: vid.captionsrt,
+        kind: "captions",
+        label: "srt"
+      }]
+    }]
   };
 
   jwplayer("player").setup(args);
@@ -297,7 +309,9 @@ SMPlayer.init = function(opts) {
       'preview_src': vidinfo.data('preview-src'),
       'transcripts': vidinfo.data('transcripts'),
       'audio': vidinfo.data('audio'),
-      'defaultLocale': vidinfo.data('defaultLocale')
+      'defaultLocale': vidinfo.data('defaultLocale'),
+      'captionvtt': vidinfo.data('captionvtt'),
+      'captionsrt': vidinfo.data('captionsrt')
     };
     var screenWidth = $(window).width();
     var width = opts.width;
@@ -309,7 +323,7 @@ SMPlayer.init = function(opts) {
       isVertical = false;
     }
     if (vid != null) {
-      $.fn.ceebox.popup(SMPlayer.ceebox_template(vid), {
+      $.fn.ceebox.popup(SMPlayer.ceebox_template(vid.title), {
         modal: true,
         titles: false,
         titleHeight: "20px",
@@ -343,6 +357,6 @@ SMPlayer.init = function(opts) {
   });
 };
 
-SMPlayer.ceebox_template = function(vid) {
-  return '<div id="cee_title"><h2>' + vid.title  + '</h2></div><div id="player-live-wrapper"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a>' + $('#player-frame').clone().html() + '</div>';
+SMPlayer.ceebox_template = function(title) {
+  return '<div id="cee_title"><h2>' + title  + '</h2></div><div id="player-live-wrapper"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a>' + $('#player-frame').clone().html() + '</div>';
 };
