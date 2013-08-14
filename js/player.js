@@ -1,3 +1,19 @@
+if (!Array.prototype.forEach) {
+  Array.prototype.forEach = function(iterator, context) {
+    if (this.length === +this.length) {
+      for (var i = 0, l = this.length; i < l; i++) {
+        if (i in this) iterator.call(context, this[i], i, this);
+      }
+    } else {
+      for (var key in this) {
+        if (Object.prototype.hasOwnProperty.call(this, key)) {
+          iterator.call(context, this[key], key, this);
+        }
+      }
+    }
+  };
+}
+
 var SMPlayer = {
   currentPosition: 0,
   currentVolume: 80,
@@ -15,7 +31,11 @@ var SMPlayer = {
     "widthFudge": 50,
     "preview": null
   },
-  player: null
+  player: null,
+  locales: {
+    'en-US': "English (US)",
+    'hi-IN': "Hindi"
+  }
 };
 
 // transcript highlighting function based on JW Player player position
@@ -127,15 +147,29 @@ SMPlayer.setup = function(vid) {
       }
     }
     for (var t in vid.transcripts) {
-      $('#transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>'+SMData.locales[t]+'</option>\n');
-      $('#audio-locale-selector').append('<option value="' + vid.audio[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>'+SMData.locales[t]+'</option>\n');
+      $('#transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
+      $('#audio-locale-selector').append('<option value="' + vid.audio[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
       if (def == t) {
-        SMPlayer.loadTranscript(vid.transcripts[t]);
+        $.ajax({
+          url: vid.transcripts[t]
+        }).done(function(data){
+          var pa = new WebVTTParser();
+          var captionsvtt = pa.parse(data, "captions");
+          var transcript = SMPlayer.convert_vtt_to_html(captionsvtt);
+          SMPlayer.loadTranscript(transcript);
+        });
         SMPlayer.loadAudio(vid.audio[t]);
       }
     }
     $('#transcript-locale-selector').on('change', function() {
-      SMPlayer.loadTranscript($(this).val());
+      $.ajax({
+        url: $(this).val()
+      }).done(function(data){
+        var pa = new WebVTTParser();
+        var captionsvtt = pa.parse(data, "captions");
+        var transcript = SMPlayer.convert_vtt_to_html(captionsvtt);
+        SMPlayer.loadTranscript(transcript);
+      });
     });
     $('#audio-locale-selector').on('change', function() {
       SMPlayer.loadAudio($(this).val());
@@ -146,8 +180,8 @@ SMPlayer.setup = function(vid) {
 };
 
 // load transcript into browser transcript display
-SMPlayer.loadTranscript = function(url) {
-  $('#transcript').load(url);
+SMPlayer.loadTranscript = function(html) {
+  $('#transcript').html(html);
 };
 
 // load separate language audio track
@@ -355,6 +389,16 @@ SMPlayer.init = function(opts) {
     }
     return false;
   });
+};
+
+SMPlayer.convert_vtt_to_html = function(parsedVTT) {
+  var html = "";
+  parsedVTT.cues.forEach(function(cue) {
+    if (cue.text) {
+      html += "<span id='T" + Math.floor(cue.startTime) + "'>" + cue.text + "</span> "
+    }
+  });
+  return html;
 };
 
 SMPlayer.ceebox_template = function(title) {

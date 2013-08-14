@@ -1,0 +1,4275 @@
+1
+00:00:00,000 --> 00:00:06,580
+
+2
+00:00:06,580 --> 00:00:11,230
+Let me welcome all of you on
+behalf of MIT, on behalf of
+
+3
+00:00:11,230 --> 00:00:14,140
+the Office of Educational
+Innovation and Technology, and
+
+4
+00:00:14,140 --> 00:00:18,550
+on behalf of our partners here,
+Apple, Scott's, I don't
+
+5
+00:00:18,550 --> 00:00:22,070
+know, it's not always good to
+extend the family metaphor
+
+6
+00:00:22,070 --> 00:00:25,110
+because of all the intended
+dysfunctionality, but, you
+
+7
+00:00:25,110 --> 00:00:30,930
+know, it's like a member of an
+extended family over here.
+
+8
+00:00:30,930 --> 00:00:35,870
+But, really, we welcome you
+to MIT and to this event.
+
+9
+00:00:35,870 --> 00:00:38,420
+There is a lot of planning,
+I know.
+
+10
+00:00:38,420 --> 00:00:40,660
+Not just what Scott was talking
+about, I watched
+
+11
+00:00:40,660 --> 00:00:45,030
+Andrew, who works in our office,
+along with Jeff and
+
+12
+00:00:45,030 --> 00:00:48,900
+Judy go at it you know,
+for quite some time.
+
+13
+00:00:48,900 --> 00:00:51,090
+So it's a treat to have you
+over here and to have this
+
+14
+00:00:51,090 --> 00:00:52,890
+event over here.
+
+15
+00:00:52,890 --> 00:00:57,410
+I'm not going to be talking
+about OEIT today, although the
+
+16
+00:00:57,410 --> 00:00:59,630
+Office of Educational Innovation
+and Technology,
+
+17
+00:00:59,630 --> 00:01:03,330
+although, you know, I'm hoping
+to touch on some examples, as
+
+18
+00:01:03,330 --> 00:01:05,190
+they are relevant to
+my conversation.
+
+19
+00:01:05,190 --> 00:01:08,425
+I should also apologize to you
+in advance, I'm not doing to
+
+20
+00:01:08,425 --> 00:01:09,540
+be singing for you today.
+
+21
+00:01:09,540 --> 00:01:16,350
+My voice is a little bit off,
+but I do hope to talk about
+
+22
+00:01:16,350 --> 00:01:22,560
+some things open, and really
+about this gathering storm,
+
+23
+00:01:22,560 --> 00:01:27,460
+you know, which I call the open
+education movement, and
+
+24
+00:01:27,460 --> 00:01:31,720
+the potentially implications
+it has for
+
+25
+00:01:31,720 --> 00:01:33,750
+transforming education.
+
+26
+00:01:33,750 --> 00:01:36,970
+And you know, it was really
+about, I don't know if it was
+
+27
+00:01:36,970 --> 00:01:39,930
+at 2:00 in the morning today or
+7:00 in the morning today.
+
+28
+00:01:39,930 --> 00:01:43,690
+You know I got onto MIT's web
+page, and this was the page,
+
+29
+00:01:43,690 --> 00:01:44,380
+and I said wow!
+
+30
+00:01:44,380 --> 00:01:47,380
+You know, somebody paid somebody
+to do this, because
+
+31
+00:01:47,380 --> 00:01:50,570
+it really epitomizes at least
+certainly the institutional
+
+32
+00:01:50,570 --> 00:01:53,970
+commitment part of openness that
+we want to talk about.
+
+33
+00:01:53,970 --> 00:01:57,360
+Last week at the faculty
+meeting, not in this room,
+
+34
+00:01:57,360 --> 00:01:59,610
+some faculty meetings are held
+in this room, but in another
+
+35
+00:01:59,610 --> 00:02:06,640
+renovated space in the main
+drag, MIT faculty wanted to
+
+36
+00:02:06,640 --> 00:02:09,740
+provide, you know, to allow the
+institute to provide open
+
+37
+00:02:09,740 --> 00:02:13,850
+access to all scholarly
+articles, which sort of shows
+
+38
+00:02:13,850 --> 00:02:18,710
+the commitment and, of course,
+most of you have heard about
+
+39
+00:02:18,710 --> 00:02:21,730
+OpenCourseWare, which was the
+educational version of this.
+
+40
+00:02:21,730 --> 00:02:25,360
+So there's, you know, so there's
+some institutional
+
+41
+00:02:25,360 --> 00:02:30,300
+teeth to this movement,
+certainly as far as we are
+
+42
+00:02:30,300 --> 00:02:34,050
+concerned here at MIT.
+
+43
+00:02:34,050 --> 00:02:45,110
+So, having -- let me pop it up
+there and -- so, I chose an
+
+44
+00:02:45,110 --> 00:02:49,340
+old expression to describe a new
+phenomenon, you know the
+
+45
+00:02:49,340 --> 00:02:53,200
+new deal, only to signify the
+tremendous opportunity that I
+
+46
+00:02:53,200 --> 00:02:57,640
+see, this open education
+movement has, and, you know,
+
+47
+00:02:57,640 --> 00:03:03,020
+it's characterized by open
+content, open knowledge, open
+
+48
+00:03:03,020 --> 00:03:07,140
+technology and all these
+dimensions sort of describe
+
+49
+00:03:07,140 --> 00:03:09,580
+the envelope of the open
+education movement.
+
+50
+00:03:09,580 --> 00:03:13,650
+And the top part, you know, in
+this world of borrowing and
+
+51
+00:03:13,650 --> 00:03:16,760
+collaboration euphemistically
+called match ups, actually
+
+52
+00:03:16,760 --> 00:03:19,760
+borrowed the top part of that,
+advancing the educational life
+
+53
+00:03:19,760 --> 00:03:23,400
+of information resources of
+title from a guru of mine,
+
+54
+00:03:23,400 --> 00:03:26,750
+John Seely Brown, who many of
+you know had this social life
+
+55
+00:03:26,750 --> 00:03:27,680
+of information.
+
+56
+00:03:27,680 --> 00:03:30,720
+The thesis there being that
+the community really gives
+
+57
+00:03:30,720 --> 00:03:32,360
+meaning to information.
+
+58
+00:03:32,360 --> 00:03:39,910
+And here, my pitch is that a lot
+of what openness is about
+
+59
+00:03:39,910 --> 00:03:43,000
+is breathing educational life
+into information resources
+
+60
+00:03:43,000 --> 00:03:46,200
+which are becoming available and
+plenty, through, you know,
+
+61
+00:03:46,200 --> 00:03:47,940
+through the kinds of initiatives
+that I'm going to
+
+62
+00:03:47,940 --> 00:03:50,190
+talk about.
+
+63
+00:03:50,190 --> 00:03:57,420
+So the promise was best
+articulated by Chuck Vest, who
+
+64
+00:03:57,420 --> 00:04:01,550
+was President here at MIT, who
+is now the President of the
+
+65
+00:04:01,550 --> 00:04:05,150
+National Academy, National
+Academy for Engineering, and
+
+66
+00:04:05,150 --> 00:04:09,920
+it was under his championship,
+actually, that OpenCourseWare
+
+67
+00:04:09,920 --> 00:04:11,970
+at MIT was launched.
+
+68
+00:04:11,970 --> 00:04:16,110
+And Fred painted this,
+you know, this
+
+69
+00:04:16,110 --> 00:04:17,050
+vision, if you will.
+
+70
+00:04:17,050 --> 00:04:21,180
+And he said we are talking about
+OpenCourseWare and the
+
+71
+00:04:21,180 --> 00:04:24,720
+surrounding initiatives that
+were sprouting at that time,
+
+72
+00:04:24,720 --> 00:04:28,360
+to say we are seeing the early
+emergence of a Metaversity.
+
+73
+00:04:28,360 --> 00:04:32,840
+A transcendent, accessible,
+empowering, dynamic community
+
+74
+00:04:32,840 --> 00:04:36,230
+constructed framework of open
+materials and platforms, on
+
+75
+00:04:36,230 --> 00:04:39,960
+which much of higher education
+worldwide can be constructed
+
+76
+00:04:39,960 --> 00:04:41,260
+or enhanced.
+
+77
+00:04:41,260 --> 00:04:43,910
+And it's a tremendous vision.
+
+78
+00:04:43,910 --> 00:04:46,430
+It is a vision of
+the Metaversity.
+
+79
+00:04:46,430 --> 00:04:52,100
+And what I am contending today
+is that much of what you have
+
+80
+00:04:52,100 --> 00:04:55,730
+seen, remarkable as it is, the
+OpenCourseWare as a movement,
+
+81
+00:04:55,730 --> 00:04:59,230
+and I'll point to some of the
+evidence, is the first phase
+
+82
+00:04:59,230 --> 00:05:00,000
+off that vision.
+
+83
+00:05:00,000 --> 00:05:02,900
+It is Metaversity part one, and
+the kinds of things that
+
+84
+00:05:02,900 --> 00:05:07,640
+we are all engaged in really
+points to a deeper vision of
+
+85
+00:05:07,640 --> 00:05:15,480
+this second phase, which is
+more akin to what I think
+
+86
+00:05:15,480 --> 00:05:18,090
+Chuck is trying to describe
+over there, the
+
+87
+00:05:18,090 --> 00:05:21,040
+Metaversity part two.
+
+88
+00:05:21,040 --> 00:05:25,970
+So, very quickly, some off the
+artifacts some off the
+
+89
+00:05:25,970 --> 00:05:30,530
+evidence of this gathering storm
+that I refer to are some
+
+90
+00:05:30,530 --> 00:05:34,560
+of the things that categorize
+the Metaversity part one.
+
+91
+00:05:34,560 --> 00:05:37,900
+Of course, we like to start
+with OpenCourseWare.
+
+92
+00:05:37,900 --> 00:05:44,865
+Around 2000, when MIT very
+boldly, and some of us thought
+
+93
+00:05:44,865 --> 00:05:48,220
+at that time thought rationally,
+announced that it
+
+94
+00:05:48,220 --> 00:05:52,080
+would make the content of all
+its courses available on the
+
+95
+00:05:52,080 --> 00:05:54,100
+web for free to the world.
+
+96
+00:05:54,100 --> 00:05:57,350
+And I remember being in the
+room, as part of the Counsel
+
+97
+00:05:57,350 --> 00:06:01,930
+in Education Technology when
+the sub-group came back and
+
+98
+00:06:01,930 --> 00:06:03,850
+said, you know, maybe
+we should do this.
+
+99
+00:06:03,850 --> 00:06:06,760
+And there were two remarkable
+things that
+
+100
+00:06:06,760 --> 00:06:08,120
+happened, that are true.
+
+101
+00:06:08,120 --> 00:06:10,160
+One was our emotional
+response.
+
+102
+00:06:10,160 --> 00:06:14,420
+We said, whoa -- this is big,
+you know, and, which was
+
+103
+00:06:14,420 --> 00:06:14,880
+tremendous.
+
+104
+00:06:14,880 --> 00:06:16,960
+We all knew this was something
+very important.
+
+105
+00:06:16,960 --> 00:06:19,160
+The second thing was none
+of us knew what
+
+106
+00:06:19,160 --> 00:06:20,390
+it meant, you know.
+
+107
+00:06:20,390 --> 00:06:25,110
+So, we said, well, but
+it was powerful.
+
+108
+00:06:25,110 --> 00:06:28,940
+None of us really understood the
+profound implications that
+
+109
+00:06:28,940 --> 00:06:34,670
+have subsequently emerged
+from that announcement.
+
+110
+00:06:34,670 --> 00:06:36,810
+Of course, one of the side
+benefits, and then since then
+
+111
+00:06:36,810 --> 00:06:39,680
+lots has happened, you know.
+
+112
+00:06:39,680 --> 00:06:46,740
+A couple of Octobers ago MIT,
+all of MIT's 1,800 courses
+
+113
+00:06:46,740 --> 00:06:52,180
+were actually made available
+through OpenCourseWare, and --
+
+114
+00:06:52,180 --> 00:06:55,070
+which is tremendous, which is
+sort of -- you know, the first
+
+115
+00:06:55,070 --> 00:06:59,215
+item was Daily Word, and the
+first part of the promise was
+
+116
+00:06:59,215 --> 00:06:59,940
+Daily Word.
+
+117
+00:06:59,940 --> 00:07:03,160
+Now, one side benefit that I
+always like to point out from
+
+118
+00:07:03,160 --> 00:07:07,250
+OpenCourseWare is that we like
+to say to MIT that we figured
+
+119
+00:07:07,250 --> 00:07:10,350
+out actually how many courses
+there were, indeed, at MIT.
+
+120
+00:07:10,350 --> 00:07:15,710
+So we, you know, because we said
+all the courses, like in
+
+121
+00:07:15,710 --> 00:07:18,270
+the old days we used to talk
+about the Athena computing
+
+122
+00:07:18,270 --> 00:07:19,050
+environment.
+
+123
+00:07:19,050 --> 00:07:22,360
+It was sort of everything, but
+we didn't exactly what it was,
+
+124
+00:07:22,360 --> 00:07:25,510
+and 1,800 was a good number,
+so that's where it come.
+
+125
+00:07:25,510 --> 00:07:27,810
+So that was there, but the
+interesting thing about the
+
+126
+00:07:27,810 --> 00:07:30,420
+open education movement that
+I'm referring to was
+
+127
+00:07:30,420 --> 00:07:35,930
+certainly, motivated, led,
+catalyzed by OpenCourseWare,
+
+128
+00:07:35,930 --> 00:07:42,890
+but that's not the movement,
+and it's not even, when we
+
+129
+00:07:42,890 --> 00:07:47,690
+announced OpenCourseWare, it
+was interesting because the
+
+130
+00:07:47,690 --> 00:07:51,730
+kinds of letters we'd get from
+all over the world, MIT used
+
+131
+00:07:51,730 --> 00:07:57,510
+to get, and typically in
+presentations, and in fact, if
+
+132
+00:07:57,510 --> 00:08:00,060
+you go to the MIT OpenCourseWare
+site, you will
+
+133
+00:08:00,060 --> 00:08:04,900
+see stats on the millions off
+hits and how much access, and
+
+134
+00:08:04,900 --> 00:08:07,000
+that's all wonderful.
+
+135
+00:08:07,000 --> 00:08:07,810
+That's great data.
+
+136
+00:08:07,810 --> 00:08:14,810
+That's great information, but
+the impact data is really
+
+137
+00:08:14,810 --> 00:08:17,590
+vignette like this, when you
+talk about the fact that when
+
+138
+00:08:17,590 --> 00:08:20,630
+you put out resources like
+OpenCourseWare, people can use
+
+139
+00:08:20,630 --> 00:08:22,140
+it for curriculum formulation
+elsewhere.
+
+140
+00:08:22,140 --> 00:08:28,130
+It serves as a model and so it's
+not just about consuming
+
+141
+00:08:28,130 --> 00:08:31,010
+the content that is put over
+there, but being able to learn
+
+142
+00:08:31,010 --> 00:08:32,880
+from it the way it is put
+together, the way it is
+
+143
+00:08:32,880 --> 00:08:37,100
+structured in order that you
+can do your own thing more
+
+144
+00:08:37,100 --> 00:08:38,440
+efficiently.
+
+145
+00:08:38,440 --> 00:08:41,950
+So this is, Richard Hall, who
+says it saved him an enormous
+
+146
+00:08:41,950 --> 00:08:43,470
+amount of time and stress.
+
+147
+00:08:43,470 --> 00:08:45,070
+I could use some
+of that myself.
+
+148
+00:08:45,070 --> 00:08:49,830
+So, the other kind of vignette,
+which I look at as
+
+149
+00:08:49,830 --> 00:08:52,600
+evidence is this one, where,
+you know, you actually have
+
+150
+00:08:52,600 --> 00:08:56,730
+students elsewhere who are using
+this, and who actually
+
+151
+00:08:56,730 --> 00:09:00,310
+go and look at the notes in
+OpenCourseWare and then use
+
+152
+00:09:00,310 --> 00:09:02,120
+them as supplements to what
+they're learning.
+
+153
+00:09:02,120 --> 00:09:04,880
+And by the way, this is a
+phenomenon that I experience
+
+154
+00:09:04,880 --> 00:09:07,060
+all the time when I'm giving
+talks, for instance, in India,
+
+155
+00:09:07,060 --> 00:09:11,230
+I'd be there giving a talk to
+you know, some 1,700 people in
+
+156
+00:09:11,230 --> 00:09:15,180
+a class like this, and I'll as
+for a show of hands, how many
+
+157
+00:09:15,180 --> 00:09:19,560
+of you have heard of OCW, you
+know, the hands will go up.
+
+158
+00:09:19,560 --> 00:09:22,130
+Then I'll ask, how many
+of you use OCW?
+
+159
+00:09:22,130 --> 00:09:28,030
+And what is remarkable is that
+there are classes where all
+
+160
+00:09:28,030 --> 00:09:30,390
+the students would have their
+hands up, you know.
+
+161
+00:09:30,390 --> 00:09:35,020
+And unselfconsciously, with
+the instructor over there,
+
+162
+00:09:35,020 --> 00:09:36,690
+because they using get
+the supplements.
+
+163
+00:09:36,690 --> 00:09:43,410
+Sometimes they're looking at it
+as a benchmark, to ask an
+
+164
+00:09:43,410 --> 00:09:47,330
+instructor why isn't our course
+looking like that, or
+
+165
+00:09:47,330 --> 00:09:52,040
+why aren't we covering those
+aspects of the content?
+
+166
+00:09:52,040 --> 00:09:55,510
+So you can start to see the
+kinds of implications of
+
+167
+00:09:55,510 --> 00:09:56,720
+things open.
+
+168
+00:09:56,720 --> 00:09:58,510
+It is not just about
+being able to go
+
+169
+00:09:58,510 --> 00:09:59,690
+and grab the contents.
+
+170
+00:09:59,690 --> 00:10:00,770
+It serves as a model.
+
+171
+00:10:00,770 --> 00:10:02,010
+It serves as a benchmark.
+
+172
+00:10:02,010 --> 00:10:05,070
+It serves as a mirror into your
+quality, and this is,
+
+173
+00:10:05,070 --> 00:10:06,040
+these are the --
+
+174
+00:10:06,040 --> 00:10:08,750
+I'm trying to start giving you
+hints of the transubmitive
+
+175
+00:10:08,750 --> 00:10:12,310
+impact of things open.
+
+176
+00:10:12,310 --> 00:10:14,090
+Again, but that's is
+not the movement.
+
+177
+00:10:14,090 --> 00:10:16,700
+This was, so far I've
+talked about OCW.
+
+178
+00:10:16,700 --> 00:10:20,850
+What characterized the movement
+was, now actually
+
+179
+00:10:20,850 --> 00:10:23,920
+hundreds of OCWs that started.
+
+180
+00:10:23,920 --> 00:10:27,550
+There's a consortium with
+160 institutions.
+
+181
+00:10:27,550 --> 00:10:29,680
+Brandon, sitting over there,
+is actually involved in the
+
+182
+00:10:29,680 --> 00:10:32,360
+consortium, as I am.
+
+183
+00:10:32,360 --> 00:10:37,120
+So the number of universities
+who started making there
+
+184
+00:10:37,120 --> 00:10:41,390
+materials available, and number
+of initiatives that
+
+185
+00:10:41,390 --> 00:10:44,920
+started making their resources
+available in one form or the
+
+186
+00:10:44,920 --> 00:10:48,550
+other, making them available
+for consumption across the
+
+187
+00:10:48,550 --> 00:10:49,830
+world for free.
+
+188
+00:10:49,830 --> 00:10:55,340
+So that characterizes the scale
+of the movement, and why
+
+189
+00:10:55,340 --> 00:10:59,700
+I use terms like a gatherings
+storm, because this is big.
+
+190
+00:10:59,700 --> 00:11:04,980
+I go to the Commonwealth of
+Learning meetings in London,
+
+191
+00:11:04,980 --> 00:11:07,450
+and they say, well you know,
+we have to have OER as a
+
+192
+00:11:07,450 --> 00:11:11,410
+strategy for extensive access
+to education in developing
+
+193
+00:11:11,410 --> 00:11:12,360
+countries, you know.
+
+194
+00:11:12,360 --> 00:11:14,440
+And why they are able to make
+statements like that is
+
+195
+00:11:14,440 --> 00:11:17,760
+because they see the evidence
+of the movement in pretty
+
+196
+00:11:17,760 --> 00:11:19,610
+dramatically ways.
+
+197
+00:11:19,610 --> 00:11:22,330
+So that's one part.
+
+198
+00:11:22,330 --> 00:11:24,160
+I mention the consortium.
+
+199
+00:11:24,160 --> 00:11:27,860
+Now, typically we think this is
+all about higher education.
+
+200
+00:11:27,860 --> 00:11:29,200
+Not true, you know.
+
+201
+00:11:29,200 --> 00:11:31,710
+There are very significant K
+through 12 initiatives, some
+
+202
+00:11:31,710 --> 00:11:34,210
+of which you see listed
+before you.
+
+203
+00:11:34,210 --> 00:11:38,150
+One that Scott mentioned
+in my introduction.
+
+204
+00:11:38,150 --> 00:11:40,840
+Curriki which I served as
+adviser to, which actually
+
+205
+00:11:40,840 --> 00:11:46,160
+came out of Scott McNealy's
+championship from Sun
+
+206
+00:11:46,160 --> 00:11:49,600
+Microsystems, but this is, the
+Curriki initiative is to make
+
+207
+00:11:49,600 --> 00:11:52,450
+sure that you can create a
+framework so that people can
+
+208
+00:11:52,450 --> 00:11:56,590
+contribute resources for K
+through 12, and then make it
+
+209
+00:11:56,590 --> 00:11:59,240
+widely available in an
+open-fashion and open-source
+
+210
+00:11:59,240 --> 00:12:05,610
+model, and mapping it to
+regional, local and curricula,
+
+211
+00:12:05,610 --> 00:12:07,970
+not just in this country,
+but elsewhere.
+
+212
+00:12:07,970 --> 00:12:11,990
+So in the K through 12 domain
+also there is a palpable
+
+213
+00:12:11,990 --> 00:12:16,210
+movement, open movement, and
+you know, with some good
+
+214
+00:12:16,210 --> 00:12:18,530
+materials, people say, well
+you know, if it's open, it
+
+215
+00:12:18,530 --> 00:12:19,610
+won't be good.
+
+216
+00:12:19,610 --> 00:12:21,560
+It's all bitter medicine
+thing.
+
+217
+00:12:21,560 --> 00:12:26,720
+And there are some very, very
+good pieces off educational
+
+218
+00:12:26,720 --> 00:12:32,200
+courseware, you know, applets
+if you will, to teach
+
+219
+00:12:32,200 --> 00:12:33,750
+different concepts.
+
+220
+00:12:33,750 --> 00:12:37,780
+And this contribution from
+around the world, there are
+
+221
+00:12:37,780 --> 00:12:41,110
+initiatives that have been
+launched, to filter, to make
+
+222
+00:12:41,110 --> 00:12:46,920
+sure there is good, appropriate
+content.
+
+223
+00:12:46,920 --> 00:12:51,620
+MIT itself has provided a
+channel to its OpenCourseWare
+
+224
+00:12:51,620 --> 00:12:53,410
+for, you know, for
+higher education.
+
+225
+00:12:53,410 --> 00:12:58,560
+We call it highlights for high
+school, where you provide
+
+226
+00:12:58,560 --> 00:13:01,980
+particular channels into courses
+and content which
+
+227
+00:13:01,980 --> 00:13:05,320
+might be relevant for high
+school consumption, for
+
+228
+00:13:05,320 --> 00:13:10,600
+advanced placement of, you know,
+of advanced preparation.
+
+229
+00:13:10,600 --> 00:13:13,240
+This is a resource that I
+like to point to in the
+
+230
+00:13:13,240 --> 00:13:14,610
+K through 12 domain.
+
+231
+00:13:14,610 --> 00:13:17,370
+This was an initiative that was
+launch by Carl Wyman, no
+
+232
+00:13:17,370 --> 00:13:19,890
+less, who was the year before
+last, Novel Laureate in
+
+233
+00:13:19,890 --> 00:13:22,310
+physics, and he had launched
+this when he was at the
+
+234
+00:13:22,310 --> 00:13:23,710
+University of Colorado.
+
+235
+00:13:23,710 --> 00:13:27,250
+And, where, if you go to this
+site, and now of course, Carl
+
+236
+00:13:27,250 --> 00:13:31,940
+has moved on to University of
+British Columbia, and this
+
+237
+00:13:31,940 --> 00:13:33,800
+site is there.
+
+238
+00:13:33,800 --> 00:13:35,060
+It is maintained by his group.
+
+239
+00:13:35,060 --> 00:13:37,570
+It is openly, maid
+openly available.
+
+240
+00:13:37,570 --> 00:13:42,660
+And if you go to the site, you
+will find that there is very,
+
+241
+00:13:42,660 --> 00:13:46,580
+you know, there'll be statements
+about how the
+
+242
+00:13:46,580 --> 00:13:49,140
+resources over there have
+been evaluated.
+
+243
+00:13:49,140 --> 00:13:52,570
+There has been very, very good,
+you know, they have
+
+244
+00:13:52,570 --> 00:13:55,030
+founded, they have been
+developed on very, very good
+
+245
+00:13:55,030 --> 00:13:56,930
+educational principles.
+
+246
+00:13:56,930 --> 00:13:59,870
+There has been some amount of
+vigorous evaluation done.
+
+247
+00:13:59,870 --> 00:14:04,560
+All this to tell you that there
+is open stuff there,
+
+248
+00:14:04,560 --> 00:14:08,820
+good stuff that, there is
+quality stuff there, capable
+
+249
+00:14:08,820 --> 00:14:13,270
+off making great transformative
+contribution to
+
+250
+00:14:13,270 --> 00:14:14,910
+education as we know it.
+
+251
+00:14:14,910 --> 00:14:17,220
+And what happens is, over time,
+when you start doing
+
+252
+00:14:17,220 --> 00:14:21,000
+these things, the kind of sort
+of vision that Scott was
+
+253
+00:14:21,000 --> 00:14:26,390
+alluding to, you start
+seeing pieces of.
+
+254
+00:14:26,390 --> 00:14:32,510
+But like I said, that's all
+fantastic, but it's still --
+
+255
+00:14:32,510 --> 00:14:35,110
+I characterize all that
+as F part one.
+
+256
+00:14:35,110 --> 00:14:41,370
+Part two, I think, is when, and
+if you've noticed, many of
+
+257
+00:14:41,370 --> 00:14:46,210
+those are about fantastic
+resources, largely about
+
+258
+00:14:46,210 --> 00:14:51,810
+content, and they are
+stand-alone, they are
+
+259
+00:14:51,810 --> 00:14:56,430
+disparitary resources, but
+transformative impact or
+
+260
+00:14:56,430 --> 00:15:00,100
+systemic change, I think, for
+education, happens when we can
+
+261
+00:15:00,100 --> 00:15:06,670
+move from there to another kind
+of place where we can
+
+262
+00:15:06,670 --> 00:15:10,020
+actually provide quality end to
+an educational experience
+
+263
+00:15:10,020 --> 00:15:11,300
+through things open.
+
+264
+00:15:11,300 --> 00:15:13,130
+So when we think about
+end-to-end educational
+
+265
+00:15:13,130 --> 00:15:16,260
+experiences, we think not only
+about content, but how we
+
+266
+00:15:16,260 --> 00:15:19,570
+might be able to do, provide
+first-hand experiences,
+
+267
+00:15:19,570 --> 00:15:25,500
+laboratory experiences, as, you
+know, to complement good
+
+268
+00:15:25,500 --> 00:15:26,710
+content out there.
+
+269
+00:15:26,710 --> 00:15:29,800
+How might we provide good
+interactive experiences for
+
+270
+00:15:29,800 --> 00:15:38,490
+people learning and how we
+might actually harvest
+
+271
+00:15:38,490 --> 00:15:41,690
+resources that might be
+available anywhere and
+
+272
+00:15:41,690 --> 00:15:44,810
+productivity combine them to
+deliver different kinds of
+
+273
+00:15:44,810 --> 00:15:48,150
+learning experiences to suit
+different audiences.
+
+274
+00:15:48,150 --> 00:15:54,770
+And, really keep the focus on
+quality, the fact that you can
+
+275
+00:15:54,770 --> 00:15:58,800
+generate new kinds
+of experiences,
+
+276
+00:15:58,800 --> 00:16:00,390
+new kinds of material.
+
+277
+00:16:00,390 --> 00:16:04,720
+So what I'd like to do now is
+just point to some off the
+
+278
+00:16:04,720 --> 00:16:08,400
+kinds of initiatives, and I will
+apologize, many of the
+
+279
+00:16:08,400 --> 00:16:13,660
+initiatives that I'm pointing
+to are MIT based, but you
+
+280
+00:16:13,660 --> 00:16:16,080
+know, I talk about what
+I know better.
+
+281
+00:16:16,080 --> 00:16:19,280
+So I'll point to them,
+but they're done.
+
+282
+00:16:19,280 --> 00:16:22,720
+And I'll also point out that
+they might have been launched
+
+283
+00:16:22,720 --> 00:16:28,280
+at MIT, but right from the
+get-go they involved other
+
+284
+00:16:28,280 --> 00:16:30,890
+institutions, other players.
+
+285
+00:16:30,890 --> 00:16:34,960
+But they speak to the kinds
+of, the value proposition
+
+286
+00:16:34,960 --> 00:16:37,680
+elements that I think will take
+us to to this vision of a
+
+287
+00:16:37,680 --> 00:16:38,350
+Metaversity II.
+
+288
+00:16:38,350 --> 00:16:47,610
+So, this is an initiative that
+I like to talk about a lot.
+
+289
+00:16:47,610 --> 00:16:51,280
+On the left is Jesus del Alamo
+he is a professor right here,
+
+290
+00:16:51,280 --> 00:16:56,950
+upstairs, teaches in electrical
+engineering.
+
+291
+00:16:56,950 --> 00:17:00,960
+So some years ago, he started
+this thing called iLab and the
+
+292
+00:17:00,960 --> 00:17:04,760
+intent of iLab is to provide
+access to real laboratories
+
+293
+00:17:04,760 --> 00:17:07,960
+over the internet, not
+simulations, actually labs.
+
+294
+00:17:07,960 --> 00:17:13,220
+So, initially it started off
+with some, you know, network
+
+295
+00:17:13,220 --> 00:17:16,330
+signal analyzer and for digital
+
+296
+00:17:16,330 --> 00:17:17,960
+signal processing courses.
+
+297
+00:17:17,960 --> 00:17:20,680
+And then there were some other
+labs that actually got
+
+298
+00:17:20,680 --> 00:17:23,960
+launched, and we had students
+from Singapore, from Sweden
+
+299
+00:17:23,960 --> 00:17:28,130
+sort of places who
+were actually
+
+300
+00:17:28,130 --> 00:17:31,990
+conducting labs over here.
+
+301
+00:17:31,990 --> 00:17:34,850
+And, you know, then we had some
+of our Cambridge students
+
+302
+00:17:34,850 --> 00:17:37,260
+actually looking at, you know,
+we had a partnership with the
+
+303
+00:17:37,260 --> 00:17:38,800
+University of Cambridge,
+who was
+
+304
+00:17:38,800 --> 00:17:40,900
+looking at chemical reactors.
+
+305
+00:17:40,900 --> 00:17:44,330
+There was a civil engineering, a
+shake table experiment to do
+
+306
+00:17:44,330 --> 00:17:49,500
+seismic measurements, and
+these work controlled,
+
+307
+00:17:49,500 --> 00:17:54,240
+accessed, through browsers, and
+people actually adjusted
+
+308
+00:17:54,240 --> 00:17:56,990
+the parameters, saw the results,
+and not only that,
+
+309
+00:17:56,990 --> 00:17:59,310
+there were communities swarming
+which would discuss
+
+310
+00:17:59,310 --> 00:17:59,990
+the results.
+
+311
+00:17:59,990 --> 00:18:05,730
+And in fact, we have one that is
+going on right now, an NSF
+
+312
+00:18:05,730 --> 00:18:08,740
+supported project where K
+through 12 students have
+
+313
+00:18:08,740 --> 00:18:09,840
+browser-based access.
+
+314
+00:18:09,840 --> 00:18:13,370
+MIT has a benign, friendly,
+nuclear reactor.
+
+315
+00:18:13,370 --> 00:18:18,350
+I have to put all these
+qualifiers over there, but you
+
+316
+00:18:18,350 --> 00:18:23,430
+know, it's provides
+access to those.
+
+317
+00:18:23,430 --> 00:18:25,940
+And you can see, I mean you can
+imagine the empowerment
+
+318
+00:18:25,940 --> 00:18:28,260
+when K through 12 students are
+watching these neutrons go,
+
+319
+00:18:28,260 --> 00:18:30,640
+and by the way, the same
+browser-based access that is
+
+320
+00:18:30,640 --> 00:18:35,700
+providing data for spectrometry
+experiments to a
+
+321
+00:18:35,700 --> 00:18:42,700
+nuclear engineering program,
+but the fact is that iLabs,
+
+322
+00:18:42,700 --> 00:18:48,440
+the technical architecture,
+the framework iLabs, makes
+
+323
+00:18:48,440 --> 00:18:52,380
+labs available, labs accessible
+
+324
+00:18:52,380 --> 00:18:54,860
+openly over the internet.
+
+325
+00:18:54,860 --> 00:18:58,440
+So that's brings a first-time,
+hands-on experience to
+
+326
+00:18:58,440 --> 00:19:01,290
+complement open resources
+that might be
+
+327
+00:19:01,290 --> 00:19:02,590
+available in a course.
+
+328
+00:19:02,590 --> 00:19:07,240
+Now, so you can see, and I
+normally talk about this more
+
+329
+00:19:07,240 --> 00:19:09,770
+than I should, but I'm really
+passionate about this.
+
+330
+00:19:09,770 --> 00:19:13,730
+Because, one of the things that
+you find that happens,
+
+331
+00:19:13,730 --> 00:19:17,670
+and this is a transformative
+dimension of this, is that
+
+332
+00:19:17,670 --> 00:19:22,750
+iLabs is not just about making
+expensive equipment, you know,
+
+333
+00:19:22,750 --> 00:19:27,330
+a radio telescope accessible
+to people, you know, but it
+
+334
+00:19:27,330 --> 00:19:31,870
+really alters the economics
+of lab instruction.
+
+335
+00:19:31,870 --> 00:19:33,730
+Labs are expensive,
+whether they're
+
+336
+00:19:33,730 --> 00:19:35,580
+small labs or big labs.
+
+337
+00:19:35,580 --> 00:19:36,770
+You configure them.
+
+338
+00:19:36,770 --> 00:19:38,590
+They take time to
+be configured.
+
+339
+00:19:38,590 --> 00:19:40,030
+They are one-time
+installation.
+
+340
+00:19:40,030 --> 00:19:40,850
+You set it up.
+
+341
+00:19:40,850 --> 00:19:41,560
+You do it.
+
+342
+00:19:41,560 --> 00:19:44,310
+Then you've got to wait long
+time before you set up again.
+
+343
+00:19:44,310 --> 00:19:45,700
+There's always latency.
+
+344
+00:19:45,700 --> 00:19:48,500
+I do not know about your
+education, but you know,
+
+345
+00:19:48,500 --> 00:19:51,160
+Monday you got the lecture.
+
+346
+00:19:51,160 --> 00:19:53,410
+And a couple of weeks later
+you did the lab work
+
+347
+00:19:53,410 --> 00:19:54,210
+or didn't do it.
+
+348
+00:19:54,210 --> 00:19:56,880
+Solid latency between when you
+learned the concept and you
+
+349
+00:19:56,880 --> 00:19:59,690
+would actually be able
+to learn from it.
+
+350
+00:19:59,690 --> 00:20:03,920
+So it was expensive, you know,
+what IT affrays, it was
+
+351
+00:20:03,920 --> 00:20:06,260
+expensive in terms of
+the learner's time.
+
+352
+00:20:06,260 --> 00:20:08,260
+It was expensive in terms of
+the fact that there were
+
+353
+00:20:08,260 --> 00:20:14,550
+one-time installation, and
+suddenly this iLab project
+
+354
+00:20:14,550 --> 00:20:18,220
+provides the potential to say,
+you know, this 24 by 7 access
+
+355
+00:20:18,220 --> 00:20:22,480
+for this, being able to leverage
+a setup much more
+
+356
+00:20:22,480 --> 00:20:26,130
+extensively, can dramatically
+alter the economics of
+
+357
+00:20:26,130 --> 00:20:27,800
+laboratory instruction.
+
+358
+00:20:27,800 --> 00:20:31,100
+That is, of course, if you
+believe as we do, that
+
+359
+00:20:31,100 --> 00:20:34,620
+laboratory instruction,
+first-hand experiences are a
+
+360
+00:20:34,620 --> 00:20:38,450
+very important part off the
+educational experience.
+
+361
+00:20:38,450 --> 00:20:41,400
+And you know, there are things
+that, we had students here for
+
+362
+00:20:41,400 --> 00:20:45,730
+one time, I remember, who wanted
+to do some experiments
+
+363
+00:20:45,730 --> 00:20:47,300
+with Compaq's clean labs.
+
+364
+00:20:47,300 --> 00:20:50,240
+We, Compaq didn't want our
+student traipsing all over the
+
+365
+00:20:50,240 --> 00:20:53,050
+clean labs over there, but the
+setup allowed us to do
+
+366
+00:20:53,050 --> 00:20:54,950
+controlled experiments
+in the clean labs.
+
+367
+00:20:54,950 --> 00:20:58,050
+So you can start imagining the
+implications, not only for
+
+368
+00:20:58,050 --> 00:21:00,630
+formal education, but things
+like vocational education,
+
+369
+00:21:00,630 --> 00:21:04,480
+cannot connect up with equipment
+that might be
+
+370
+00:21:04,480 --> 00:21:05,680
+available industry.
+
+371
+00:21:05,680 --> 00:21:09,110
+So it has the potential to
+
+372
+00:21:09,110 --> 00:21:11,470
+dramatically alter the economics.
+
+373
+00:21:11,470 --> 00:21:14,460
+Now, again, the interesting
+things about iLab and open
+
+374
+00:21:14,460 --> 00:21:18,990
+iLabs is not the five or six or
+seven labs that have been
+
+375
+00:21:18,990 --> 00:21:22,920
+set up at MIT and being made
+accessible, but the fact that
+
+376
+00:21:22,920 --> 00:21:26,850
+there are labs elsewhere, in
+fact, both at the University
+
+377
+00:21:26,850 --> 00:21:28,720
+of Queensland our colleague,
+Phil Hong, who's there.
+
+378
+00:21:28,720 --> 00:21:35,020
+University of Queensland, China,
+they have more labs in
+
+379
+00:21:35,020 --> 00:21:37,530
+the iLab framework than
+actually MIT has.
+
+380
+00:21:37,530 --> 00:21:41,590
+And so the architecture allows
+lab anywhere to be set up.
+
+381
+00:21:41,590 --> 00:21:44,680
+In fact, for us, the value
+proposition is that we might
+
+382
+00:21:44,680 --> 00:21:47,440
+want our students to
+access labs that
+
+383
+00:21:47,440 --> 00:21:49,310
+have been set up elsewhere.
+
+384
+00:21:49,310 --> 00:21:53,400
+So that's the value proposition,
+and that's where
+
+385
+00:21:53,400 --> 00:21:56,610
+the openness dimension comes the
+open architecture, allows
+
+386
+00:21:56,610 --> 00:22:00,450
+people to set up labs, big or
+small, and make it accessible
+
+387
+00:22:00,450 --> 00:22:02,630
+to students all over
+the world.
+
+388
+00:22:02,630 --> 00:22:05,200
+So, I'm pointing to a
+couple of things.
+
+389
+00:22:05,200 --> 00:22:07,750
+This is done at our office, at
+the Office of Educational
+
+390
+00:22:07,750 --> 00:22:08,790
+Innovation and Technology.
+
+391
+00:22:08,790 --> 00:22:12,210
+The day before yesterday, Chuck
+Schubert, who heads this
+
+392
+00:22:12,210 --> 00:22:15,970
+group called the Star Group,
+at, oh yes, he came and you
+
+393
+00:22:15,970 --> 00:22:19,740
+know, had me sign a few forms,
+a whole bunch of the Star
+
+394
+00:22:19,740 --> 00:22:24,000
+tools for visualization in
+biology, in genetic modeling
+
+395
+00:22:24,000 --> 00:22:26,690
+for genetic modeling for
+hydrology, that had been set
+
+396
+00:22:26,690 --> 00:22:33,230
+up, are now an open source
+and made available.
+
+397
+00:22:33,230 --> 00:22:34,780
+So these are fantastic
+simulations.
+
+398
+00:22:34,780 --> 00:22:38,650
+And why I'm pointing to these
+particular ones, because there
+
+399
+00:22:38,650 --> 00:22:46,030
+is educational, because they
+are tied to some very good
+
+400
+00:22:46,030 --> 00:22:51,840
+deep thinking about tools that
+are available openly, and you
+
+401
+00:22:51,840 --> 00:22:53,840
+know, there are great
+visualization tools tools, and
+
+402
+00:22:53,840 --> 00:22:54,540
+we've all seen them.
+
+403
+00:22:54,540 --> 00:22:55,310
+They are common.
+
+404
+00:22:55,310 --> 00:22:58,760
+This is part of a program that
+we have at OEIT to bridge
+
+405
+00:22:58,760 --> 00:23:01,640
+research and learning, to
+bring, to provide our
+
+406
+00:23:01,640 --> 00:23:04,550
+undergraduate students,
+first-year students, with
+
+407
+00:23:04,550 --> 00:23:07,600
+early exposure to research
+tools, and the kinds of
+
+408
+00:23:07,600 --> 00:23:09,690
+applications that typically
+are only available to
+
+409
+00:23:09,690 --> 00:23:10,920
+researchers.
+
+410
+00:23:10,920 --> 00:23:14,570
+And how can we remove the
+operational fog from these, so
+
+411
+00:23:14,570 --> 00:23:18,090
+that first-year students, again
+in this case even K
+
+412
+00:23:18,090 --> 00:23:21,600
+through 12 students, can
+actually use these tools.
+
+413
+00:23:21,600 --> 00:23:25,850
+This visualization that is seen
+which looks like Justin,
+
+414
+00:23:25,850 --> 00:23:30,266
+who also works with us,
+twirling, you know, when they
+
+415
+00:23:30,266 --> 00:23:33,410
+are visualizing DNA molecules,
+students look at it, They make
+
+416
+00:23:33,410 --> 00:23:37,700
+conjectures about
+it's properties.
+
+417
+00:23:37,700 --> 00:23:40,870
+They can reach into Cornell's
+protein database, make
+
+418
+00:23:40,870 --> 00:23:46,230
+comparisons now, and so you
+provide some very empowering
+
+419
+00:23:46,230 --> 00:23:49,970
+experiences and exposure to very
+big professional tools
+
+420
+00:23:49,970 --> 00:23:52,980
+and profession thinking, and
+provide them the confidence by
+
+421
+00:23:52,980 --> 00:23:55,830
+creating visualizations
+like this, with
+
+422
+00:23:55,830 --> 00:23:57,790
+students can control.
+
+423
+00:23:57,790 --> 00:24:02,700
+Now these kinds of simulations
+of tools are available in the
+
+424
+00:24:02,700 --> 00:24:07,720
+open, and what lies under them
+is a lot of good thinking,
+
+425
+00:24:07,720 --> 00:24:12,050
+hard problems that certainly are
+a faculty of experience,
+
+426
+00:24:12,050 --> 00:24:14,640
+in bringing research concepts
+into learning, because it's
+
+427
+00:24:14,640 --> 00:24:18,300
+all nice to say, you know, we
+want to have lots of proximity
+
+428
+00:24:18,300 --> 00:24:21,770
+between research and teaching,
+but to create tangible,
+
+429
+00:24:21,770 --> 00:24:26,080
+manageable crosswalks is not
+easy, and you do it through
+
+430
+00:24:26,080 --> 00:24:29,020
+these tools, and then you make
+these tools widely available
+
+431
+00:24:29,020 --> 00:24:32,850
+so that students all over
+can benefit from it.
+
+432
+00:24:32,850 --> 00:24:37,910
+So, I'm trying to give you
+a sense of the kinds of
+
+433
+00:24:37,910 --> 00:24:48,330
+possibilities, the enablements
+that lead to this vision, this
+
+434
+00:24:48,330 --> 00:24:52,050
+vision that is more advanced
+than the current capabilities
+
+435
+00:24:52,050 --> 00:24:53,790
+that open resources
+have created.
+
+436
+00:24:53,790 --> 00:24:57,190
+Now this is a project, this is
+very dear to my friend, Andrew
+
+437
+00:24:57,190 --> 00:25:01,865
+over there, and he and his team,
+and Brandon, they are
+
+438
+00:25:01,865 --> 00:25:03,000
+all working on this.
+
+439
+00:25:03,000 --> 00:25:05,010
+This is a project that was
+started by a professor
+
+440
+00:25:05,010 --> 00:25:09,090
+upstairs, a Professor Jim Glass
+in Computer Science, and
+
+441
+00:25:09,090 --> 00:25:13,640
+what it does is it uses natural
+language recognition,
+
+442
+00:25:13,640 --> 00:25:16,380
+voice recognition,
+summarization.
+
+443
+00:25:16,380 --> 00:25:20,180
+And the intent is to provide
+very, very acute and good
+
+444
+00:25:20,180 --> 00:25:22,660
+access to digitized content.
+
+445
+00:25:22,660 --> 00:25:30,380
+So we have digital video of
+lectures and the idea is to go
+
+446
+00:25:30,380 --> 00:25:34,410
+search these to get particular
+snippets of the lectures that
+
+447
+00:25:34,410 --> 00:25:35,280
+might be relevant.
+
+448
+00:25:35,280 --> 00:25:39,400
+So, for instance, what you can't
+see, probably seen in
+
+449
+00:25:39,400 --> 00:25:41,430
+the highlight, there's
+a lot of angular
+
+450
+00:25:41,430 --> 00:25:42,890
+momentum showing up.
+
+451
+00:25:42,890 --> 00:25:46,290
+So what we are working on is to
+make sure that you can use
+
+452
+00:25:46,290 --> 00:25:52,720
+this to go and find all those
+lecture segments that deal
+
+453
+00:25:52,720 --> 00:25:57,580
+with angular momentum, because
+if I as an instructor, want to
+
+454
+00:25:57,580 --> 00:26:00,680
+provide some deeper thinking,
+a nuance learning around the
+
+455
+00:26:00,680 --> 00:26:03,640
+notion of angular momentum, I
+want to be able to make sure
+
+456
+00:26:03,640 --> 00:26:06,520
+the students can get efficiently
+to that section,
+
+457
+00:26:06,520 --> 00:26:09,660
+because you know, it might occur
+all over the place in
+
+458
+00:26:09,660 --> 00:26:12,820
+the course of a lecture or in
+the course of a 14-week
+
+459
+00:26:12,820 --> 00:26:16,500
+semester, where this topic might
+be treated in different
+
+460
+00:26:16,500 --> 00:26:19,370
+ways, and you want students to
+go very, very efficiently to
+
+461
+00:26:19,370 --> 00:26:21,140
+those segments and get there.
+
+462
+00:26:21,140 --> 00:26:24,440
+So the Spoken Lecture Browser
+provides very, very -- as it's
+
+463
+00:26:24,440 --> 00:26:30,650
+named -- browser-based access,
+and, but it uses, like I said,
+
+464
+00:26:30,650 --> 00:26:32,210
+natural language recognition
+to get there.
+
+465
+00:26:32,210 --> 00:26:34,130
+This is a very exciting project,
+and what we are
+
+466
+00:26:34,130 --> 00:26:38,145
+trying to do is see how this
+can be really leveraged not
+
+467
+00:26:38,145 --> 00:26:42,570
+only for video content across
+our courses, Andrew and team
+
+468
+00:26:42,570 --> 00:26:45,650
+are working on a couple of
+introductory physics courses.
+
+469
+00:26:45,650 --> 00:26:49,390
+Some off you might have seen
+this dramatic video lecture,
+
+470
+00:26:49,390 --> 00:26:51,330
+Walter Lewin's lecture
+on OpenCourseWare.
+
+471
+00:26:51,330 --> 00:26:53,240
+He has been featured
+on everything
+
+472
+00:26:53,240 --> 00:26:56,080
+from Jay Leno to NPR.
+
+473
+00:26:56,080 --> 00:27:02,190
+But, you know, you can get to
+segments of Lewin's lecture,
+
+474
+00:27:02,190 --> 00:27:05,390
+and they're working on that,
+because a current instructor,
+
+475
+00:27:05,390 --> 00:27:09,140
+Peter Dourmashkin, wants his
+students to go to particular
+
+476
+00:27:09,140 --> 00:27:11,880
+concepts, you know, advanced
+learning and particular
+
+477
+00:27:11,880 --> 00:27:17,590
+things, and the spoken lecture,
+you know, at OEIT, we
+
+478
+00:27:17,590 --> 00:27:20,970
+are stabilizing the research
+work in the project and
+
+479
+00:27:20,970 --> 00:27:22,730
+enabling that kind
+of research.
+
+480
+00:27:22,730 --> 00:27:27,300
+Our goal is to take it to open
+video content that might be
+
+481
+00:27:27,300 --> 00:27:30,140
+available across, you know, from
+different institutions,
+
+482
+00:27:30,140 --> 00:27:32,850
+at least as a start for all of
+the universities that are in
+
+483
+00:27:32,850 --> 00:27:34,230
+the OpenCourseWare consortium.
+
+484
+00:27:34,230 --> 00:27:36,960
+So that's, you can see that
+kind of enablement, again,
+
+485
+00:27:36,960 --> 00:27:41,100
+extending that to, this is a
+wonderful project, Shakespeare
+
+486
+00:27:41,100 --> 00:27:45,190
+in Asia, which has got various
+renderings of Shakespeare
+
+487
+00:27:45,190 --> 00:27:48,730
+presentations, video
+presentations, and the idea is
+
+488
+00:27:48,730 --> 00:27:50,510
+to do the same spoken
+lecture browser kind
+
+489
+00:27:50,510 --> 00:27:52,560
+of access to this.
+
+490
+00:27:52,560 --> 00:27:54,360
+Those of you who thought
+Shakespeare was deal, he is
+
+491
+00:27:54,360 --> 00:27:58,830
+just living under an assumed
+name, and so, but there's --
+
+492
+00:27:58,830 --> 00:28:03,990
+but this is yet another -- and
+I'm showing you these to, let
+
+493
+00:28:03,990 --> 00:28:06,110
+me give you the sub-text
+over here.
+
+494
+00:28:06,110 --> 00:28:12,700
+The idea of these is, see, that
+in order to realize the
+
+495
+00:28:12,700 --> 00:28:15,320
+next stage of educational
+transformation through open
+
+496
+00:28:15,320 --> 00:28:20,100
+resources, we not only need
+the surround off active
+
+497
+00:28:20,100 --> 00:28:24,060
+experience, we also need the
+means to go collectively
+
+498
+00:28:24,060 --> 00:28:28,550
+harvest in useful educational
+content very, very easily.
+
+499
+00:28:28,550 --> 00:28:31,640
+We want to reduce the barriers
+to get to them, and I keep
+
+500
+00:28:31,640 --> 00:28:34,370
+using the word productively,
+because you just don't want to
+
+501
+00:28:34,370 --> 00:28:38,535
+see and not touch, you want to
+see, bring, use, and use in
+
+502
+00:28:38,535 --> 00:28:40,030
+the fashion that you want.
+
+503
+00:28:40,030 --> 00:28:42,130
+So, how do you productively
+combine them?
+
+504
+00:28:42,130 --> 00:28:44,110
+Now this was a wonderful
+project which sort of
+
+505
+00:28:44,110 --> 00:28:47,190
+demonstrates that, and it was
+built on OKI's open service
+
+506
+00:28:47,190 --> 00:28:51,200
+interface definition, the
+service interfaces.
+
+507
+00:28:51,200 --> 00:28:54,210
+And this was, Shigeru Miyagawa,
+who is the professor
+
+508
+00:28:54,210 --> 00:29:05,220
+in Linguistics, actually over
+here, and he and John Dower,
+
+509
+00:29:05,220 --> 00:29:09,220
+who is a prize winning, Pulitzer
+winning historian,
+
+510
+00:29:09,220 --> 00:29:11,690
+they created this program called
+Visualizing Cultures,
+
+511
+00:29:11,690 --> 00:29:13,980
+by the way, this is an
+OpenCourseWare also.
+
+512
+00:29:13,980 --> 00:29:19,200
+And it goes, the intent was to
+teach history and culture,
+
+513
+00:29:19,200 --> 00:29:21,070
+expose students to Japanese
+history and
+
+514
+00:29:21,070 --> 00:29:22,830
+culture, through images.
+
+515
+00:29:22,830 --> 00:29:25,790
+Images that are available in a
+variety of repositories, some
+
+516
+00:29:25,790 --> 00:29:28,790
+in Japan, some of the Museum
+of Fine Arts over here.
+
+517
+00:29:28,790 --> 00:29:32,150
+And the idea was to go, be
+able to get these through
+
+518
+00:29:32,150 --> 00:29:35,190
+different kinds of
+applications.
+
+519
+00:29:35,190 --> 00:29:37,350
+And you know, these images
+are fantastic.
+
+520
+00:29:37,350 --> 00:29:40,720
+For instance, some of them,
+which have to do with
+
+521
+00:29:40,720 --> 00:29:44,820
+Commodore Perry's trips to
+Japan, and if you look at them
+
+522
+00:29:44,820 --> 00:29:47,560
+there's a whole city called
+Black Ships and Samurai, now
+
+523
+00:29:47,560 --> 00:29:48,660
+that you see on top.
+
+524
+00:29:48,660 --> 00:29:51,600
+And it's very interesting,
+because depending on the
+
+525
+00:29:51,600 --> 00:29:56,080
+relationship that the US had
+with Japan, people in Japan
+
+526
+00:29:56,080 --> 00:29:57,890
+would depict Commodore Perry.
+
+527
+00:29:57,890 --> 00:30:00,780
+So sometimes you see him
+characterized as a nice,
+
+528
+00:30:00,780 --> 00:30:02,860
+beaming, benevolent fellow,
+and sometimes you see him
+
+529
+00:30:02,860 --> 00:30:05,450
+drawn like an ogre.
+
+530
+00:30:05,450 --> 00:30:10,130
+And, you know, it's reflective
+of the kinds of, the political
+
+531
+00:30:10,130 --> 00:30:13,140
+dynamics if you will,
+of that period.
+
+532
+00:30:13,140 --> 00:30:14,290
+But anyway, that's
+the content part.
+
+533
+00:30:14,290 --> 00:30:18,610
+The message here for me, from
+this slide, which has to do
+
+534
+00:30:18,610 --> 00:30:22,170
+with materials from Doc
+Edgerton, who was the creator
+
+535
+00:30:22,170 --> 00:30:25,250
+of strobe photography, who
+has, you know, wonderful
+
+536
+00:30:25,250 --> 00:30:26,730
+archive of materials.
+
+537
+00:30:26,730 --> 00:30:28,740
+It's to say that we want to be
+able to say there are good
+
+538
+00:30:28,740 --> 00:30:32,420
+qualities of resources, rich
+media resources out there, and
+
+539
+00:30:32,420 --> 00:30:35,390
+we want to be able to really
+lower the barrier to getting
+
+540
+00:30:35,390 --> 00:30:37,780
+to these, and getting to
+these through different
+
+541
+00:30:37,780 --> 00:30:39,300
+applications.
+
+542
+00:30:39,300 --> 00:30:41,430
+For instance, here you're
+seeing, and this is a
+
+543
+00:30:41,430 --> 00:30:43,890
+three-year old slide, four-year
+old slide, here you
+
+544
+00:30:43,890 --> 00:30:48,540
+are seeing those images that
+Shigeru was using for
+
+545
+00:30:48,540 --> 00:30:51,710
+visualizing cultures, got
+through Harvestrodes Hive.
+
+546
+00:30:51,710 --> 00:30:55,950
+Hive was a Java-based
+application.
+
+547
+00:30:55,950 --> 00:30:58,440
+We had to get to content
+from repositories.
+
+548
+00:30:58,440 --> 00:31:00,650
+You're seeing it accessed
+through our course management
+
+549
+00:31:00,650 --> 00:31:03,520
+system, through a search tool
+for the images in our course
+
+550
+00:31:03,520 --> 00:31:05,330
+management system
+on the right.
+
+551
+00:31:05,330 --> 00:31:08,330
+You're seeing it accessed
+through the visual
+
+552
+00:31:08,330 --> 00:31:11,120
+understanding editor, a
+concept tool the Tufts
+
+553
+00:31:11,120 --> 00:31:12,890
+University created.
+
+554
+00:31:12,890 --> 00:31:16,000
+So here the idea is that you
+can have these, you know,
+
+555
+00:31:16,000 --> 00:31:19,860
+wonderful depositories of rich
+content to do good things
+
+556
+00:31:19,860 --> 00:31:22,840
+educationally, but you want to
+bring them together, make them
+
+557
+00:31:22,840 --> 00:31:28,060
+accessible through OEIT
+of open or proprietary
+
+558
+00:31:28,060 --> 00:31:29,720
+applications.
+
+559
+00:31:29,720 --> 00:31:33,930
+And that's the kind of
+econological transformation
+
+560
+00:31:33,930 --> 00:31:36,860
+that we think will lead to the,
+at least I believe will
+
+561
+00:31:36,860 --> 00:31:38,810
+lead to this Metaversity
+vision.
+
+562
+00:31:38,810 --> 00:31:43,010
+So, and you created, you know,
+you, so, the message that we
+
+563
+00:31:43,010 --> 00:31:45,810
+hear, it's not just about all
+the resources that are being
+
+564
+00:31:45,810 --> 00:31:48,560
+created openly, but the
+technological enablements, and
+
+565
+00:31:48,560 --> 00:31:53,100
+then as I will point out in
+a bit, the organizational
+
+566
+00:31:53,100 --> 00:31:56,000
+enablements that will
+allow us to approach
+
+567
+00:31:56,000 --> 00:31:57,680
+that kind of vision.
+
+568
+00:31:57,680 --> 00:32:01,020
+So, a lot of the stuff that I
+showed you was about deep
+
+569
+00:32:01,020 --> 00:32:03,320
+learning, subjects and stuff.
+
+570
+00:32:03,320 --> 00:32:06,170
+The message of open and
+transformation is
+
+571
+00:32:06,170 --> 00:32:07,330
+much bigger than that.
+
+572
+00:32:07,330 --> 00:32:11,870
+This is also, this is not just
+about innovation at a
+
+573
+00:32:11,870 --> 00:32:15,580
+micro-level, and significant
+as it is, it's not about
+
+574
+00:32:15,580 --> 00:32:20,010
+changing courses or even
+changing universities, it is
+
+575
+00:32:20,010 --> 00:32:22,370
+also about national crusades.
+
+576
+00:32:22,370 --> 00:32:27,120
+Scott mention that I had the
+opportunity to serve as an
+
+577
+00:32:27,120 --> 00:32:29,410
+advisor to India's National
+Knowledge Commission.
+
+578
+00:32:29,410 --> 00:32:31,660
+India, as most of you know, is
+a country in a hurry, you
+
+579
+00:32:31,660 --> 00:32:36,240
+know, to play in the national,
+in the knowledge economy.
+
+580
+00:32:36,240 --> 00:32:39,480
+And some years ago, you know,
+the National Knowledge
+
+581
+00:32:39,480 --> 00:32:42,190
+Commission was formed by the
+Prime Minister to say, how can
+
+582
+00:32:42,190 --> 00:32:46,430
+we really scale excellence,
+provide quality it the scales.
+
+583
+00:32:46,430 --> 00:32:50,790
+To meet the needs off this
+explosive economy?
+
+584
+00:32:50,790 --> 00:32:53,540
+We need knowledge workers
+to build roads, to build
+
+585
+00:32:53,540 --> 00:32:55,940
+hospitals, to build up,
+you know, engineering
+
+586
+00:32:55,940 --> 00:32:57,040
+institutions.
+
+587
+00:32:57,040 --> 00:33:00,970
+We need doctors, and how can we
+provide quality education
+
+588
+00:33:00,970 --> 00:33:04,510
+at scale, and knowing what I
+know about the numbers, you
+
+589
+00:33:04,510 --> 00:33:07,110
+cannot do it in the
+traditional way.
+
+590
+00:33:07,110 --> 00:33:09,520
+Not, you can't do it in the
+traditional way you can't
+
+591
+00:33:09,520 --> 00:33:13,100
+build schools I mean I could
+give you statistics, 55
+
+592
+00:33:13,100 --> 00:33:14,890
+million kids who come
+out of primary
+
+593
+00:33:14,890 --> 00:33:16,830
+education, no place to go.
+
+594
+00:33:16,830 --> 00:33:19,530
+Even if you built a school a
+week, it would not be able to
+
+595
+00:33:19,530 --> 00:33:20,570
+meet the demand.
+
+596
+00:33:20,570 --> 00:33:22,910
+There are about 11 institutions
+in the Institute
+
+597
+00:33:22,910 --> 00:33:26,650
+of Technology you could keep,
+and they are being added on.
+
+598
+00:33:26,650 --> 00:33:31,860
+The message is that what the
+open education movement offers
+
+599
+00:33:31,860 --> 00:33:37,750
+is a way of going and being able
+to provide that kind of
+
+600
+00:33:37,750 --> 00:33:41,840
+quality education at
+scale efficiently.
+
+601
+00:33:41,840 --> 00:33:44,770
+And, therefore, a whole set of
+recommendations were made
+
+602
+00:33:44,770 --> 00:33:47,210
+which are being acted upon,
+which have been accepted.
+
+603
+00:33:47,210 --> 00:33:50,580
+They are part of the Planning
+Commission team entirely based
+
+604
+00:33:50,580 --> 00:33:57,210
+on open education resources,
+and again, the model over
+
+605
+00:33:57,210 --> 00:34:01,390
+here, and this is a real, a very
+short-time caricature of
+
+606
+00:34:01,390 --> 00:34:04,180
+the recommendations that
+I'm presenting to you.
+
+607
+00:34:04,180 --> 00:34:06,580
+Essentially, to say that, you
+know, you can have distributed
+
+608
+00:34:06,580 --> 00:34:09,300
+depositories of fantastic
+content.
+
+609
+00:34:09,300 --> 00:34:12,200
+You can have a very good
+technical substrate, which
+
+610
+00:34:12,200 --> 00:34:15,580
+allows and good applications,
+which allows people to harvest
+
+611
+00:34:15,580 --> 00:34:21,810
+these, and be able to deliver
+education to meet the needs of
+
+612
+00:34:21,810 --> 00:34:23,100
+various sectors.
+
+613
+00:34:23,100 --> 00:34:29,000
+Again, in a scalable and
+efficient fashion.
+
+614
+00:34:29,000 --> 00:34:33,560
+And actually, this particular
+slide is because in order to
+
+615
+00:34:33,560 --> 00:34:36,540
+show that this is not just
+a pipe dream, we actually
+
+616
+00:34:36,540 --> 00:34:39,030
+started building small
+applications to show it.
+
+617
+00:34:39,030 --> 00:34:44,350
+I saw Jeff had just walked in,
+Jeff Merrimen, he and I and
+
+618
+00:34:44,350 --> 00:34:47,830
+some off you might know Stuart
+Sim, we actually we're working
+
+619
+00:34:47,830 --> 00:34:51,830
+with this group called IUCE,
+there's an Indo-U.S.
+
+620
+00:34:51,830 --> 00:34:54,630
+collaboration on engineering
+education, and the model was
+
+621
+00:34:54,630 --> 00:35:00,610
+to see how faculty over here
+could, and there, could go get
+
+622
+00:35:00,610 --> 00:35:03,580
+content from radius open
+initiatives from MIT's
+
+623
+00:35:03,580 --> 00:35:05,340
+OpenCourseWare.
+
+624
+00:35:05,340 --> 00:35:08,490
+India has put a lot of its
+engineering content, there's
+
+625
+00:35:08,490 --> 00:35:12,510
+an initiative called NPTEL,
+The National Program on
+
+626
+00:35:12,510 --> 00:35:19,450
+Technology Enabled Learning,
+which has put out about 120 --
+
+627
+00:35:19,450 --> 00:35:20,630
+I mean it's significant.
+
+628
+00:35:20,630 --> 00:35:23,540
+All the engineering courses
+available through You Tube,
+
+629
+00:35:23,540 --> 00:35:27,860
+and so what we worked on
+was trying to develop a
+
+630
+00:35:27,860 --> 00:35:32,290
+demonstration which would allow
+faculty to get content
+
+631
+00:35:32,290 --> 00:35:36,510
+from OCW, from NPTEL from Rice
+University's connections, and
+
+632
+00:35:36,510 --> 00:35:39,290
+create courses along with the
+collaborative surround, you
+
+633
+00:35:39,290 --> 00:35:41,270
+know we keep it surround,
+so that they actually
+
+634
+00:35:41,270 --> 00:35:43,100
+collaborate, construct
+the courses
+
+635
+00:35:43,100 --> 00:35:47,050
+from various resources.
+
+636
+00:35:47,050 --> 00:35:53,900
+So that's the value
+proposition.
+
+637
+00:35:53,900 --> 00:35:56,540
+If you look at what I have, when
+I talk about Metaversity
+
+638
+00:35:56,540 --> 00:36:02,110
+two, the elements of the open
+movement that it really draws
+
+639
+00:36:02,110 --> 00:36:09,760
+upon is aid that you can have
+large, sort of unprecedented
+
+640
+00:36:09,760 --> 00:36:14,740
+volume of quality resources,
+which are available anywhere,
+
+641
+00:36:14,740 --> 00:36:17,190
+anytime, you know, through
+the kinds of
+
+642
+00:36:17,190 --> 00:36:19,500
+enablements I described.
+
+643
+00:36:19,500 --> 00:36:23,050
+What's more, because of the
+way they are constructed,
+
+644
+00:36:23,050 --> 00:36:26,485
+because, and the kinds of
+information that surrounds
+
+645
+00:36:26,485 --> 00:36:29,260
+them, they can actually
+be localized.
+
+646
+00:36:29,260 --> 00:36:33,570
+And you know, I personally am a
+very big believer, you know,
+
+647
+00:36:33,570 --> 00:36:37,840
+we keep talking about education
+being a cottage
+
+648
+00:36:37,840 --> 00:36:39,800
+industry, as if it was
+something bad.
+
+649
+00:36:39,800 --> 00:36:42,510
+I actually believe that it
+derives its value from being a
+
+650
+00:36:42,510 --> 00:36:45,760
+cottage industry, and part of
+the challenge that we face is
+
+651
+00:36:45,760 --> 00:36:48,340
+how can we really make that
+cottage industry thrive
+
+652
+00:36:48,340 --> 00:36:50,810
+efficiency?
+
+653
+00:36:50,810 --> 00:36:53,500
+And when I say cottage industry,
+it means that a lot
+
+654
+00:36:53,500 --> 00:37:01,020
+of value is derived locally, and
+we need to -- the idea of,
+
+655
+00:37:01,020 --> 00:37:02,980
+one of the things that the
+open education resource
+
+656
+00:37:02,980 --> 00:37:07,200
+movement offers is that you can
+have large pools of shared
+
+657
+00:37:07,200 --> 00:37:11,870
+resources, without militating
+against the localization that
+
+658
+00:37:11,870 --> 00:37:16,380
+is very important for good
+education to happen.
+
+659
+00:37:16,380 --> 00:37:19,770
+It provides alternatives, you
+know, deeper learning, and I
+
+660
+00:37:19,770 --> 00:37:21,800
+will some examples.
+
+661
+00:37:21,800 --> 00:37:25,270
+One of the things that it does
+allow, and this is not in my
+
+662
+00:37:25,270 --> 00:37:27,800
+slides, but I will make
+a quick mention.
+
+663
+00:37:27,800 --> 00:37:30,510
+It does allow a lot
+of feedback.
+
+664
+00:37:30,510 --> 00:37:33,640
+When we talk about educational
+transformation, it's not just
+
+665
+00:37:33,640 --> 00:37:38,100
+about access and good tools,
+but what is the generated
+
+666
+00:37:38,100 --> 00:37:40,440
+mechanism that you
+have in order to
+
+667
+00:37:40,440 --> 00:37:42,330
+improve on what you do?
+
+668
+00:37:42,330 --> 00:37:46,030
+Now, I remember when
+OpenCourseWare was launched,
+
+669
+00:37:46,030 --> 00:37:49,740
+Shigeru, whom I refer to, now
+it's visualizing cultures, he
+
+670
+00:37:49,740 --> 00:37:53,000
+had a wonderful statement out
+there on our website, the OCW
+
+671
+00:37:53,000 --> 00:37:56,960
+websites, which said that, you
+know, this is about we, as
+
+672
+00:37:56,960 --> 00:37:59,640
+educators, we know how to share
+our research, but we
+
+673
+00:37:59,640 --> 00:38:03,820
+don't know how to share our
+pedagogy for critical review.
+
+674
+00:38:03,820 --> 00:38:07,170
+Now, if you think about it for
+a second, what you really do
+
+675
+00:38:07,170 --> 00:38:09,290
+through OpenCourseWare
+is you say, look,
+
+676
+00:38:09,290 --> 00:38:10,650
+this is how we teach.
+
+677
+00:38:10,650 --> 00:38:11,830
+Have at it.
+
+678
+00:38:11,830 --> 00:38:13,430
+Tell us what you can do.
+
+679
+00:38:13,430 --> 00:38:19,450
+So that's, and if you can have
+the means to incorporate that
+
+680
+00:38:19,450 --> 00:38:23,310
+feedback that people might give
+you into continuously
+
+681
+00:38:23,310 --> 00:38:26,140
+improving your courses, good
+things can happen.
+
+682
+00:38:26,140 --> 00:38:28,550
+And there's a very good
+demonstration of this.
+
+683
+00:38:28,550 --> 00:38:31,230
+Carnegie Mellon has set up this
+thing called, they have
+
+684
+00:38:31,230 --> 00:38:35,610
+this initiative called the Open
+Learning Initiative, OLI,
+
+685
+00:38:35,610 --> 00:38:39,440
+and there's a statistics
+course where they have
+
+686
+00:38:39,440 --> 00:38:42,110
+created, which allows the
+community to give feedback,
+
+687
+00:38:42,110 --> 00:38:45,520
+and then that's incorporated
+into the into the course
+
+688
+00:38:45,520 --> 00:38:49,900
+segments themselves, and what
+they've found was that they
+
+689
+00:38:49,900 --> 00:38:54,140
+had a learning gain of 50% in
+the delivery of the statistics
+
+690
+00:38:54,140 --> 00:38:55,790
+course, and I'll tell
+you what that means.
+
+691
+00:38:55,790 --> 00:38:58,480
+What it means is that coverage,
+which they would
+
+692
+00:38:58,480 --> 00:39:03,290
+have had, and without
+sacrificing quality, the time
+
+693
+00:39:03,290 --> 00:39:06,510
+to deliver that course was, for
+the same learning games,
+
+694
+00:39:06,510 --> 00:39:08,790
+was decreased by 50%.
+
+695
+00:39:08,790 --> 00:39:10,270
+Now that is significant.
+
+696
+00:39:10,270 --> 00:39:13,860
+That is transubmitive, and we
+are not, and this is well
+
+697
+00:39:13,860 --> 00:39:14,410
+written about.
+
+698
+00:39:14,410 --> 00:39:15,870
+In fact, Candice [? Till ?]
+
+699
+00:39:15,870 --> 00:39:18,120
+still has written about this
+in the book, that we,
+
+700
+00:39:18,120 --> 00:39:20,430
+according to, that Scott
+was referring to.
+
+701
+00:39:20,430 --> 00:39:24,385
+So there's this dimension of
+collected improvement and
+
+702
+00:39:24,385 --> 00:39:27,990
+feedback, both at the micro
+level and at the macro level
+
+703
+00:39:27,990 --> 00:39:30,350
+that is really, really important
+when you think about
+
+704
+00:39:30,350 --> 00:39:34,840
+transformation that's afforded
+by open education.
+
+705
+00:39:34,840 --> 00:39:36,920
+So all that's fine.
+
+706
+00:39:36,920 --> 00:39:39,140
+When I think about possibility
+as a signal, there are two
+
+707
+00:39:39,140 --> 00:39:42,790
+dimensions that are really
+important that we all talk
+
+708
+00:39:42,790 --> 00:39:45,120
+about, which are enabled
+by this.
+
+709
+00:39:45,120 --> 00:39:47,890
+One which I loosely call
+blended learning
+
+710
+00:39:47,890 --> 00:39:49,160
+opportunities.
+
+711
+00:39:49,160 --> 00:39:53,240
+And what openness allows is
+really, and this again speaks
+
+712
+00:39:53,240 --> 00:39:56,800
+to the context of setting
+statements that Scott was
+
+713
+00:39:56,800 --> 00:40:01,120
+making allows us to really
+look at possibilities for
+
+714
+00:40:01,120 --> 00:40:04,320
+intelligently combining the
+physical and the virtual.
+
+715
+00:40:04,320 --> 00:40:07,200
+How we might, you know, the
+highlight example for this,
+
+716
+00:40:07,200 --> 00:40:13,580
+how might we combine what we
+know as good practices and
+
+717
+00:40:13,580 --> 00:40:16,130
+situated learning, the kinds
+of authentic learning
+
+718
+00:40:16,130 --> 00:40:18,220
+experiences that we provide
+in this situation.
+
+719
+00:40:18,220 --> 00:40:21,370
+The labs, with what
+might be digitally
+
+720
+00:40:21,370 --> 00:40:23,000
+available, online available.
+
+721
+00:40:23,000 --> 00:40:28,090
+So it purely provides
+opportunities to mix and melt
+
+722
+00:40:28,090 --> 00:40:32,210
+the best of good worlds, and
+to be able to localize it.
+
+723
+00:40:32,210 --> 00:40:34,990
+And this is being done.
+
+724
+00:40:34,990 --> 00:40:41,150
+This is not something that came
+out of some lazy exercise
+
+725
+00:40:41,150 --> 00:40:45,470
+in -- what shall I say, on
+controlled substances.
+
+726
+00:40:45,470 --> 00:40:49,810
+This is the kind of stuff that
+has been practiced, developed,
+
+727
+00:40:49,810 --> 00:40:53,130
+and demonstrated you know,
+through things like iLabs that
+
+728
+00:40:53,130 --> 00:40:57,180
+I'm talking about, and we have
+to start looking at these for
+
+729
+00:40:57,180 --> 00:40:58,340
+transformation.
+
+730
+00:40:58,340 --> 00:41:01,230
+You know, the combining the
+formal and the non-formal
+
+731
+00:41:01,230 --> 00:41:04,080
+here, for instance, we are
+thinking, how can we use
+
+732
+00:41:04,080 --> 00:41:09,030
+co-curricular experiences and
+combine them with, you know,
+
+733
+00:41:09,030 --> 00:41:11,460
+as good substitutes for
+authentic learning
+
+734
+00:41:11,460 --> 00:41:12,480
+experiences.
+
+735
+00:41:12,480 --> 00:41:17,740
+These are the enablements of
+open, given the very generous
+
+736
+00:41:17,740 --> 00:41:20,940
+definition of open that I
+provided here, you know, about
+
+737
+00:41:20,940 --> 00:41:24,170
+open technology, open content,
+and open knowledge.
+
+738
+00:41:24,170 --> 00:41:30,100
+The other really value element,
+value vision element
+
+739
+00:41:30,100 --> 00:41:32,730
+for me is boundary-less
+education.
+
+740
+00:41:32,730 --> 00:41:35,980
+And again, this is not about
+traditional boundaries,
+
+741
+00:41:35,980 --> 00:41:39,140
+geopolitical boundaries, some of
+which is true, like in the
+
+742
+00:41:39,140 --> 00:41:42,860
+IUCEE example I gave, but
+even boundaries between
+
+743
+00:41:42,860 --> 00:41:43,750
+disciplines.
+
+744
+00:41:43,750 --> 00:41:46,660
+If you go to the OpenCourseWare
+site, you will
+
+745
+00:41:46,660 --> 00:41:51,450
+see some new programs that have
+been launched for energy
+
+746
+00:41:51,450 --> 00:41:53,450
+studies, right?
+
+747
+00:41:53,450 --> 00:41:57,530
+And these are being possible,
+made possible, some of these
+
+748
+00:41:57,530 --> 00:42:00,410
+boundaries are diminishing our
+ability to leverage, content
+
+749
+00:42:00,410 --> 00:42:03,910
+is happening, because the
+substance of the component
+
+750
+00:42:03,910 --> 00:42:06,570
+courses are becoming visible,
+and people are being able to
+
+751
+00:42:06,570 --> 00:42:09,570
+see much more finely where there
+might be substitutions,
+
+752
+00:42:09,570 --> 00:42:12,020
+where there might be
+opportunities to have
+
+753
+00:42:12,020 --> 00:42:17,080
+compounds of these courses to
+lead to new programs that
+
+754
+00:42:17,080 --> 00:42:19,600
+transcend disciplinary
+boundaries or department
+
+755
+00:42:19,600 --> 00:42:21,220
+boundaries.
+
+756
+00:42:21,220 --> 00:42:24,110
+I could give you other examples
+with there is
+
+757
+00:42:24,110 --> 00:42:27,380
+boundary-less-ness being
+experienced where the boundary
+
+758
+00:42:27,380 --> 00:42:32,370
+between research learnings and
+the lay person is being
+
+759
+00:42:32,370 --> 00:42:33,480
+diminished.
+
+760
+00:42:33,480 --> 00:42:36,000
+Neeru Paharia, she's is of the
+Graduate Business School over
+
+761
+00:42:36,000 --> 00:42:37,590
+here at Harvard.
+
+762
+00:42:37,590 --> 00:42:42,940
+She used to be Director of
+Creative Commons, so she has
+
+763
+00:42:42,940 --> 00:42:47,240
+worked on something called
+Acawiki, A C A W I K I, where
+
+764
+00:42:47,240 --> 00:42:50,870
+actually people go in and
+provide sense-making documents
+
+765
+00:42:50,870 --> 00:42:55,710
+for the lay people, you and I,
+who fund research, to have, to
+
+766
+00:42:55,710 --> 00:42:59,770
+understand research, again, to
+take away the divide between,
+
+767
+00:42:59,770 --> 00:43:03,610
+to diminish the divide between
+research and lay people.
+
+768
+00:43:03,610 --> 00:43:06,990
+So there's a lot of
+boundary-less-ness that can
+
+769
+00:43:06,990 --> 00:43:11,860
+being enabled through
+openness.
+
+770
+00:43:11,860 --> 00:43:16,500
+So I'm going to start, this is
+my, sort of getting to my
+
+771
+00:43:16,500 --> 00:43:18,980
+closing statements over here.
+
+772
+00:43:18,980 --> 00:43:21,290
+We have this movement, and you
+say, well, you know, here's
+
+773
+00:43:21,290 --> 00:43:23,730
+this guy, he's talking about
+all these wonderful
+
+774
+00:43:23,730 --> 00:43:27,240
+possibilities, and like I said,
+you know, this is not a
+
+775
+00:43:27,240 --> 00:43:28,210
+pipe dream.
+
+776
+00:43:28,210 --> 00:43:35,060
+How do we interpret pipe, b but
+it's born out of really
+
+777
+00:43:35,060 --> 00:43:39,680
+looking at some markers, some of
+the significant influences
+
+778
+00:43:39,680 --> 00:43:42,360
+that are around us, that
+give me comfort,
+
+779
+00:43:42,360 --> 00:43:43,690
+give me solid hope.
+
+780
+00:43:43,690 --> 00:43:48,030
+You know, and some of it is
+because many of us in this
+
+781
+00:43:48,030 --> 00:43:52,210
+room are invested and engaged
+in these initiatives.
+
+782
+00:43:52,210 --> 00:43:55,950
+So one significant category of
+significant influence I've
+
+783
+00:43:55,950 --> 00:43:58,750
+already talked a lot about, is
+the fact that there's a lot of
+
+784
+00:43:58,750 --> 00:44:00,800
+open content, there is
+good open technology
+
+785
+00:44:00,800 --> 00:44:03,390
+initiatives going on.
+
+786
+00:44:03,390 --> 00:44:08,470
+Good design, and I mean this
+both in terms of organization
+
+787
+00:44:08,470 --> 00:44:10,190
+and technology.
+
+788
+00:44:10,190 --> 00:44:13,700
+I particularly like to talk
+about my pet initiative, the
+
+789
+00:44:13,700 --> 00:44:17,930
+open knowledge initiative, which
+allows this kind of, you
+
+790
+00:44:17,930 --> 00:44:21,730
+know, Scott referred to it as
+disaggregation, which allows
+
+791
+00:44:21,730 --> 00:44:23,835
+different players, different
+qualities, different
+
+792
+00:44:23,835 --> 00:44:24,900
+strengths to play.
+
+793
+00:44:24,900 --> 00:44:28,260
+So, there are design enablers,
+and design is a very important
+
+794
+00:44:28,260 --> 00:44:30,030
+consideration.
+
+795
+00:44:30,030 --> 00:44:32,340
+But there are legal enablers,
+creative commons, for
+
+796
+00:44:32,340 --> 00:44:39,510
+instance, which, you know, so
+which give me hope that this
+
+797
+00:44:39,510 --> 00:44:43,420
+vision of Metaversity
+II is, indeed,
+
+798
+00:44:43,420 --> 00:44:46,490
+realizable and can be reaffied.
+
+799
+00:44:46,490 --> 00:44:49,550
+But there are two dimensions
+which I have not touch upon
+
+800
+00:44:49,550 --> 00:44:50,480
+which I'll quickly tell you.
+
+801
+00:44:50,480 --> 00:44:53,740
+One is institutional
+commitment.
+
+802
+00:44:53,740 --> 00:44:57,670
+And some of the institutional
+commitment is expressed
+
+803
+00:44:57,670 --> 00:44:59,970
+through communities that
+are being created.
+
+804
+00:44:59,970 --> 00:45:03,820
+The Sakai community, consortia
+around iLabs
+
+805
+00:45:03,820 --> 00:45:05,050
+that are being built.
+
+806
+00:45:05,050 --> 00:45:06,960
+The groups that meet
+around OKI.
+
+807
+00:45:06,960 --> 00:45:10,580
+So these are expressions of
+institutional commitment
+
+808
+00:45:10,580 --> 00:45:14,970
+around things open that are
+forming, which so which are
+
+809
+00:45:14,970 --> 00:45:18,560
+really becoming the building
+blocks for this
+
+810
+00:45:18,560 --> 00:45:20,000
+open education movement.
+
+811
+00:45:20,000 --> 00:45:22,580
+There is another kind, which I
+really pointed to, and I had a
+
+812
+00:45:22,580 --> 00:45:26,270
+bunch of slides, and I think
+they got finished by today's
+
+813
+00:45:26,270 --> 00:45:29,220
+web page from MIT that I showed
+you, which is a real
+
+814
+00:45:29,220 --> 00:45:31,050
+expression of MIT commitment.
+
+815
+00:45:31,050 --> 00:45:35,440
+The slides I was going to show
+you, which are really, have to
+
+816
+00:45:35,440 --> 00:45:40,140
+do with the fact that MIT
+expressed its initial, its
+
+817
+00:45:40,140 --> 00:45:43,510
+institutional commitment to
+OpenCourseWare through a lot a
+
+818
+00:45:43,510 --> 00:45:46,290
+strategic thinking that
+preceded the launch of
+
+819
+00:45:46,290 --> 00:45:49,850
+OpenCourseWare, it's current
+commitment to it, right?
+
+820
+00:45:49,850 --> 00:45:55,410
+And to openness, as expressed
+wonderfully by, you know, by
+
+821
+00:45:55,410 --> 00:45:56,930
+today's web page.
+
+822
+00:45:56,930 --> 00:45:59,400
+And there is a second dimension
+off this, there is
+
+823
+00:45:59,400 --> 00:46:03,700
+another aspect which is on the
+collectivity culture, and you
+
+824
+00:46:03,700 --> 00:46:06,320
+see that, you know, through
+the Wikis, the blogs, the
+
+825
+00:46:06,320 --> 00:46:10,590
+distributed culture, all the
+tools and artifacts of the
+
+826
+00:46:10,590 --> 00:46:14,610
+digital natives that Scott
+was talking about.
+
+827
+00:46:14,610 --> 00:46:17,010
+So very quickly, some things
+about MIT's institutional
+
+828
+00:46:17,010 --> 00:46:17,470
+commitments.
+
+829
+00:46:17,470 --> 00:46:20,550
+Like I said, OpenCourseWare
+was preceded by a lot of
+
+830
+00:46:20,550 --> 00:46:21,880
+strategic thinking.
+
+831
+00:46:21,880 --> 00:46:24,890
+You know, we had this Counsel
+on Education Technology, and
+
+832
+00:46:24,890 --> 00:46:27,580
+there was a particular strategic
+thrust around
+
+833
+00:46:27,580 --> 00:46:30,810
+bolstering the commons off
+the mind, you know.
+
+834
+00:46:30,810 --> 00:46:35,240
+Nice words chosen by Hal
+Abelson, who was, you know,
+
+835
+00:46:35,240 --> 00:46:41,660
+who was a leader in education
+technology over here at MIT.
+
+836
+00:46:41,660 --> 00:46:44,070
+And we had a lot of strategies
+around active learning, which
+
+837
+00:46:44,070 --> 00:46:47,970
+led to all kinds of initiatives
+like, you know,
+
+838
+00:46:47,970 --> 00:46:50,350
+TEAL and iLab and so on.
+
+839
+00:46:50,350 --> 00:46:54,580
+But the strategy around
+intellectual commons was what
+
+840
+00:46:54,580 --> 00:46:58,920
+was an expression of MIT's
+institutional commitment to
+
+841
+00:46:58,920 --> 00:46:59,740
+things open.
+
+842
+00:46:59,740 --> 00:47:04,480
+In fact, at that time, and these
+slides are dated, you
+
+843
+00:47:04,480 --> 00:47:10,170
+know, they're circa 2004, but
+these initiatives that were
+
+844
+00:47:10,170 --> 00:47:13,010
+launched were part of an
+institutional strategy and the
+
+845
+00:47:13,010 --> 00:47:15,560
+present MIT's commitment.
+
+846
+00:47:15,560 --> 00:47:22,720
+This base, which is a very, very
+big base, to the website
+
+847
+00:47:22,720 --> 00:47:26,310
+announcement that you saw about
+open access to research,
+
+848
+00:47:26,310 --> 00:47:29,170
+OKI that you've heard about,
+OpenCourseWare that I need not
+
+849
+00:47:29,170 --> 00:47:30,020
+speak about.
+
+850
+00:47:30,020 --> 00:47:33,260
+So, the institutional commitment
+was because it was
+
+851
+00:47:33,260 --> 00:47:38,890
+seen as important elements of
+educational strategy at MIT.
+
+852
+00:47:38,890 --> 00:47:44,480
+Now, the second thing about the
+collectivity culture, and
+
+853
+00:47:44,480 --> 00:47:48,250
+I'm going to close over here,
+the collectivity culture is
+
+854
+00:47:48,250 --> 00:47:54,500
+really expressed through, you
+know, through what we see.
+
+855
+00:47:54,500 --> 00:47:58,990
+And my boss, Dan Hastings,
+who's the Dean of
+
+856
+00:47:58,990 --> 00:48:01,670
+Undergraduate Education over
+here, has sent us these slides
+
+857
+00:48:01,670 --> 00:48:02,790
+sometime ago.
+
+858
+00:48:02,790 --> 00:48:06,070
+And for me, they tells the
+story about the digital
+
+859
+00:48:06,070 --> 00:48:10,820
+natives, and the collectivity
+culture, which I think gives
+
+860
+00:48:10,820 --> 00:48:14,830
+me comfort that -- well, on the
+one hand it makes it very
+
+861
+00:48:14,830 --> 00:48:19,380
+important that we continue to
+march on, on this road towards
+
+862
+00:48:19,380 --> 00:48:22,920
+Metaversity two, but at the same
+time it gives me comfort
+
+863
+00:48:22,920 --> 00:48:27,290
+that it's well on it's way
+to being reaffied.
+
+864
+00:48:27,290 --> 00:48:30,500
+So here are a set of slides
+that Dan gave that I think
+
+865
+00:48:30,500 --> 00:48:32,710
+speak to the collectivity
+culture.
+
+866
+00:48:32,710 --> 00:48:37,030
+This is by a group of students
+who fancy that they work at
+
+867
+00:48:37,030 --> 00:48:40,470
+NASA, and who also asking why
+aren't we working at NASA.
+
+868
+00:48:40,470 --> 00:48:41,650
+And they are --
+
+869
+00:48:41,650 --> 00:48:43,740
+I won't say much why
+it is being played,
+
+870
+00:48:43,740 --> 00:48:45,290
+they are from gen-Y.
+
+871
+00:48:45,290 --> 00:48:47,480
+Gen-Y is, by the way, it is
+characterized by everyone
+
+872
+00:48:47,480 --> 00:48:54,740
+between 14 and they say 40,
+but I'm going to say 50s.
+
+873
+00:48:54,740 --> 00:49:00,730
+So and well, these are the,
+and you're seeing
+
+874
+00:49:00,730 --> 00:49:03,440
+characteristics of
+this collectivity
+
+875
+00:49:03,440 --> 00:49:09,070
+generations, right?
+
+876
+00:49:09,070 --> 00:49:43,820
+So they're talking about why are
+-- it's self-explanatory.
+
+877
+00:49:43,820 --> 00:49:49,380
+Now, there are tools that they,
+and this speaks exactly
+
+878
+00:49:49,380 --> 00:50:07,400
+to your point, By the way,
+this is just a sort of
+
+879
+00:50:07,400 --> 00:50:09,950
+disclaimer slide to say that
+NASA actually uses a lot of
+
+880
+00:50:09,950 --> 00:50:10,620
+these tools.
+
+881
+00:50:10,620 --> 00:50:11,900
+I think I have said enough.
+
+882
+00:50:11,900 --> 00:50:13,600
+I hope I have given
+you a message.
+
+883
+00:50:13,600 --> 00:50:16,690
+Thank you very much, and
+I hope the message off
+
+884
+00:50:16,690 --> 00:50:18,020
+everything open is clear.
+
+885
+00:50:18,020 --> 00:50:21,260
+And I don't know, Scott, if
+you wanted to take any
+
+886
+00:50:21,260 --> 00:50:25,750
+questions, or if -- what have
+you noticed, but thanks a lot.
+
+887
+00:50:25,750 --> 00:50:36,913
