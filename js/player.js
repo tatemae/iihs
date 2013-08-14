@@ -74,23 +74,19 @@ SMPlayer.playListener = function(o) {
 };
 
 // reloading JW Player Flash
-SMPlayer.create = function(file, duration, opts) {
-  if (opts != null) {
-    if (typeof opts.width === undefined || opts.width === null) {
-      opts.width = SMPlayer.defaults.videoWidth;
-    }
-    if (typeof opts.height === undefined || opts.height === null) {
-      opts.height = SMPlayer.defaults.videoHeight;
-    }
-  } else {
-    opts = SMPlayer.defaults;
+SMPlayer.create = function(vid) {
+  if (vid.width === undefined || vid.width === null) {
+    vid.width = SMPlayer.defaults.videoWidth;
+  }
+  if (vid.height === undefined || vid.height === null) {
+    vid.height = SMPlayer.defaults.videoHeight;
   }
 
   var args = {
-    file: file,
-    width: opts.width,
-    height: opts.height,
-    image: opts.preview,
+    file: vid.video_src,
+    width: vid.width,
+    height: vid.height,
+    image: vid.preview_src,
     allowfullscreen: "true",
     allowscriptaccess: "always",
     flashplayer: "swf/jwplayer.flash.swf",
@@ -98,37 +94,16 @@ SMPlayer.create = function(file, duration, opts) {
   };
 
   jwplayer("player").setup(args);
-  // jwplayer("player").onReady(SMPlayer.ready);
   jwplayer("player").onTime(SMPlayer.positionListener);
   jwplayer("player").onPause(SMPlayer.pauseListener);
   jwplayer("player").onPlay(SMPlayer.playListener);
 };
 
-// takes a video identifier and returns the video data structure
-SMPlayer.getVideo = function(id) {
-  var vid = null;
-  for (var v in SMData.videos) {
-    if (SMData.videos[v].id == id) {
-      vid = SMData.videos[v];
-      break;
-    }
-  }
-  return vid;    
-};
-
-// takes a video identifier and sets up the browser transcript and
+// takes a video and sets up the browser transcript and
 // per-video options, based on associated metadata
-SMPlayer.setup = function(id) {
-  var vid = SMPlayer.getVideo(id);
-  if (vid != null) {
-    SMPlayer.create(
-      vid.video,
-      vid.duration,
-      {
-        "width": vid.width,
-        "height": vid.height,
-        "preview": vid.preview
-      });
+SMPlayer.setup = function(vid) {
+  if (vid !== null) {
+    SMPlayer.create(vid);
     $('#player-speaker').text(vid.speaker);
     var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
     var def = vid.defaultLocale;
@@ -170,7 +145,7 @@ SMPlayer.loadAudio = function(url) {
 
 // display an error in the same vein as the browser
 SMPlayer.error = function(msg) {
-  $.fn.ceebox.popup('<div class="error"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a><p>' + msg + '</p></div>', { "modal": true, "html": true, "htmlGallery": false, "borderColor": '#f00', "width": 400, "height": 100});
+  $.fn.ceebox.popup('<div class="error"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a><p>' + msg + '</p></div>', { "modal": true, "html": true, "htmlGallery": false, "borderColor": '#f00', "width": 400, "height": 100, onload: function() { $('#cee_closeBtn').on('click', SMPlayer.onClose); }});
 };
 
 // unnecessary, but keep for now as an exercise in searching the whole
@@ -223,11 +198,11 @@ SMPlayer.doSearch = function(query) {
 };
 
 // set up the browser when launched
-SMPlayer.onOpen = function(id) {
+SMPlayer.onOpen = function(vid) {
   $('#cee_title').height($('#cee_title h2').height());
   $('#cee_box').height($('#cee_box').height() + $('#cee_title h2').height() - 20);
   $('#player-frame').empty();
-  SMPlayer.setup(id);
+  SMPlayer.setup(vid);
   $('#search').on('focus', function() {
     if ($('#search').val() == "Search transcript") {
       $('#search').val('');
@@ -265,7 +240,9 @@ SMPlayer.onOpen = function(id) {
 SMPlayer.onClose = function() {
   $('#player-frame').html($('#player-live-wrapper').clone().html());
   $.fn.ceebox.closebox(null, function() {
-    jwplayer("player").remove();
+    if (jwplayer("player").getState()) {
+      jwplayer("player").remove();
+    }
     $('#transcript-locale-selector').empty();
     $('#transcript').empty();
     $('#player-speaker').empty();
@@ -307,11 +284,21 @@ SMPlayer.init = function(opts) {
     opts.width = SMPlayer.defaults.horizontalWidth;
     opts.height = SMPlayer.defaults.horizontalHeight;
   }
-  SMPlayer.create(null, 0);
   $('.video').on('click', function(e) {
     e.preventDefault();
-    var clicked = this;
-    var vid = SMPlayer.getVideo($(clicked).attr('rel'));
+    var vidinfo = $(this).closest(".vidinfo");
+    var vid = {
+      'id': vidinfo.data('id'),
+      'title': vidinfo.data('title'),
+      'speaker': vidinfo.data('speaker'),
+      'video_src': vidinfo.data('video-src'),
+      'width': vidinfo.data('width'),
+      'height': vidinfo.data('height'),
+      'preview_src': vidinfo.data('preview-src'),
+      'transcripts': vidinfo.data('transcripts'),
+      'audio': vidinfo.data('audio'),
+      'defaultLocale': vidinfo.data('defaultLocale')
+    };
     var screenWidth = $(window).width();
     var width = opts.width;
     var isVertical = false;
@@ -338,7 +325,7 @@ SMPlayer.init = function(opts) {
         width: width,
         borderWidth: "0px",
         onload: function() {
-          SMPlayer.onOpen($(clicked).attr('rel'));
+          SMPlayer.onOpen(vid);
           $('#cee_closeBtn').on('click', SMPlayer.onClose);
           if(isVertical){
             $('#cee_box').addClass('vertical_player');
