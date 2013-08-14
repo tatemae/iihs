@@ -83,14 +83,14 @@ SMPlayer.create = function(vid) {
   }
 
   var args = {
+    width: vid.width,
+    height: vid.height,
     allowfullscreen: "true",
     allowscriptaccess: "always",
     flashplayer: "swf/jwplayer.flash.swf",
     autostart: true,
     playlist: [{
       file: vid.video_src,
-      width: vid.width,
-      height: vid.height,
       image: vid.preview_src,
       tracks: [{ 
         file: vid.captionvtt,
