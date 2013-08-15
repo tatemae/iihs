@@ -113,14 +113,14 @@ SMPlayer.create = function(vid) {
       file: vid.video_src,
       image: vid.preview_src,
       tracks: [{ 
-        file: vid.captionvtt,
-        label: "vtt",
+        file: vid.caption_english,
+        label: "English",
         kind: "captions",
         "default": true
       },{
-        file: vid.captionsrt,
+        file: vid.caption_hindi,
         kind: "captions",
-        label: "srt"
+        label: "Hindi"
       }]
     }]
   };
@@ -138,7 +138,7 @@ SMPlayer.setup = function(vid) {
     SMPlayer.create(vid);
     $('#player-speaker').text(vid.speaker);
     var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
-    var def = vid.defaultLocale;
+    var def = vid.default_locale;
     for (var l = 0; l < browserLocales.length; l++) {
       var locale = browserLocales[l];
       if (locale in vid.transcripts) {
@@ -348,9 +348,9 @@ SMPlayer.init = function(opts) {
       'preview_src': vidinfo.data('preview-src'),
       'transcripts': vidinfo.data('transcripts'),
       'audio': vidinfo.data('audio'),
-      'defaultLocale': vidinfo.data('defaultLocale'),
-      'captionvtt': vidinfo.data('captionvtt'),
-      'captionsrt': vidinfo.data('captionsrt')
+      'default_locale': vidinfo.data('default-locale'),
+      'caption_english': vidinfo.data('caption-english'),
+      'caption_hindi': vidinfo.data('caption-hindi')
     };
     var screenWidth = $(window).width();
     var width = opts.width;
