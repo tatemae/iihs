@@ -112,16 +112,7 @@ SMPlayer.create = function(vid) {
     playlist: [{
       file: vid.video_src,
       image: vid.preview_src,
-      tracks: [{ 
-        file: vid.caption_english,
-        label: "English",
-        kind: "captions",
-        "default": true
-      },{
-        file: vid.caption_hindi,
-        kind: "captions",
-        label: "Hindi"
-      }]
+      tracks: SMPlayer.tracks(vid.transcripts)
     }]
   };
 
@@ -129,6 +120,20 @@ SMPlayer.create = function(vid) {
   jwplayer("player").onTime(SMPlayer.positionListener);
   jwplayer("player").onPause(SMPlayer.pauseListener);
   jwplayer("player").onPlay(SMPlayer.playListener);
+};
+
+SMPlayer.tracks = function(transcripts) {
+  var tracks = [];
+  if (transcripts) {
+    $.each(transcripts, function(label, file) {
+      tracks.push({
+        file: file,
+        kind: "captions",
+        label: label
+      });
+    });
+  }
+  return tracks;
 };
 
 // takes a video and sets up the browser transcript and
@@ -348,9 +353,7 @@ SMPlayer.init = function(opts) {
       'preview_src': vidinfo.data('preview-src'),
       'transcripts': vidinfo.data('transcripts'),
       'audio': vidinfo.data('audio'),
-      'default_locale': vidinfo.data('default-locale'),
-      'caption_english': vidinfo.data('caption-english'),
-      'caption_hindi': vidinfo.data('caption-hindi')
+      'default_locale': vidinfo.data('default-locale')
     };
     var screenWidth = $(window).width();
     var width = opts.width;
