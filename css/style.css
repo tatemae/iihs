@@ -172,5 +172,6 @@
 }
 
 .video img {
-  cursor:hand
+  cursor: pointer;
+  width: 160px;
 }
