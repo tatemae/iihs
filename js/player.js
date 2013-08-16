@@ -110,7 +110,7 @@ SMPlayer.create = function(vid) {
     flashplayer: "swf/jwplayer.flash.swf",
     autostart: true,
     playlist: [{
-      file: vid.video_src,
+      sources: SMPlayer.sources(vid.video_srcs),
       image: vid.preview_src,
       tracks: SMPlayer.tracks(vid.transcripts)
     }]
@@ -121,6 +121,19 @@ SMPlayer.create = function(vid) {
   jwplayer("player").onPause(SMPlayer.pauseListener);
   jwplayer("player").onPlay(SMPlayer.playListener);
 };
+
+SMPlayer.sources = function(file_srcs) {
+  var sources = [];
+  if (file_srcs) {
+    $.each(file_srcs, function(label, file) {
+      sources.push({
+        file: file,
+        label: label
+      });
+    });
+  }
+  return sources;
+}
 
 SMPlayer.tracks = function(transcripts) {
   var tracks = [];
@@ -347,7 +360,7 @@ SMPlayer.init = function(opts) {
       'id': vidinfo.data('id'),
       'title': vidinfo.data('title'),
       'speaker': vidinfo.data('speaker'),
-      'video_src': vidinfo.data('video-src'),
+      'video_srcs': vidinfo.data('video-srcs'),
       'width': vidinfo.data('width'),
       'height': vidinfo.data('height'),
       'preview_src': vidinfo.data('preview-src'),
