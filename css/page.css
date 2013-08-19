@@ -42,6 +42,12 @@ td, th {
 
 }
 
+footer {
+  margin-left: auto;
+  margin-right: auto;
+  width: 830px;
+}
+
 footer .logo_link {
   float: right;
   padding-top: 5px;
