@@ -56,3 +56,8 @@ footer .logo_link {
 footer .logo {
   width: 200px;
 }
+
+footer table td {
+  width: 790px;
+  padding: 10px;
+}
