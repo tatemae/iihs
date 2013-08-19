@@ -41,3 +41,12 @@ td, th {
 .vidinfo img {
 
 }
+
+footer .logo_link {
+  float: right;
+  padding-top: 5px;
+}
+
+footer .logo {
+  width: 200px;
+}
