@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SpokenMedia for IIHS</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ceebox-min.css" />
+
+  </head>
+  <body>
+
+    <h1 id="title"><img src="../img/IIHS-customLogo.gif" alt="IIHS Logo" /></h1>
+
+    <div id="player-frame">
+      <div id="player-control">
+        <div id="player"></div>
+        <div id="player-speaker"></div>
+      </div><!-- player-control -->
+      <div id="transcript-control">
+        <p id="search-control">
+          <span id="search-count"></span> <input id="search" type="text" size="15" value="Search transcript" />
+        </p>
+        <div id="transcript" class="pane"></div>
+        <div id="transcript-search" class="pane"></div>
+        <p class="control">
+          <div class="control-selector">
+            <label for="audio-locale-selector">Audio</label> <select id="audio-locale-selector"></select>
+          </div>
+          <div class="control-selector">
+            <label for="transcript-locale-selector">Transcript</label> <select id="transcript-locale-selector"></select>
+          </div>
+        </p>
+      </div><!-- transcript-control -->
+      <div class="clearfix">&#160;</div>
+    </div><!--player-frame-->
+
+    <footer>
+      <div>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <p><a href="http://spokenmedia.mit.edu/">MIT SpokenMedia</a> technology was used to automatically create  transcripts for the Indian Institute for Human Settlements videos on this page.<br /><br /></p>
+
+                <p>Please keep in mind that you're viewing the <em>unedited</em> transcripts; in some cases the automatic transcript technology did a good job of speech recognition, in others not as well. Automatic speech recognition depends on a number of factors--we know there are a range of techniques that we can use to improve the baseline recognition, and we know there are a number of active research areas to pursue to further improve the accuracy.<br /><br /></p>
+
+                <p>We'd like to call your attention to two videos in particular: <a href="https://iihs-tatemae.s3.amazonaws.com/IIHS_Bish_Sanyal_Oct2009.mov" data-id="bish_sanyal" class="video">Prof. Bish Sanyal</a>, DUSP, MIT and <a href="video/IIHS_Geetam_Tiwari_Oct2009.mov" data-id="geetam_tiwari" class="video">Prof. Geetam Tiwari</a>, IIT Delhi. These videos have <em>edited</em> transcripts, as well as Hindi translations. We encourage you to watch these videos and to search through the transcripts and playback the video from the search results.<br />
+                <a href="http://oeit.mit.edu/" class="logo_link"><img class="logo" src="../img/oeit-logo-blue.png" alt="oeit logo" /></a></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.ceebox-min.js"></script>
+    <script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
+    <script type="text/javascript" src="../js/player.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        SMPlayer.init();
+      });
+    </script>
+  </body>
+</html>
