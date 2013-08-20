@@ -105,9 +105,6 @@ SMPlayer.create = function(vid) {
   var args = {
     width: vid.width,
     height: vid.height,
-    allowfullscreen: "true",
-    allowscriptaccess: "always",
-    flashplayer: "swf/jwplayer.flash.swf",
     autostart: true,
     playlist: [{
       sources: SMPlayer.sources(vid.video_srcs),
