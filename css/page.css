@@ -2,6 +2,7 @@ body {
   background: url(../img/bg_yellow.jpg) repeat;
   font-family: "Verdana", sans-serif;
   font-size: 0.8em;
+  min-width: 415px;
 }
 
 p {
@@ -38,8 +39,17 @@ td, th {
   text-align: center;
 }
 
-.vidinfo img {
+.vidinfo-inline {
+  padding: 10px 30px;
+  text-align: center;
+}
 
+.vidinfo-inline .modal-body {
+  background-color: rgba(255,255,255,0.75);
+  border: 1px solid;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
 }
 
 footer {
