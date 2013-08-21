@@ -69,25 +69,29 @@ SMPlayer.secondsToTime = function(t) {
 
 // mode switching function based on play/pause state of JW Player
 SMPlayer.pauseListener = function(o) {
-  $('#transcript span').css('cursor', 'pointer').animate({'opacity': 1});
-  $('#transcript span').addClass('paused');
-  $('#transcript span').each(function() {
+  var player_id = this.id;
+  var vid_id = player_id.replace('player_','');
+  $('.' + vid_id + ' #transcript span').css('cursor', 'pointer').animate({'opacity': 1});
+  $('.' + vid_id + ' #transcript span').addClass('paused');
+  $('.' + vid_id + ' #transcript span').each(function() {
     var secs = $(this).attr('id').substr(1);
     var time = SMPlayer.secondsToTime(secs);
     $(this).attr('title', "skip to " + time + " mark");
   });
-  $('#transcript span').on('click', function() {
-    jwplayer("player").seek($(this).attr('id').substr(1));
+  $('.' + vid_id + ' #transcript span').on('click', function() {
+    jwplayer(player_id).seek($(this).attr('id').substr(1));
   });
 };
 
 // mode switching function based on play/pause state of JW Player
 SMPlayer.playListener = function(o) {
   if (o.oldstate === "PAUSED") {
-    $('#transcript span').off();
-    $('#transcript span').removeClass('paused');
-    $('#transcript span').css('cursor', 'default').attr('title', null);
-    $('#transcript span').filter(function() {
+    var player_id = this.id;
+    var vid_id = player_id.replace('player_','');
+    $('.' + vid_id + ' #transcript span').off();
+    $('.' + vid_id + ' #transcript span').removeClass('paused');
+    $('.' + vid_id + ' #transcript span').css('cursor', 'default').attr('title', null);
+    $('.' + vid_id + ' #transcript span').filter(function() {
       return $(this).css('border-bottom-color') == 'transparent';
     }).animate({'opacity': 0.65});
   }
@@ -105,7 +109,7 @@ SMPlayer.create = function(vid) {
   var args = {
     width: vid.width,
     height: vid.height,
-    autostart: true,
+    autostart: vid.autostart,
     playlist: [{
       sources: SMPlayer.sources(vid.video_srcs),
       image: vid.preview_src,
@@ -113,10 +117,10 @@ SMPlayer.create = function(vid) {
     }]
   };
 
-  jwplayer("player").setup(args);
-  jwplayer("player").onTime(SMPlayer.positionListener);
-  jwplayer("player").onPause(SMPlayer.pauseListener);
-  jwplayer("player").onPlay(SMPlayer.playListener);
+  jwplayer("player_"+vid.id).setup(args);
+  jwplayer("player_"+vid.id).onTime(SMPlayer.positionListener);
+  jwplayer("player_"+vid.id).onPause(SMPlayer.pauseListener);
+  jwplayer("player_"+vid.id).onPlay(SMPlayer.playListener);
 };
 
 SMPlayer.sources = function(file_srcs) {
@@ -151,7 +155,7 @@ SMPlayer.tracks = function(transcripts) {
 SMPlayer.setup = function(vid) {
   if (vid !== null) {
     SMPlayer.create(vid);
-    $('#player-speaker').text(vid.speaker);
+    $('.' + vid.id + ' #player-speaker').text(vid.speaker);
     var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
     var def = vid.default_locale;
     for (var l = 0; l < browserLocales.length; l++) {
@@ -162,31 +166,31 @@ SMPlayer.setup = function(vid) {
       }
     }
     for (var t in vid.transcripts) {
-      $('#transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
-      $('#audio-locale-selector').append('<option value="' + vid.audio[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
+      $('.' + vid.id + ' #transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
+      $('.' + vid.id + ' #audio-locale-selector').append('<option value="' + vid.audio[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
       if (def == t) {
         $.ajax({
           url: vid.transcripts[t]
         }).done(function(data){
           var pa = new WebVTTParser();
           var captionsvtt = pa.parse(data, "captions");
-          var transcript = SMPlayer.convert_vtt_to_html(captionsvtt);
-          SMPlayer.loadTranscript(transcript);
+          var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
+          SMPlayer.loadTranscript(transcript, vid.id);
         });
         SMPlayer.loadAudio(vid.audio[t]);
       }
     }
-    $('#transcript-locale-selector').on('change', function() {
+    $('.' + vid.id + ' #transcript-locale-selector').on('change', function() {
       $.ajax({
         url: $(this).val()
       }).done(function(data){
         var pa = new WebVTTParser();
         var captionsvtt = pa.parse(data, "captions");
-        var transcript = SMPlayer.convert_vtt_to_html(captionsvtt);
-        SMPlayer.loadTranscript(transcript);
+        var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
+        SMPlayer.loadTranscript(transcript, vid.id);
       });
     });
-    $('#audio-locale-selector').on('change', function() {
+    $('.' + vid.id + ' #audio-locale-selector').on('change', function() {
       SMPlayer.loadAudio($(this).val());
     });
   } else {
@@ -195,8 +199,8 @@ SMPlayer.setup = function(vid) {
 };
 
 // load transcript into browser transcript display
-SMPlayer.loadTranscript = function(html) {
-  $('#transcript').html(html);
+SMPlayer.loadTranscript = function(html, id) {
+  $('.' + id + ' #transcript').html(html);
 };
 
 // load separate language audio track
@@ -228,14 +232,14 @@ SMPlayer.search = function(string) {
 };
 
 // perform search
-SMPlayer.doSearch = function(query) {
+SMPlayer.doSearch = function(query, id) {
   if (query.length > 0) {
-    $('#transcript').hide();
-    $('#transcript-search').show();
-    $('#transcript-search').empty();
-    var hits = $('#transcript span:contains(' + query + ')').size();
-    $('#search-count').text(hits + ' match' + ((hits == 1) ? '' : 'es'));
-    $('#transcript span:contains(' + query + ')').each(function() {
+    $('.' + id + ' #transcript').hide()
+    $('.' + id + ' #transcript-search').show();
+    $('.' + id + ' #transcript-search').empty();
+    var hits = $('.' + id + ' #transcript span:contains(' + query + ')').size();
+    $('.' + id + ' #search-count').text(hits + ' match' + ((hits == 1) ? '' : 'es'));
+    $('.' + id + ' #transcript span:contains(' + query + ')').each(function() {
       var seek = $(this).attr('id').substr(1);
       var startIdx = $(this).text().indexOf(query);
       var highlighted = $(this).text().substr(0, startIdx) + '<span class="highlight">' + $(this).text().substr(startIdx, query.length) + '</span>' + $(this).text().substr(startIdx+query.length);
@@ -243,39 +247,40 @@ SMPlayer.doSearch = function(query) {
       result += $(this).prev().text() + ' ' + highlighted + ' ' + $(this).next().text();
       result += '</div>\n';
       var jqresult = $(result);
-      $('#transcript-search').append(jqresult);
+      $('.' + id + ' #transcript-search').append(jqresult);
       jqresult.on('click', function() {
-        jwplayer("player").seek(seek);
-        $('#search-count').empty();
-        $('#transcript-search').hide();
-        $('#transcript').show();
+        jwplayer("player_" + id).seek(seek);
+        $('.' + id + ' #search-count').empty();
+        $('.' + id + ' #transcript-search').hide();
+        $('.' + id + ' #transcript').show();
       });
     });
   } else {
-    $('#search-count').empty();
-    $('#transcript-search').hide();
-    $('#transcript').show();
+    $('.' + id + ' #search-count').empty();
+    $('.' + id + ' #transcript-search').hide();
+    $('.' + id + ' #transcript').show();
   }
 };
 
 // set up the browser when launched
 SMPlayer.onOpen = function(vid) {
-  $('#cee_title').height($('#cee_title h2').height());
-  $('#cee_box').height($('#cee_box').height() + $('#cee_title h2').height() - 20);
+  $('.' + vid.id + ' #cee_title').height($('.' + vid.id + ' #cee_title h2').height());
+  $('.' + vid.id).height($('.' + vid.id).height() + $('.' + vid.id + ' #cee_title h2').height() - 20);
   $('#player-frame').empty();
+  $('.' + vid.id + ' #player').attr('id', 'player_'+vid.id);
   SMPlayer.setup(vid);
-  $('#search').on('focus', function() {
-    if ($('#search').val() == "Search transcript") {
-      $('#search').val('');
+  $('.' + vid.id + ' #search').on('focus', function() {
+    if ($('.' + vid.id + ' #search').val() == "Search transcript") {
+      $('.' + vid.id + ' #search').val('');
     } else {
       this.select();
-      SMPlayer.doSearch($(this).val());
+      SMPlayer.doSearch($(this).val(), vid.id);
     }
-    $('#search').css('color', '#000');
+    $('.' + vid.id + ' #search').css('color', '#000');
   });
-  $('#search').on('blur', function(e) {
-    if ($('#search').val() == '') {
-        $('#search').val('Search transcript').css('color', '#999');
+  $('.' + vid.id + ' #search').on('blur', function(e) {
+    if ($('.' + vid.id + ' #search').val() == '') {
+        $('.' + vid.id + ' #search').val('Search transcript').css('color', '#999');
     }
     // hack, blur fires before click and swallows the triggering
     // click event in firefox (presumably all others as well) -
@@ -284,22 +289,23 @@ SMPlayer.onOpen = function(vid) {
     // ugly solutions may be using a global flag and instrumenting all
     // clicks or introducing an explicit cancel search mode link
     var f = function() {
-      if ($('#transcript:visible').size() == 0) {
-        $('#transcript').show();
-        $('#transcript-search').hide();
-        $('#search-count').empty();
+      if ($('.' + vid.id + ' #transcript:visible').size() == 0) {
+        $('.' + vid.id + ' #transcript').show();
+        $('.' + vid.id + ' #transcript-search').hide();
+        $('.' + vid.id + ' #search-count').empty();
       }
     };
     setTimeout(f, 200);
   });
-  $('#search').on('keyup', function() {
-    SMPlayer.doSearch($(this).val());
+  $('.' + vid.id + ' #search').on('keyup', function() {
+    SMPlayer.doSearch($(this).val(), vid.id);
   });
 };
 
 // modify the browser when closed to eliminate decorative items
-SMPlayer.onClose = function() {
-  $('#player-frame').html($('#player-live-wrapper').clone().html());
+SMPlayer.onClose = function(e) {
+  var id = e.data.id;
+  $('#player-frame').html($('.' + id + ' #player-live-wrapper').clone().html());
   $.fn.ceebox.closebox(null, function() {
     if (jwplayer("player").getState()) {
       jwplayer("player").remove();
@@ -320,6 +326,33 @@ SMPlayer.makeVertical = function() {
   $('#transcript').css('height', '140px').css('padding-top', 0).css('padding-bottom', 0);
   $('#transcript-search').css('height', '140px');
   $('.control').css('text-align', 'center');
+};
+
+SMPlayer.vid_data = function(video) {
+  return {
+    'id': $(video).data('id'),
+    'title': $(video).data('title'),
+    'speaker': $(video).data('speaker'),
+    'speaker-location': $(video).data('speaker-location'),
+    'video_srcs': $(video).data('video-srcs'),
+    'width': $(video).data('width'),
+    'height': $(video).data('height'),
+    'preview_src': $(video).data('preview-src'),
+    'transcripts': $(video).data('transcripts'),
+    'audio': $(video).data('audio'),
+    'default_locale': $(video).data('default-locale'),
+    'autostart': $(video).data('autostart')
+  };
+};
+
+// Finds all the inline videos and makes them into players
+SMPlayer.create_inline_players = function() {
+  $('.vidinfo-inline').each(function() {
+    $(this).html($('#player-frame').clone().html());
+    var vid = SMPlayer.vid_data(this);
+    $(this).addClass(vid.id);
+    SMPlayer.setup(vid);
+  });
 };
 
 // public method to be called in the page within a
@@ -345,26 +378,16 @@ SMPlayer.init = function(opts) {
     opts.width = SMPlayer.defaults.horizontalWidth;
     opts.height = SMPlayer.defaults.horizontalHeight;
   }
-  $(window).on('keyup', function(e) {
-    if (e.keyCode === 27 && jwplayer("player").getState()) {
-      SMPlayer.onClose();
-    }
-  });
+  // $(window).on('keyup', function(e) {
+  //   if (e.keyCode === 27 && jwplayer("player").getState()) {
+  //     SMPlayer.onClose();
+  //   }
+  // });
+  SMPlayer.create_inline_players();
   $('.video').on('click', function(e) {
     e.preventDefault();
     var vidinfo = $(this).closest(".vidinfo");
-    var vid = {
-      'id': vidinfo.data('id'),
-      'title': vidinfo.data('title'),
-      'speaker': vidinfo.data('speaker'),
-      'video_srcs': vidinfo.data('video-srcs'),
-      'width': vidinfo.data('width'),
-      'height': vidinfo.data('height'),
-      'preview_src': vidinfo.data('preview-src'),
-      'transcripts': vidinfo.data('transcripts'),
-      'audio': vidinfo.data('audio'),
-      'default_locale': vidinfo.data('default-locale')
-    };
+    var vid = SMPlayer.vid_data(vidinfo);
     var screenWidth = $(window).width();
     var width = opts.width;
     var isVertical = false;
@@ -391,14 +414,15 @@ SMPlayer.init = function(opts) {
         width: width,
         borderWidth: "0px",
         onload: function() {
+          $('#cee_box').addClass(vid.id);
           SMPlayer.onOpen(vid);
-          $('#cee_closeBtn').on('click', SMPlayer.onClose);
+          $('#cee_closeBtn').on('click', {id: vid.id}, SMPlayer.onClose);
           if(isVertical){
-            $('#cee_box').addClass('vertical_player');
-            $('#cee_box').css("top", "25%");
+            $('.' + vid.id).addClass('vertical_player');
+            $('.' + vid.id).css("top", "25%");
           } else {
-            $('#cee_box').removeClass('vertical_player');
-            $('#cee_box').css("top", "50%");
+            $('.' + vid.id).removeClass('vertical_player');
+            $('.' + vid.id).css("top", "50%");
           }
         }
       });
@@ -409,11 +433,11 @@ SMPlayer.init = function(opts) {
   });
 };
 
-SMPlayer.convert_vtt_to_html = function(parsedVTT) {
+SMPlayer.convert_vtt_to_html = function(parsedVTT, id) {
   var html = "";
   parsedVTT.cues.forEach(function(cue) {
     if (cue.text) {
-      html += "<span id='T" + Math.floor(cue.startTime) + "'>" + cue.text + "</span> "
+      html += "<span id='T" + Math.floor(cue.startTime) + "' data-id='" + id + "'>" + cue.text + "</span> "
     }
   });
   return html;
