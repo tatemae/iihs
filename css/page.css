@@ -43,21 +43,19 @@ td, th {
 }
 
 footer {
-  margin-left: auto;
-  margin-right: auto;
-  width: 830px;
+  padding: 10px;
 }
 
-footer .logo_link {
+footer .oeit_logo {
   float: right;
   padding-top: 5px;
-}
-
-footer .logo {
+  background-image: url(../img/oeit-logo-blue.png);
+  background-repeat: no-repeat;
+  background-size: 200px;
+  display: block;
   width: 200px;
-}
-
-footer table td {
-  width: 790px;
-  padding: 10px;
+  height: 30px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
 }
