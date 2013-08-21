@@ -191,8 +191,10 @@ SMPlayer.vid_data = function(video) {
     'speaker': $(video).data('speaker'),
     'speaker-location': $(video).data('speaker-location'),
     'video_srcs': $(video).data('video-srcs'),
-    'width': $(video).data('width'),
-    'height': $(video).data('height'),
+    'video_width': $(video).data('video-width'),
+    'video_height': $(video).data('video-height'),
+    'transcript_width': $(video).data('transcript-width'),
+    'transcript_height': $(video).data('transcript-height'),
     'preview_src': $(video).data('preview-src'),
     'transcripts': $(video).data('transcripts'),
     'default_locale': $(video).data('default-locale'),
@@ -251,6 +253,13 @@ SMPlayer.init_search = function(vid) {
 };
 
 SMPlayer.init_transcript = function(vid) {
+  if (vid.transcript_width) {
+    $('.' + vid.id + ' .transcript-control').css("width", vid.transcript_width + "px");
+  }
+  if (vid.transcript_height) {
+    $('.' + vid.id + ' .transcript').css("height", vid.transcript_height + "px");
+    $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
+  }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker);
   var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
   var def = vid.default_locale;
@@ -287,16 +296,16 @@ SMPlayer.init_transcript = function(vid) {
 };
 
 SMPlayer.init_video = function(vid) {
-  if (vid.width === undefined || vid.width === null) {
-    vid.width = SMPlayer.defaults.videoWidth;
+  if (vid.video_width === undefined || vid.video_width === null) {
+    vid.video_width = SMPlayer.defaults.videoWidth;
   }
-  if (vid.height === undefined || vid.height === null) {
-    vid.height = SMPlayer.defaults.videoHeight;
+  if (vid.video_height === undefined || vid.video_height === null) {
+    vid.video_height = SMPlayer.defaults.videoHeight;
   }
 
   var args = {
-    width: vid.width,
-    height: vid.height,
+    width: vid.video_width,
+    height: vid.video_height,
     autostart: vid.autostart,
     playlist: [{
       sources: SMPlayer.sources(vid.video_srcs),

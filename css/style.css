@@ -21,12 +21,6 @@
   }
 }
 
-.transcript-control {
-  float: left;
-  width: 315px;
-  margin-left: 10px;
-}
-
 .player-speaker {
   font-color: #333;
   /*   font-size: 0.9em;*/
@@ -35,6 +29,9 @@
 }
 
 .transcript-control {
+  float: left;
+  width: 315px;
+  margin-left: 10px;
   clear: right;
 }
 
