@@ -46,7 +46,7 @@
 .transcript {
   padding: 70px 5px 120px 0;
   height: 20px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .transcript .error-message {
@@ -70,7 +70,7 @@
   display: none;
   padding: 0 5px 0 0;
   height: 210px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .transcript span {
