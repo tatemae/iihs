@@ -4,9 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>SpokenMedia for IIHS</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/page.css" />
-    <link rel="stylesheet" type="text/css" href="css/ceebox-min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/page.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
 
   </head>
   <body>
@@ -142,27 +144,38 @@
       </tbody>
     </table>
 
-    <div id="player-frame">
-      <div id="player-control">
-        <div id="player"></div>
-        <div id="player-speaker"></div>
-      </div><!-- player-control -->
-      <div id="transcript-control">
-        <p id="search-control">
-          <span id="search-count"></span> <input id="search" type="text" size="15" value="Search transcript" />
-        </p>
-        <div id="transcript" class="pane"></div>
-        <div id="transcript-search" class="pane"></div>
-        <p class="control">
-          <div class="control-selector">
-            <label for="audio-locale-selector">Audio</label> <select id="audio-locale-selector"></select>
+    <div id="player-frame" class="modal hide fade" tabindex="-1" data-width="760">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3></h3>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="player-control">
+              <div id="player_"></div>
+              <div class="player-speaker"></div>
+            </div><!-- player-control -->
           </div>
-          <div class="control-selector">
-            <label for="transcript-locale-selector">Transcript</label> <select id="transcript-locale-selector"></select>
+          <div class="span6">
+            <div class="transcript-control">
+              <p class="search-control">
+                <span class="search-count"></span> <input class="search" type="text" size="15" value="Search transcript" />
+              </p>
+              <div class="transcript" class="pane"></div>
+              <div class="transcript-search" class="pane"></div>
+              <p class="control">
+                <div class="control-selector">
+                  <label for="transcript-locale-selector">Transcript</label> <select class="transcript-locale-selector"></select>
+                </div>
+              </p>
+            </div><!-- transcript-control -->
           </div>
-        </p>
-      </div><!-- transcript-control -->
-      <div class="clearfix">&#160;</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <img src="./img/oeit-mark.png" alt="OEIT Logo" />
+      </div>
     </div><!--player-frame-->
 
     <footer>
@@ -187,7 +200,9 @@
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
-    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.ceebox-min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
     <script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
     <script type="text/javascript" src="./js/player.js"></script>
 

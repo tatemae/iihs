@@ -16,11 +16,11 @@ if (!Array.prototype.forEach) {
 
 var SMPlayer = {
   currentPosition: 0,
-  currentVolume: 80,
   prevSegLocId: null,
   segLocId: null,
   scroll: 0,
   SCROLL_OFFSET: -70,
+  previous: '',
   defaults: {
     "videoWidth": 320,
     "videoHeight": 240,
@@ -41,20 +41,22 @@ var SMPlayer = {
 // transcript highlighting function based on JW Player player position
 SMPlayer.positionListener = function(o) {
   SMPlayer.currentPosition = o.position;
+  var player_id = this.id;
+  var vid_id = player_id.replace('player_','');
   SMPlayer.segLocId = '#T' + Math.round(SMPlayer.currentPosition);
-  if($(SMPlayer.segLocId).size() > 0) {
-    if (SMPlayer.prevSegLocId != null && SMPlayer.prevSegLocId != SMPlayer.segLocId && !$(SMPlayer.prevSegLocId).hasClass("passed")) {
-        $(SMPlayer.prevSegLocId).css("border-bottom-color", "transparent");
-        $(SMPlayer.prevSegLocId).animate({"opacity": 0.65}, {"duration": 5000});
-      $(SMPlayer.prevSegLocId).removeClass("current").addClass("passed");
+  if($('.' + vid_id + ' ' + SMPlayer.segLocId).size() > 0) {
+    if (SMPlayer.prevSegLocId != null && SMPlayer.prevSegLocId != SMPlayer.segLocId && !$('.' + vid_id + ' ' + SMPlayer.prevSegLocId).hasClass("passed")) {
+        $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).css("border-bottom-color", "transparent");
+        $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).animate({"opacity": 0.65}, {"duration": 5000});
+      $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).removeClass("current").addClass("passed");
     }
-    if(!$(SMPlayer.segLocId).hasClass("current")) {
-      if ( $(SMPlayer.segLocId).position().top - SMPlayer.scroll + SMPlayer.SCROLL_OFFSET > 5)
-      $('#transcript').scrollTo($(SMPlayer.segLocId), {"offset": {"top": SMPlayer.SCROLL_OFFSET}, "duration": 250});
-      $(SMPlayer.segLocId).css("opacity", 1).css("border-bottom-color", "black");
-      $(SMPlayer.segLocId).addClass("current").removeClass("passed");
+    if(!$('.' + vid_id + ' ' + SMPlayer.segLocId).hasClass("current")) {
+      if ( $('.' + vid_id + ' ' + SMPlayer.segLocId).position().top - SMPlayer.scroll + SMPlayer.SCROLL_OFFSET > 5)
+      $('.' + vid_id + ' ' + '.transcript').scrollTo($('.' + vid_id + ' ' + SMPlayer.segLocId), {"offset": {"top": SMPlayer.SCROLL_OFFSET}, "duration": 250});
+      $('.' + vid_id + ' ' + SMPlayer.segLocId).css("opacity", 1).css("border-bottom-color", "black");
+      $('.' + vid_id + ' ' + SMPlayer.segLocId).addClass("current").removeClass("passed");
       SMPlayer.prevSegLocId = SMPlayer.segLocId;
-      SMPlayer.scroll = $(SMPlayer.segLocId).position().top + SMPlayer.SCROLL_OFFSET;
+      SMPlayer.scroll = $('.' + vid_id + ' ' + SMPlayer.segLocId).position().top + SMPlayer.SCROLL_OFFSET;
     }
   }
 };
@@ -71,14 +73,14 @@ SMPlayer.secondsToTime = function(t) {
 SMPlayer.pauseListener = function(o) {
   var player_id = this.id;
   var vid_id = player_id.replace('player_','');
-  $('.' + vid_id + ' #transcript span').css('cursor', 'pointer').animate({'opacity': 1});
-  $('.' + vid_id + ' #transcript span').addClass('paused');
-  $('.' + vid_id + ' #transcript span').each(function() {
+  $('.' + vid_id + ' .transcript span').css('cursor', 'pointer').animate({'opacity': 1});
+  $('.' + vid_id + ' .transcript span').addClass('paused');
+  $('.' + vid_id + ' .transcript span').each(function() {
     var secs = $(this).attr('id').substr(1);
     var time = SMPlayer.secondsToTime(secs);
     $(this).attr('title', "skip to " + time + " mark");
   });
-  $('.' + vid_id + ' #transcript span').on('click', function() {
+  $('.' + vid_id + ' .transcript span').on('click', function() {
     jwplayer(player_id).seek($(this).attr('id').substr(1));
   });
 };
@@ -88,39 +90,13 @@ SMPlayer.playListener = function(o) {
   if (o.oldstate === "PAUSED") {
     var player_id = this.id;
     var vid_id = player_id.replace('player_','');
-    $('.' + vid_id + ' #transcript span').off();
-    $('.' + vid_id + ' #transcript span').removeClass('paused');
-    $('.' + vid_id + ' #transcript span').css('cursor', 'default').attr('title', null);
-    $('.' + vid_id + ' #transcript span').filter(function() {
+    $('.' + vid_id + ' .transcript span').off();
+    $('.' + vid_id + ' .transcript span').removeClass('paused');
+    $('.' + vid_id + ' .transcript span').css('cursor', 'default').attr('title', null);
+    $('.' + vid_id + ' .transcript span').filter(function() {
       return $(this).css('border-bottom-color') == 'transparent';
     }).animate({'opacity': 0.65});
   }
-};
-
-// reloading JW Player Flash
-SMPlayer.create = function(vid) {
-  if (vid.width === undefined || vid.width === null) {
-    vid.width = SMPlayer.defaults.videoWidth;
-  }
-  if (vid.height === undefined || vid.height === null) {
-    vid.height = SMPlayer.defaults.videoHeight;
-  }
-
-  var args = {
-    width: vid.width,
-    height: vid.height,
-    autostart: vid.autostart,
-    playlist: [{
-      sources: SMPlayer.sources(vid.video_srcs),
-      image: vid.preview_src,
-      tracks: SMPlayer.tracks(vid.transcripts)
-    }]
-  };
-
-  jwplayer("player_"+vid.id).setup(args);
-  jwplayer("player_"+vid.id).onTime(SMPlayer.positionListener);
-  jwplayer("player_"+vid.id).onPause(SMPlayer.pauseListener);
-  jwplayer("player_"+vid.id).onPlay(SMPlayer.playListener);
 };
 
 SMPlayer.sources = function(file_srcs) {
@@ -150,74 +126,20 @@ SMPlayer.tracks = function(transcripts) {
   return tracks;
 };
 
-// takes a video and sets up the browser transcript and
-// per-video options, based on associated metadata
-SMPlayer.setup = function(vid) {
-  if (vid !== null) {
-    SMPlayer.create(vid);
-    $('.' + vid.id + ' #player-speaker').text(vid.speaker);
-    var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
-    var def = vid.default_locale;
-    for (var l = 0; l < browserLocales.length; l++) {
-      var locale = browserLocales[l];
-      if (locale in vid.transcripts) {
-        def = locale;
-        break;
-      }
-    }
-    for (var t in vid.transcripts) {
-      $('.' + vid.id + ' #transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
-      $('.' + vid.id + ' #audio-locale-selector').append('<option value="' + vid.audio[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
-      if (def == t) {
-        $.ajax({
-          url: vid.transcripts[t]
-        }).done(function(data){
-          var pa = new WebVTTParser();
-          var captionsvtt = pa.parse(data, "captions");
-          var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
-          SMPlayer.loadTranscript(transcript, vid.id);
-        });
-        SMPlayer.loadAudio(vid.audio[t]);
-      }
-    }
-    $('.' + vid.id + ' #transcript-locale-selector').on('change', function() {
-      $.ajax({
-        url: $(this).val()
-      }).done(function(data){
-        var pa = new WebVTTParser();
-        var captionsvtt = pa.parse(data, "captions");
-        var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
-        SMPlayer.loadTranscript(transcript, vid.id);
-      });
-    });
-    $('.' + vid.id + ' #audio-locale-selector').on('change', function() {
-      SMPlayer.loadAudio($(this).val());
-    });
-  } else {
-    SMPlayer.error("Video not found.  Please contact the administrator to fix this problem.");
-  }
-};
-
 // load transcript into browser transcript display
 SMPlayer.loadTranscript = function(html, id) {
-  $('.' + id + ' #transcript').html(html);
-};
-
-// load separate language audio track
-SMPlayer.loadAudio = function(url) {
-  // not defined
+  $('.' + id + ' .transcript').html(html);
 };
 
 // display an error in the same vein as the browser
 SMPlayer.error = function(msg) {
-  $.fn.ceebox.popup('<div class="error"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a><p>' + msg + '</p></div>', { "modal": true, "html": true, "htmlGallery": false, "borderColor": '#f00', "width": 400, "height": 100, onload: function() { $('#cee_closeBtn').on('click', SMPlayer.onClose); }});
 };
 
 // unnecessary, but keep for now as an exercise in searching the whole
 // transcript, not just its fragments
 SMPlayer.search = function(string) {
   var matches = [];
-  var text = $('#transcript').text();
+  var text = $('.transcript').text();
   var re = new RegExp(string, 'igm');
   var m = text.search(re);
   while (m >= 0) {
@@ -234,12 +156,12 @@ SMPlayer.search = function(string) {
 // perform search
 SMPlayer.doSearch = function(query, id) {
   if (query.length > 0) {
-    $('.' + id + ' #transcript').hide()
-    $('.' + id + ' #transcript-search').show();
-    $('.' + id + ' #transcript-search').empty();
-    var hits = $('.' + id + ' #transcript span:contains(' + query + ')').size();
-    $('.' + id + ' #search-count').text(hits + ' match' + ((hits == 1) ? '' : 'es'));
-    $('.' + id + ' #transcript span:contains(' + query + ')').each(function() {
+    $('.' + id + ' .transcript').hide()
+    $('.' + id + ' .transcript-search').show();
+    $('.' + id + ' .transcript-search').empty();
+    var hits = $('.' + id + ' .transcript span:contains(' + query + ')').size();
+    $('.' + id + ' .search-count').text(hits + ' match' + ((hits == 1) ? '' : 'es'));
+    $('.' + id + ' .transcript span:contains(' + query + ')').each(function() {
       var seek = $(this).attr('id').substr(1);
       var startIdx = $(this).text().indexOf(query);
       var highlighted = $(this).text().substr(0, startIdx) + '<span class="highlight">' + $(this).text().substr(startIdx, query.length) + '</span>' + $(this).text().substr(startIdx+query.length);
@@ -247,85 +169,19 @@ SMPlayer.doSearch = function(query, id) {
       result += $(this).prev().text() + ' ' + highlighted + ' ' + $(this).next().text();
       result += '</div>\n';
       var jqresult = $(result);
-      $('.' + id + ' #transcript-search').append(jqresult);
+      $('.' + id + ' .transcript-search').append(jqresult);
       jqresult.on('click', function() {
         jwplayer("player_" + id).seek(seek);
-        $('.' + id + ' #search-count').empty();
-        $('.' + id + ' #transcript-search').hide();
-        $('.' + id + ' #transcript').show();
+        $('.' + id + ' .search-count').empty();
+        $('.' + id + ' .transcript-search').hide();
+        $('.' + id + ' .transcript').show();
       });
     });
   } else {
-    $('.' + id + ' #search-count').empty();
-    $('.' + id + ' #transcript-search').hide();
-    $('.' + id + ' #transcript').show();
+    $('.' + id + ' .search-count').empty();
+    $('.' + id + ' .transcript-search').hide();
+    $('.' + id + ' .transcript').show();
   }
-};
-
-// set up the browser when launched
-SMPlayer.onOpen = function(vid) {
-  $('.' + vid.id + ' #cee_title').height($('.' + vid.id + ' #cee_title h2').height());
-  $('.' + vid.id).height($('.' + vid.id).height() + $('.' + vid.id + ' #cee_title h2').height() - 20);
-  $('#player-frame').empty();
-  $('.' + vid.id + ' #player').attr('id', 'player_'+vid.id);
-  SMPlayer.setup(vid);
-  $('.' + vid.id + ' #search').on('focus', function() {
-    if ($('.' + vid.id + ' #search').val() == "Search transcript") {
-      $('.' + vid.id + ' #search').val('');
-    } else {
-      this.select();
-      SMPlayer.doSearch($(this).val(), vid.id);
-    }
-    $('.' + vid.id + ' #search').css('color', '#000');
-  });
-  $('.' + vid.id + ' #search').on('blur', function(e) {
-    if ($('.' + vid.id + ' #search').val() == '') {
-        $('.' + vid.id + ' #search').val('Search transcript').css('color', '#999');
-    }
-    // hack, blur fires before click and swallows the triggering
-    // click event in firefox (presumably all others as well) -
-    // timeout may still fail to avoid the situation, but .2 seconds
-    // on a modern cpu looks to be good enough - more robust but still
-    // ugly solutions may be using a global flag and instrumenting all
-    // clicks or introducing an explicit cancel search mode link
-    var f = function() {
-      if ($('.' + vid.id + ' #transcript:visible').size() == 0) {
-        $('.' + vid.id + ' #transcript').show();
-        $('.' + vid.id + ' #transcript-search').hide();
-        $('.' + vid.id + ' #search-count').empty();
-      }
-    };
-    setTimeout(f, 200);
-  });
-  $('.' + vid.id + ' #search').on('keyup', function() {
-    SMPlayer.doSearch($(this).val(), vid.id);
-  });
-};
-
-// modify the browser when closed to eliminate decorative items
-SMPlayer.onClose = function(e) {
-  var id = e.data.id;
-  $('#player-frame').html($('.' + id + ' #player-live-wrapper').clone().html());
-  $.fn.ceebox.closebox(null, function() {
-    if (jwplayer("player").getState()) {
-      jwplayer("player").remove();
-    }
-    $('#transcript-locale-selector').empty();
-    $('#transcript').empty();
-    $('#player-speaker').empty();
-    $('#cee_closeBtn').remove();
-    $('#cee_title').remove();
-  });
-};
-
-// makes the player have a vertical orientation
-SMPlayer.makeVertical = function() {
-  // popup width is 465, height 555
-  $('#player-control').css('float', 'none').css('width', '100%').css('text-align', 'center');
-  $('#transcript-control').css('float', 'none').css('width', '100%');
-  $('#transcript').css('height', '140px').css('padding-top', 0).css('padding-bottom', 0);
-  $('#transcript-search').css('height', '140px');
-  $('.control').css('text-align', 'center');
 };
 
 SMPlayer.vid_data = function(video) {
@@ -339,7 +195,6 @@ SMPlayer.vid_data = function(video) {
     'height': $(video).data('height'),
     'preview_src': $(video).data('preview-src'),
     'transcripts': $(video).data('transcripts'),
-    'audio': $(video).data('audio'),
     'default_locale': $(video).data('default-locale'),
     'autostart': $(video).data('autostart')
   };
@@ -351,81 +206,125 @@ SMPlayer.create_inline_players = function() {
     $(this).html($('#player-frame').clone().html());
     var vid = SMPlayer.vid_data(this);
     $(this).addClass(vid.id);
-    SMPlayer.setup(vid);
+    $(this).find('#player_').attr('id', 'player_' + vid.id);
+    $(this).find('.modal-header').remove();
+    $(this).find('.modal-footer').remove();
+    SMPlayer.init_search(vid);
+    SMPlayer.init_transcript(vid);
+    SMPlayer.init_video(vid);
   });
 };
 
-// public method to be called in the page within a
-// $(document).ready() block.  options:
-// vertical {boolean} Make the player have a vertical orientation
-// popupWidth {int} Initial width of the popup
-// popupHeight {int} Initial height of the popup (may change depending on video title length)
-SMPlayer.init = function(opts) {
-  if (typeof opts != "undefined" && opts != null) {
-    if (typeof opts.vertical != "undefined") {
-      SMPlayer.makeVertical();
-      opts.width = SMPlayer.defaults.verticalWidth;
-      opts.height = SMPlayer.defaults.verticalHeight;
+
+SMPlayer.update_modal = function(vid) {
+  SMPlayer.modal
+    .find('.modal-header > h3').text(vid.title).end()
+    .find('#player_' + SMPlayer.previous).attr('id', 'player_' + vid.id).end()
+    .modal('show');
+  SMPlayer.modal.addClass(vid.id);
+  SMPlayer.previous = vid.id;
+};
+
+SMPlayer.init_search = function(vid) {
+  $('.' + vid.id + ' .search').on('focus', function() {
+    if ($('.' + vid.id + ' .search').val() == "Search transcript") {
+      $('.' + vid.id + ' .search').val('');
+    } else {
+      this.select();
+      SMPlayer.doSearch($(this).val(), vid.id);
     }
-    if (typeof opts.popupWidth != "undefined") {
-      opts.width = parseInt(opts.popupWidth);
+    $('.' + vid.id + ' .search').css('color', '#000');
+  });
+  $('.' + vid.id + ' .search').on('blur', function(e) {
+    if ($('.' + vid.id + ' .search').val() == '') {
+        $('.' + vid.id + ' .search').val('Search transcript').css('color', '#999');
     }
-    if (typeof opts.popupHeight != "undefined") {
-      opts.height = parseInt(opts.popupHeight);
+    if ($('.' + vid.id + ' .transcript:visible').size() == 0) {
+      $('.' + vid.id + ' .transcript').show();
+      $('.' + vid.id + ' .transcript-search').hide();
+      $('.' + vid.id + ' .search-count').empty();
     }
-  } else {
-    opts = {};
-    opts.width = SMPlayer.defaults.horizontalWidth;
-    opts.height = SMPlayer.defaults.horizontalHeight;
+  });
+  $('.' + vid.id + ' .search').on('keyup', function() {
+    SMPlayer.doSearch($(this).val(), vid.id);
+  });
+};
+
+SMPlayer.init_transcript = function(vid) {
+  $('.' + vid.id + ' .player-speaker').text(vid.speaker);
+  var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
+  var def = vid.default_locale;
+  for (var l = 0; l < browserLocales.length; l++) {
+    var locale = browserLocales[l];
+    if (locale in vid.transcripts) {
+      def = locale;
+      break;
+    }
   }
-  // $(window).on('keyup', function(e) {
-  //   if (e.keyCode === 27 && jwplayer("player").getState()) {
-  //     SMPlayer.onClose();
-  //   }
-  // });
+  for (var t in vid.transcripts) {
+    $('.' + vid.id + ' .transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
+    if (def == t) {
+      $.ajax({
+        url: vid.transcripts[t]
+      }).done(function(data){
+        var pa = new WebVTTParser();
+        var captionsvtt = pa.parse(data, "captions");
+        var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
+        SMPlayer.loadTranscript(transcript, vid.id);
+      });
+    }
+  }
+  $('.' + vid.id + ' .transcript-locale-selector').on('change', function() {
+    $.ajax({
+      url: $(this).val()
+    }).done(function(data){
+      var pa = new WebVTTParser();
+      var captionsvtt = pa.parse(data, "captions");
+      var transcript = SMPlayer.convert_vtt_to_html(captionsvtt, vid.id);
+      SMPlayer.loadTranscript(transcript, vid.id);
+    });
+  });
+};
+
+SMPlayer.init_video = function(vid) {
+  if (vid.width === undefined || vid.width === null) {
+    vid.width = SMPlayer.defaults.videoWidth;
+  }
+  if (vid.height === undefined || vid.height === null) {
+    vid.height = SMPlayer.defaults.videoHeight;
+  }
+
+  var args = {
+    width: vid.width,
+    height: vid.height,
+    autostart: vid.autostart,
+    playlist: [{
+      sources: SMPlayer.sources(vid.video_srcs),
+      image: vid.preview_src,
+      tracks: SMPlayer.tracks(vid.transcripts)
+    }]
+  };
+
+  jwplayer("player_"+vid.id).setup(args);
+  jwplayer("player_"+vid.id).onTime(SMPlayer.positionListener);
+  jwplayer("player_"+vid.id).onPause(SMPlayer.pauseListener);
+  jwplayer("player_"+vid.id).onPlay(SMPlayer.playListener);
+};
+
+// public method to be called in the page within a
+// $(document).ready() block.
+SMPlayer.init = function(opts) {
+  SMPlayer.modal = $('#player-frame').modal({show: false});
   SMPlayer.create_inline_players();
   $('.video').on('click', function(e) {
     e.preventDefault();
     var vidinfo = $(this).closest(".vidinfo");
     var vid = SMPlayer.vid_data(vidinfo);
-    var screenWidth = $(window).width();
-    var width = opts.width;
-    var isVertical = false;
-    if(screenWidth + SMPlayer.defaults.widthFudge < opts.width){
-      width = 350;
-      isVertical = true;
-    } else {
-      isVertical = false;
-    }
     if (vid != null) {
-      $.fn.ceebox.popup(SMPlayer.ceebox_template(vid.title), {
-        modal: true,
-        titles: false,
-        titleHeight: "20px",
-        html: false,
-        image: false,
-        video: false,
-        htmlGallery: false,
-        imageGallery: false,
-        videoGallery: false,
-        animSpeed: 'slow',
-        padding: 10,
-        height: opts.height,
-        width: width,
-        borderWidth: "0px",
-        onload: function() {
-          $('#cee_box').addClass(vid.id);
-          SMPlayer.onOpen(vid);
-          $('#cee_closeBtn').on('click', {id: vid.id}, SMPlayer.onClose);
-          if(isVertical){
-            $('.' + vid.id).addClass('vertical_player');
-            $('.' + vid.id).css("top", "25%");
-          } else {
-            $('.' + vid.id).removeClass('vertical_player');
-            $('.' + vid.id).css("top", "50%");
-          }
-        }
-      });
+      SMPlayer.update_modal(vid);
+      SMPlayer.init_search(vid);
+      SMPlayer.init_transcript(vid);
+      SMPlayer.init_video(vid);
     } else {
       SMPlayer.error("Video not found.  Please contact the administrator to fix this problem.");
     }
@@ -441,8 +340,4 @@ SMPlayer.convert_vtt_to_html = function(parsedVTT, id) {
     }
   });
   return html;
-};
-
-SMPlayer.ceebox_template = function(title) {
-  return '<div id="cee_title"><h2>' + title  + '</h2></div><div id="player-live-wrapper"><a id="cee_closeBtn" class="cee_close" title="close" href="#">close</a>' + $('#player-frame').clone().html() + '</div>';
 };

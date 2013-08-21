@@ -6,7 +6,9 @@
 
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link rel="stylesheet" type="text/css" href="../css/page.css" />
-    <link rel="stylesheet" type="text/css" href="../css/ceebox-min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
 
   </head>
   <body>
@@ -18,28 +20,43 @@
       <div>Neverland, USA</div>
     </div>
 
-    <div id="player-frame">
-      <div id="player-control">
-        <div id="player"></div>
-        <div id="player-speaker"></div>
-        <div id="player-speaker-location"></div>
-      </div><!-- player-control -->
-      <div id="transcript-control">
-        <p id="search-control">
-          <span id="search-count"></span> <input id="search" type="text" size="15" value="Search transcript" />
-        </p>
-        <div id="transcript" class="pane"></div>
-        <div id="transcript-search" class="pane"></div>
-        <p class="control">
-          <div class="control-selector">
-            <label for="audio-locale-selector">Audio</label> <select id="audio-locale-selector"></select>
+    <div class="vidinfo-inline" data-id="walter_lewin" data-title="Some sort of classroom video" data-speaker="Prof. Walter Lewin" data-autostart=false data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanic_Fall_1999_Low_Quality_144p.mp4","240p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Low_Quality_240p.mp4","360p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4"}' data-width="320" data-height="240" data-preview-src="https://iihs-tatemae.s3.amazonaws.com/img/Walter_Lewin.png" data-default-locale="en-US" data-transcripts='{"en-US":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit.vtt","hi-IN":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit.vtt"}' data-audio='{"en-US":"../audio/","hi-IN":"../audio/"}'>
+      <div><a href="https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4" class="video"><img src="https://iihs-tatemae.s3.amazonaws.com/img/Walter_Lewin.png" alt="Prof. Walter Lewin" /><br />Prof. Walter Lewin</a></div>
+      <div>Neverland, USA</div>
+    </div>
+
+    <div id="player-frame" class="modal hide fade" tabindex="-1" data-width="760">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3></h3>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="player-control">
+              <div id="player_"></div>
+              <div class="player-speaker"></div>
+            </div><!-- player-control -->
           </div>
-          <div class="control-selector">
-            <label for="transcript-locale-selector">Transcript</label> <select id="transcript-locale-selector"></select>
+          <div class="span6">
+            <div class="transcript-control">
+              <p class="search-control">
+                <span class="search-count"></span> <input class="search" type="text" size="15" value="Search transcript" />
+              </p>
+              <div class="transcript" class="pane"></div>
+              <div class="transcript-search" class="pane"></div>
+              <p class="control">
+                <div class="control-selector">
+                  <label for="transcript-locale-selector">Transcript</label> <select class="transcript-locale-selector"></select>
+                </div>
+              </p>
+            </div><!-- transcript-control -->
           </div>
-        </p>
-      </div><!-- transcript-control -->
-      <div class="clearfix">&#160;</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <img src="../img/oeit-mark.png" alt="OEIT Logo" />
+      </div>
     </div><!--player-frame-->
 
     <footer>
@@ -64,8 +81,12 @@
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
     <script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
     <script type="text/javascript" src="../js/player.js"></script>
+
 
     <script type="text/javascript">
       $(document).ready(function() {

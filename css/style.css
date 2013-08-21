@@ -10,25 +10,31 @@
   display: none;
 }
 
-#player-control {
-  float: left;
+.player-control {
+  float: right;
   width: 320px;
 }
 
-#transcript-control {
+@media (max-width: 769px) {
+  .player-control {
+    float: left;
+  }
+}
+
+.transcript-control {
   float: left;
   width: 315px;
   margin-left: 10px;
 }
 
-#player-speaker {
+.player-speaker {
   font-color: #333;
   /*   font-size: 0.9em;*/
   padding: 3px 0;
   text-align: center;
 }
 
-#transcript-control {
+.transcript-control {
   clear: right;
 }
 
@@ -37,12 +43,13 @@
  margin:0 auto;
 }
 
-#transcript {
+.transcript {
   padding: 70px 5px 120px 0;
   height: 20px;
+  overflow: scroll;
 }
 
-#transcript .error-message {
+.transcript .error-message {
   color: #100;
   font-weight: bold;
   text-align: center;
@@ -59,60 +66,61 @@
   overflow-y: auto;
 }
 
-#transcript-search {
+.transcript-search {
   display: none;
   padding: 0 5px 0 0;
   height: 210px;
+  overflow: scroll;
 }
 
-#transcript span {
+.transcript span {
   background-color: transparent;
   border-bottom: 2px solid transparent;
   opacity: 0.65;
 }
 
-#transcript span.paused:hover {
+.transcript span.paused:hover {
   background-color: yellow;
 }
 
-#search-control {
+.search-control {
   text-align: right;
 }
 
-#search-control input {
+.search-control input {
   text-align: right;
   /* added to show border-style, border-width in MIT OCW*/
   border-style:solid;
   border-width:1px;
 }
 
-#search {
+.search {
   color: #888;
   padding: 1px;
   text-align: left;
 }
 
-#search-count {
+.search-count {
   color: #888;
   font-size: 0.9em;
   padding: 0 1em 0 0;
 }
 
-#transcript-search .time {
+.transcript-search .time {
   color: #888;
   font-size: 0.8em;
 }
 
-#transcript-search .highlight {
+.transcript-search .highlight {
   background-color: yellow;
 }
 
-#transcript-search div {
+.transcript-search div {
   background-color: transparent;
   cursor: pointer;
 }
 
-#transcript-search div:hover {
+.transcript-search div:hover {
   background-color: yellow;
 }
 
@@ -135,40 +143,6 @@
 
 .control:hover {
   opacity: 1;
-}
-
-/* added, for MIT OCW set to 0.85em to reduce size, makes up for change to page.css-body -- set as 1.0 em for standalone */
-#cee_box {
-  font-size: 1.0em;
-}
-
-#cee_box > div#player-live-wrapper {
-  padding: 10px 10px 45px;
-  background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
-}
-
-#cee_box > div.error {
-  background: #fff url(../img/oeit-mark.png) bottom right no-repeat;
-  font-size: 120%;
-  padding: 10px 10px 45px;
-  text-align: center;
-}
-
-#cee_box > #cee_title {
-  background: #efefef;
-  border-bottom: 1px solid #ddd;
-  color: #333;
-  height: 20px;
-  line-height: 20px;
-  /* removed to tweak font size in MIT OCW */
-  /*    font-size: 0.9em;*/
-}
-
-#cee_box > #cee_title h2::first-letter {
-  /* remove, just use a larger letter of the same family */
-  /*    font-family: "Georgia";*/
-  font-weight: bold;
-  font-size: 120%;
 }
 
 .video img {
