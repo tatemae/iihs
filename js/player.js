@@ -282,10 +282,11 @@ SMPlayer.init_transcript = function(vid) {
     $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
   }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker);
+  $('.' + vid.id + ' .selectpicker').html('');
   var def = vid.default_locale;
   var counter = 0;
   for (var t in vid.transcripts) {
-    $('.' + vid.id + ' .transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
+    $('.' + vid.id + ' .selectpicker').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
     if (def == t || (def === undefined && counter === 0)) {
       $.ajax({
         url: vid.transcripts[t]
@@ -298,7 +299,8 @@ SMPlayer.init_transcript = function(vid) {
     }
     counter++;
   }
-  $('.' + vid.id + ' .transcript-locale-selector').on('change', function() {
+  $('.' + vid.id + ' .selectpicker').selectpicker('refresh');
+  $('.' + vid.id + ' .selectpicker').on('change', function() {
     $.ajax({
       url: $(this).val()
     }).done(function(data){
@@ -338,6 +340,14 @@ SMPlayer.init_video = function(vid) {
 // public method to be called in the page within a
 // $(document).ready() block.
 SMPlayer.init = function(opts) {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+    $('.selectpicker').selectpicker('mobile');
+  } else {
+    $('.selectpicker').selectpicker({
+      size: 'auto',
+      width: 'auto'
+    });
+  }
   SMPlayer.modal = $('#player-frame').modal({show: false});
   SMPlayer.create_inline_players();
   $('.video').on('click', function(e) {
