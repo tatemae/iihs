@@ -47,6 +47,7 @@
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
+  text-align: left;
 }
 
 .transcript .error-message {
@@ -75,6 +76,7 @@
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   border-radius: 6px;
+  text-align: left;
 }
 
 .transcript span {
@@ -131,6 +133,7 @@
 .control label {
   font-size; 0.95em;
   padding-left: 0.5em;
+  font-size: 11px;
 }
 
 .control:hover {
