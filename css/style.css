@@ -146,3 +146,7 @@
   cursor: pointer;
   width: 200px;
 }
+
+.modal-footer img {
+  width: 100px;
+}

@@ -29,7 +29,9 @@ var SMPlayer = {
     "horizontalWidth": 666,
     "horizontalHeight": 370,
     "widthFudge": 50,
-    "preview": null
+    "preview": null,
+    "logo_src": "./img/oeit-mark.png",
+    "logo_alt": "OEIT Logo"
   },
   player: null,
   locales: {
@@ -200,7 +202,8 @@ SMPlayer.vid_data = function(video) {
     'transcripts': $(video).data('transcripts'),
     'default_locale': $(video).data('default-locale'),
     'autostart': $(video).data('autostart'),
-    'autostart_cc': $(video).data('autostart-cc')
+    'autostart_cc': $(video).data('autostart-cc'),
+    'logo_src': $(video).data('logo-src')
   };
 };
 
@@ -219,11 +222,25 @@ SMPlayer.create_inline_players = function() {
   });
 };
 
+SMPlayer.logo_attr = function(vid) {
+  var logo = {};
+  if (vid.logo_src) {
+    logo.src = vid.logo_src;
+    logo.alt = "Logo";
+  } else {
+    logo.src = SMPlayer.defaults.logo_src;
+    logo.alt = SMPlayer.defaults.logo_alt;
+  }
+  return logo;
+};
 
 SMPlayer.update_modal = function(vid) {
+  var logo = SMPlayer.logo_attr(vid);
   SMPlayer.modal
     .find('.modal-header > h3').text(vid.title).end()
     .find('#player_' + SMPlayer.previous).attr('id', 'player_' + vid.id).end()
+    .find('.modal-footer > img').attr('src', logo.src).end()
+    .find('.modal-footer > img').attr('alt', logo.alt).end()
     .modal('show');
   SMPlayer.modal.addClass(vid.id);
   SMPlayer.previous = vid.id;
