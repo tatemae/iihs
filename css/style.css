@@ -31,7 +31,6 @@
 .transcript-control {
   float: left;
   width: 315px;
-  margin-left: 10px;
   clear: right;
 }
 
@@ -41,9 +40,13 @@
 }
 
 .transcript {
-  padding: 70px 5px 120px 0;
+  padding: 70px 5px 120px 5px;
   height: 20px;
   overflow-y: scroll;
+  border: 1px solid rgba(0,0,0,0.298039);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 
 .transcript .error-message {
@@ -65,9 +68,13 @@
 
 .transcript-search {
   display: none;
-  padding: 0 5px 0 0;
+  padding: 0 5px 0 5px;
   height: 210px;
   overflow-y: scroll;
+  border: 1px solid rgba(0,0,0,0.298039);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 
 .transcript span {
