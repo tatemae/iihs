@@ -112,12 +112,13 @@ SMPlayer.sources = function(file_srcs) {
   return sources;
 }
 
-SMPlayer.tracks = function(transcripts) {
+SMPlayer.tracks = function(transcripts, default_locale, autostart_cc) {
   var tracks = [];
   if (transcripts) {
     $.each(transcripts, function(label, file) {
       tracks.push({
         file: file,
+        "default": (label === default_locale) ? autostart_cc : false,
         kind: "captions",
         label: label
       });
@@ -198,7 +199,8 @@ SMPlayer.vid_data = function(video) {
     'preview_src': $(video).data('preview-src'),
     'transcripts': $(video).data('transcripts'),
     'default_locale': $(video).data('default-locale'),
-    'autostart': $(video).data('autostart')
+    'autostart': $(video).data('autostart'),
+    'autostart_cc': $(video).data('autostart-cc')
   };
 };
 
@@ -261,18 +263,19 @@ SMPlayer.init_transcript = function(vid) {
     $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
   }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker);
-  var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
+  // var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
   var def = vid.default_locale;
-  for (var l = 0; l < browserLocales.length; l++) {
-    var locale = browserLocales[l];
-    if (locale in vid.transcripts) {
-      def = locale;
-      break;
-    }
-  }
+  // for (var l = 0; l < browserLocales.length; l++) {
+  //   var locale = browserLocales[l];
+  //   if (locale in vid.transcripts) {
+  //     def = locale;
+  //     break;
+  //   }
+  // }
+  var counter = 0;
   for (var t in vid.transcripts) {
     $('.' + vid.id + ' .transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
-    if (def == t) {
+    if (def == t || (def === undefined && counter === 0)) {
       $.ajax({
         url: vid.transcripts[t]
       }).done(function(data){
@@ -282,6 +285,7 @@ SMPlayer.init_transcript = function(vid) {
         SMPlayer.loadTranscript(transcript, vid.id);
       });
     }
+    counter++;
   }
   $('.' + vid.id + ' .transcript-locale-selector').on('change', function() {
     $.ajax({
@@ -310,7 +314,7 @@ SMPlayer.init_video = function(vid) {
     playlist: [{
       sources: SMPlayer.sources(vid.video_srcs),
       image: vid.preview_src,
-      tracks: SMPlayer.tracks(vid.transcripts)
+      tracks: SMPlayer.tracks(vid.transcripts, vid.default_locale, vid.autostart_cc)
     }]
   };
 
