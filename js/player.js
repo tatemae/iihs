@@ -263,15 +263,7 @@ SMPlayer.init_transcript = function(vid) {
     $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
   }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker);
-  // var browserLocales = ("language" in navigator ? navigator.language : navigator.browserLanguage).split(";");
   var def = vid.default_locale;
-  // for (var l = 0; l < browserLocales.length; l++) {
-  //   var locale = browserLocales[l];
-  //   if (locale in vid.transcripts) {
-  //     def = locale;
-  //     break;
-  //   }
-  // }
   var counter = 0;
   for (var t in vid.transcripts) {
     $('.' + vid.id + ' .transcript-locale-selector').append('<option value="' + vid.transcripts[t] + '"' + ((def == t) ? ' selected="selected"' : '') +'>' + SMPlayer.locales[t] + '</option>\n');
