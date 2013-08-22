@@ -52,6 +52,14 @@ td, th {
   border-radius: 15px;
 }
 
+.vidinfo-inline .control {
+  float: left;
+}
+
+.vidinfo-inline .control label {
+  float: left;
+}
+
 footer {
   padding: 10px;
 }

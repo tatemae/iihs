@@ -340,6 +340,9 @@ SMPlayer.init_video = function(vid) {
 // public method to be called in the page within a
 // $(document).ready() block.
 SMPlayer.init = function(opts) {
+  SMPlayer.modal = $('#player-frame').modal({show: false});
+  SMPlayer.create_inline_players();
+
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
     $('.selectpicker').selectpicker('mobile');
   } else {
@@ -348,8 +351,9 @@ SMPlayer.init = function(opts) {
       width: 'auto'
     });
   }
-  SMPlayer.modal = $('#player-frame').modal({show: false});
-  SMPlayer.create_inline_players();
+
+  $('.selectpicker').selectpicker('refresh');
+
   $('.video').on('click', function(e) {
     e.preventDefault();
     var vidinfo = $(this).closest(".vidinfo");
