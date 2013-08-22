@@ -13,7 +13,7 @@ a img {
   border: 0;
 }
 
-a, a:link, a:visited, a:active {
+a, a:link, a:visited, a:active, a:hover {
   color: #800000;
   text-decoration: none;
 }
