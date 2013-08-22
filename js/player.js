@@ -29,9 +29,7 @@ var SMPlayer = {
     "horizontalWidth": 666,
     "horizontalHeight": 370,
     "widthFudge": 50,
-    "preview": null,
-    "logo_src": "./img/oeit-mark.png",
-    "logo_alt": "OEIT Logo"
+    "preview": null
   },
   player: null,
   locales: {
@@ -196,14 +194,15 @@ SMPlayer.vid_data = function(video) {
     'video_srcs': $(video).data('video-srcs'),
     'video_width': $(video).data('video-width'),
     'video_height': $(video).data('video-height'),
-    'transcript_width': $(video).data('transcript-width'),
-    'transcript_height': $(video).data('transcript-height'),
     'preview_src': $(video).data('preview-src'),
     'transcripts': $(video).data('transcripts'),
+    'transcript_width': $(video).data('transcript-width'),
+    'transcript_height': $(video).data('transcript-height'),
     'default_locale': $(video).data('default-locale'),
     'autostart': $(video).data('autostart'),
     'autostart_cc': $(video).data('autostart-cc'),
-    'logo_src': $(video).data('logo-src')
+    'branding_src': $(video).data('branding-src'),
+    'display_branding': $(video).data('display-branding')
   };
 };
 
@@ -222,25 +221,28 @@ SMPlayer.create_inline_players = function() {
   });
 };
 
-SMPlayer.logo_attr = function(vid) {
-  var logo = {};
-  if (vid.logo_src) {
-    logo.src = vid.logo_src;
-    logo.alt = "Logo";
-  } else {
-    logo.src = SMPlayer.defaults.logo_src;
-    logo.alt = SMPlayer.defaults.logo_alt;
+SMPlayer.branding_attr = function(vid) {
+  var branding = {};
+  if (vid.display_branding === undefined) {
+    vid.display_branding = true;
   }
-  return logo;
+  if (vid.display_branding && vid.branding_src) {
+    branding.src = vid.branding_src;
+    branding.alt = "Branding";
+  } else {
+    branding.src = '';
+    branding.alt = '';
+  }
+  return branding;
 };
 
 SMPlayer.update_modal = function(vid) {
-  var logo = SMPlayer.logo_attr(vid);
+  var branding = SMPlayer.branding_attr(vid);
   SMPlayer.modal
     .find('.modal-header > h3').text(vid.title).end()
     .find('#player_' + SMPlayer.previous).attr('id', 'player_' + vid.id).end()
-    .find('.modal-footer > img').attr('src', logo.src).end()
-    .find('.modal-footer > img').attr('alt', logo.alt).end()
+    .find('.modal-footer .branding').attr('src', branding.src).end()
+    .find('.modal-footer .branding').attr('alt', branding.alt).end()
     .modal('show');
   SMPlayer.modal.addClass(vid.id);
   SMPlayer.previous = vid.id;
