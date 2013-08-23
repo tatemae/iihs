@@ -274,13 +274,6 @@ SMPlayer.init_search = function(vid) {
 };
 
 SMPlayer.init_transcript = function(vid) {
-  if (vid.transcript_width) {
-    $('.' + vid.id + ' .transcript-control').css("width", vid.transcript_width + "px");
-  }
-  if (vid.transcript_height) {
-    $('.' + vid.id + ' .transcript').css("height", vid.transcript_height + "px");
-    $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
-  }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker ? vid.speaker : '');
   $('.' + vid.id + ' .player-speaker-location').text(vid.speaker_location ? vid.speaker_location : '');
   $('.' + vid.id + ' .selectpicker').html('');
@@ -350,6 +343,18 @@ SMPlayer.init_styling = function(vid) {
     position_style.type = 'text/css';
     position_style.innerHTML = '.' + vid.id + ' .transcript .current { ' + vid.transcript_position_style + ' }';
     document.getElementsByTagName('head')[0].appendChild(position_style);
+  }
+  if (vid.transcript_width) {
+    var transcript_width = document.createElement('style');
+    transcript_width.type = 'text/css';
+    transcript_width.innerHTML = '.' + vid.id + ' .transcript-control { width: ' + vid.transcript_width + 'px; }';
+    document.getElementsByTagName('head')[0].appendChild(transcript_width);
+  }
+  if (vid.transcript_height) {
+    var transcript_height = document.createElement('style');
+    transcript_height.type = 'text/css';
+    transcript_height.innerHTML = '.' + vid.id + ' .transcript { height: ' + vid.transcript_height + 'px; } .' + vid.id + ' .transcript-search { height: ' + vid.transcript_height + 'px; }';
+    document.getElementsByTagName('head')[0].appendChild(transcript_height);
   }
 };
 
