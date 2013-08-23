@@ -211,7 +211,8 @@ SMPlayer.create_inline_players = function() {
     var vid = SMPlayer.vid_data(this);
     $(this).addClass(vid.id);
     $(this).find('#player_').attr('id', 'player_' + vid.id);
-    $(this).find('.modal-header').remove();
+    $(this).find('.modal-header > h3').text(vid.title);
+    $(this).find('.modal-header .close').remove();
     $(this).find('.modal-footer').remove();
     SMPlayer.init_styling(vid);
     SMPlayer.init_search(vid);
