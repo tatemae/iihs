@@ -202,7 +202,8 @@ SMPlayer.vid_data = function(video) {
     'autostart': $(video).data('autostart'),
     'autostart_cc': $(video).data('autostart-cc'),
     'branding_src': $(video).data('branding-src'),
-    'display_branding': $(video).data('display-branding')
+    'display_branding': $(video).data('display-branding'),
+    'transcript_highlight': $(video).data('transcript-highlight')
   };
 };
 
@@ -215,6 +216,7 @@ SMPlayer.create_inline_players = function() {
     $(this).find('#player_').attr('id', 'player_' + vid.id);
     $(this).find('.modal-header').remove();
     $(this).find('.modal-footer').remove();
+    SMPlayer.init_styling(vid);
     SMPlayer.init_search(vid);
     SMPlayer.init_transcript(vid);
     SMPlayer.init_video(vid);
@@ -244,6 +246,7 @@ SMPlayer.update_modal = function(vid) {
     .find('.modal-footer .branding').attr('src', branding.src).end()
     .find('.modal-footer .branding').attr('alt', branding.alt).end()
     .modal('show');
+  SMPlayer.modal.removeClass(SMPlayer.previous);
   SMPlayer.modal.addClass(vid.id);
   SMPlayer.previous = vid.id;
 };
@@ -337,6 +340,15 @@ SMPlayer.init_video = function(vid) {
   jwplayer("player_"+vid.id).onPlay(SMPlayer.playListener);
 };
 
+SMPlayer.init_styling = function(vid) {
+  if (vid.transcript_highlight) {
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.innerHTML = '.' + vid.id + ' .transcript span.paused:hover { background-color: ' + vid.transcript_highlight + '; } .' + vid.id + ' .transcript-search .highlight { background-color: ' + vid.transcript_highlight + '; } .' + vid.id + ' .transcript-search div:hover { background-color: ' + vid.transcript_highlight + '; }';
+    document.getElementsByTagName('head')[0].appendChild(style);
+  }
+};
+
 // public method to be called in the page within a
 // $(document).ready() block.
 SMPlayer.init = function(opts) {
@@ -360,6 +372,7 @@ SMPlayer.init = function(opts) {
     var vid = SMPlayer.vid_data(vidinfo);
     if (vid != null) {
       SMPlayer.update_modal(vid);
+      SMPlayer.init_styling(vid);
       SMPlayer.init_search(vid);
       SMPlayer.init_transcript(vid);
       SMPlayer.init_video(vid);
