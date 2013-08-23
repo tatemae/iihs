@@ -167,7 +167,7 @@ SMPlayer.doSearch = function(query, id) {
       result += '</div>\n';
       var jqresult = $(result);
       $('.' + id + ' .transcript-search').append(jqresult);
-      jqresult.on('click', function() {
+      jqresult.on('mousedown', function() {
         jwplayer("player_" + id).seek(seek);
         $('.' + id + ' .search-count').empty();
         $('.' + id + ' .transcript-search').hide();
