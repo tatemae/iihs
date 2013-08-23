@@ -200,7 +200,7 @@ SMPlayer.vid_data = function(video) {
     'branding_src': $(video).data('branding-src'),
     'display_branding': $(video).data('display-branding'),
     'transcript_highlight': $(video).data('transcript-highlight'),
-    'transcript_underline': $(video).data('transcript-underline')
+    'transcript_position_style': $(video).data('transcript-position-style')
   };
 };
 
@@ -345,11 +345,11 @@ SMPlayer.init_styling = function(vid) {
     highlight_style.innerHTML = '.' + vid.id + ' .transcript span.paused:hover { ' + vid.transcript_highlight + ' } .' + vid.id + ' .transcript-search .highlight { ' + vid.transcript_highlight + ' } .' + vid.id + ' .transcript-search div:hover { ' + vid.transcript_highlight + ' }';
     document.getElementsByTagName('head')[0].appendChild(highlight_style);
   }
-  if (vid.transcript_underline) {
-    var underline_style = document.createElement('style');
-    underline_style.type = 'text/css';
-    underline_style.innerHTML = '.' + vid.id + ' .transcript .current { ' + vid.transcript_underline + ' }';
-    document.getElementsByTagName('head')[0].appendChild(underline_style);
+  if (vid.transcript_position_style) {
+    var position_style = document.createElement('style');
+    position_style.type = 'text/css';
+    position_style.innerHTML = '.' + vid.id + ' .transcript .current { ' + vid.transcript_position_style + ' }';
+    document.getElementsByTagName('head')[0].appendChild(position_style);
   }
 };
 
