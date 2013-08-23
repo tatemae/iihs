@@ -281,8 +281,8 @@ SMPlayer.init_transcript = function(vid) {
     $('.' + vid.id + ' .transcript').css("height", vid.transcript_height + "px");
     $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
   }
-  $('.' + vid.id + ' .player-speaker').text(vid.speaker);
-  $('.' + vid.id + ' .player-speaker-location').text(vid.speaker_location);
+  $('.' + vid.id + ' .player-speaker').text(vid.speaker ? vid.speaker : '');
+  $('.' + vid.id + ' .player-speaker-location').text(vid.speaker_location ? vid.speaker_location : '');
   $('.' + vid.id + ' .selectpicker').html('');
   var def = vid.default_locale;
   var counter = 0;
