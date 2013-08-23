@@ -23,7 +23,12 @@
 
 .player-speaker {
   font-color: #333;
-  /*   font-size: 0.9em;*/
+  padding: 3px 0;
+  text-align: center;
+}
+
+.player-speaker-location {
+  font-color: #333;
   padding: 3px 0;
   text-align: center;
 }

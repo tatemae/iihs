@@ -186,7 +186,7 @@ SMPlayer.vid_data = function(video) {
     'id': $(video).data('id'),
     'title': $(video).data('title'),
     'speaker': $(video).data('speaker'),
-    'speaker-location': $(video).data('speaker-location'),
+    'speaker_location': $(video).data('speaker-location'),
     'video_srcs': $(video).data('video-srcs'),
     'video_width': $(video).data('video-width'),
     'video_height': $(video).data('video-height'),
@@ -282,6 +282,7 @@ SMPlayer.init_transcript = function(vid) {
     $('.' + vid.id + ' .transcript-search').css("height", vid.transcript_height + "px");
   }
   $('.' + vid.id + ' .player-speaker').text(vid.speaker);
+  $('.' + vid.id + ' .player-speaker-location').text(vid.speaker_location);
   $('.' + vid.id + ' .selectpicker').html('');
   var def = vid.default_locale;
   var counter = 0;
