@@ -46,14 +46,11 @@ SMPlayer.positionListener = function(o) {
   SMPlayer.segLocId = '#T' + Math.round(SMPlayer.currentPosition);
   if($('.' + vid_id + ' ' + SMPlayer.segLocId).size() > 0) {
     if (SMPlayer.prevSegLocId != null && SMPlayer.prevSegLocId != SMPlayer.segLocId && !$('.' + vid_id + ' ' + SMPlayer.prevSegLocId).hasClass("passed")) {
-        $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).css("border-bottom-color", "transparent");
-        $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).animate({"opacity": 0.65}, {"duration": 5000});
       $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).removeClass("current").addClass("passed");
     }
     if(!$('.' + vid_id + ' ' + SMPlayer.segLocId).hasClass("current")) {
       if ( $('.' + vid_id + ' ' + SMPlayer.segLocId).position().top - SMPlayer.scroll + SMPlayer.SCROLL_OFFSET > 5)
       $('.' + vid_id + ' ' + '.transcript').scrollTo($('.' + vid_id + ' ' + SMPlayer.segLocId), {"offset": {"top": SMPlayer.SCROLL_OFFSET}, "duration": 250});
-      $('.' + vid_id + ' ' + SMPlayer.segLocId).css("opacity", 1).css("border-bottom-color", "black");
       $('.' + vid_id + ' ' + SMPlayer.segLocId).addClass("current").removeClass("passed");
       SMPlayer.prevSegLocId = SMPlayer.segLocId;
       SMPlayer.scroll = $('.' + vid_id + ' ' + SMPlayer.segLocId).position().top + SMPlayer.SCROLL_OFFSET;
@@ -73,7 +70,6 @@ SMPlayer.secondsToTime = function(t) {
 SMPlayer.pauseListener = function(o) {
   var player_id = this.id;
   var vid_id = player_id.replace('player_','');
-  $('.' + vid_id + ' .transcript span').css('cursor', 'pointer').animate({'opacity': 1});
   $('.' + vid_id + ' .transcript span').addClass('paused');
   $('.' + vid_id + ' .transcript span').each(function() {
     var secs = $(this).attr('id').substr(1);
@@ -92,7 +88,7 @@ SMPlayer.playListener = function(o) {
     var vid_id = player_id.replace('player_','');
     $('.' + vid_id + ' .transcript span').off();
     $('.' + vid_id + ' .transcript span').removeClass('paused');
-    $('.' + vid_id + ' .transcript span').css('cursor', 'default').attr('title', null);
+    $('.' + vid_id + ' .transcript span').attr('title', null);
     $('.' + vid_id + ' .transcript span').filter(function() {
       return $(this).css('border-bottom-color') == 'transparent';
     }).animate({'opacity': 0.65});
@@ -203,7 +199,8 @@ SMPlayer.vid_data = function(video) {
     'autostart_cc': $(video).data('autostart-cc'),
     'branding_src': $(video).data('branding-src'),
     'display_branding': $(video).data('display-branding'),
-    'transcript_highlight': $(video).data('transcript-highlight')
+    'transcript_highlight': $(video).data('transcript-highlight'),
+    'transcript_underline': $(video).data('transcript-underline')
   };
 };
 
@@ -246,8 +243,8 @@ SMPlayer.update_modal = function(vid) {
     .find('.modal-footer .branding').attr('src', branding.src).end()
     .find('.modal-footer .branding').attr('alt', branding.alt).end()
     .modal('show');
-  SMPlayer.modal.removeClass(SMPlayer.previous);
-  SMPlayer.modal.addClass(vid.id);
+  SMPlayer.modal.removeClass(SMPlayer.previous).addClass(vid.id);
+
   SMPlayer.previous = vid.id;
 };
 
@@ -342,10 +339,16 @@ SMPlayer.init_video = function(vid) {
 
 SMPlayer.init_styling = function(vid) {
   if (vid.transcript_highlight) {
-    var style = document.createElement('style');
-    style.type = 'text/css';
-    style.innerHTML = '.' + vid.id + ' .transcript span.paused:hover { background-color: ' + vid.transcript_highlight + '; } .' + vid.id + ' .transcript-search .highlight { background-color: ' + vid.transcript_highlight + '; } .' + vid.id + ' .transcript-search div:hover { background-color: ' + vid.transcript_highlight + '; }';
-    document.getElementsByTagName('head')[0].appendChild(style);
+    var highlight_style = document.createElement('style');
+    highlight_style.type = 'text/css';
+    highlight_style.innerHTML = '.' + vid.id + ' .transcript span.paused:hover { ' + vid.transcript_highlight + ' } .' + vid.id + ' .transcript-search .highlight { ' + vid.transcript_highlight + ' } .' + vid.id + ' .transcript-search div:hover { ' + vid.transcript_highlight + ' }';
+    document.getElementsByTagName('head')[0].appendChild(highlight_style);
+  }
+  if (vid.transcript_underline) {
+    var underline_style = document.createElement('style');
+    underline_style.type = 'text/css';
+    underline_style.innerHTML = '.' + vid.id + ' .transcript .current { ' + vid.transcript_underline + ' }';
+    document.getElementsByTagName('head')[0].appendChild(underline_style);
   }
 };
 

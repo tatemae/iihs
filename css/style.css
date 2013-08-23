@@ -81,8 +81,20 @@
 
 .transcript span {
   background-color: transparent;
-  border-bottom: 2px solid transparent;
   opacity: 0.65;
+}
+
+.transcript .current {
+  border-bottom: 2px solid black;
+}
+
+.transcript .passed {
+  opacity: 0.35;
+}
+
+.transcript .paused {
+  opacity: 1;
+  cursor: default;
 }
 
 .transcript span.paused:hover {
