@@ -3,13 +3,69 @@ OEIT Player
 
 Makes use of the JW Player 6. Takes a video source and transcript and displays them with interactivity.
 
+
+# Usage
+
+Need to include these stylesheet links in the head
+
+```
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/style.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/page.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-select.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-glyphicons.css" />
+```
+
+And need to include these script tags at the bottom of the body
+
+```
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
+<script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
+<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/player.js" ></script>
+```
+
+And finally to initialize
+
+```
+ <script type="text/javascript">
+  $(document).ready(function() {
+    SMPlayer.init();
+  });
+</script>
+```
+
+For a modal player the Data Attributes need to be in an element with class="vidinfo" with a nested element that has a class="video".
+
+```
+<td class="vidinfo" data-id="bish_sanyal" data-.....>
+  <p><a href="https://iihs-tatemae.s3.amazonaws.com/IIHS_Bish_Sanyal_Oct2009.mov" class="video"></p>
+</td>
+```
+
+For an inline player all you need is the Data Attributes in an element with class="vidinfo-inline".
+
+```
+<div class="vidinfo-inline" data-id="scot_osterweil" data-.......>
+</div>
+```
+
+
 # Data Attributes
 
 ### data-id
 
 This is the id for that player. It MUST be unique on the page, or else weird playback WILL occur.
 
-```Example
+```
 data-id="walter_lewin"
 ```
 
@@ -17,7 +73,7 @@ data-id="walter_lewin"
 
 The title is what displays in the modal header.
 
-```Example
+```
 data-title="Some sort of classroom video"
 ```
 
@@ -25,7 +81,7 @@ data-title="Some sort of classroom video"
 
 The speaker is shown below the video.
 
-```Example
+```
 data-speaker="Prof. Walter Lewin"
 ```
 
@@ -33,7 +89,7 @@ data-speaker="Prof. Walter Lewin"
 
 The speaker location is shown below the speaker below the video.
 
-```Example
+```
 data-speaker-location="Neverland, USA"
 ```
 
@@ -41,7 +97,7 @@ data-speaker-location="Neverland, USA"
 
 Takes a hash of video titles and their srcs.
 
-```Example
+```
 data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanic_Fall_1999_Low_Quality_144p.mp4","240p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Low_Quality_240p.mp4","360p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4"}'
 ```
 
@@ -49,7 +105,7 @@ data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_
 
 This is the width the video will be shown at.
 
-```Example
+```
 data-video-width="320"
 ```
 
@@ -57,7 +113,7 @@ data-video-width="320"
 
 This is the height the video will be shown at.
 
-```Example
+```
 data-video-height="240"
 ```
 
@@ -65,7 +121,7 @@ data-video-height="240"
 
 This is the src for the splash screen in the video. Before the video actually plays, this image will be shown.
 
-```Example
+```
 data-preview-src="https://iihs-tatemae.s3.amazonaws.com/img/Walter_Lewin.png"
 ```
 
@@ -73,7 +129,7 @@ data-preview-src="https://iihs-tatemae.s3.amazonaws.com/img/Walter_Lewin.png"
 
 The default locale will tell the player which transcript to use by default. If none is specified, then the first locale in the data-transcripts will be used.
 
-```Example
+```
 data-default-locale="en-US"
 ```
 
@@ -81,7 +137,7 @@ data-default-locale="en-US"
 
 The transcripts takes a hash of the locale and the vtt src. WebVTT format must be used.
 
-```Example
+```
 data-transcripts='{"en-US":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit.vtt","hi-IN":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit-bfcoder.vtt"}'
 ```
 
@@ -89,7 +145,7 @@ data-transcripts='{"en-US":"https://iihs-tatemae.s3.amazonaws.com/transcripts/le
 
 The branding source is displayed in the lower right corner of the modal.
 
-```Example
+```
 data-branding-src="https://iihs-tatemae.s3.amazonaws.com/img/tatemae_logo.png"
 ```
 
@@ -97,7 +153,7 @@ data-branding-src="https://iihs-tatemae.s3.amazonaws.com/img/tatemae_logo.png"
 
 To show or hide the branding in the lower right corner of the modal. This can be true or false. It defaults to true.
 
-```Example
+```
 data-display-branding=true
 ```
 
@@ -105,7 +161,7 @@ data-display-branding=true
 
 Accepts pure css for styling the highlighting.
 
-```Example
+```
 data-transcript-highlight="background-color: green;"
 ```
 
@@ -113,7 +169,7 @@ data-transcript-highlight="background-color: green;"
 
 Accepts pure css for styling the current possition in the transcript.
 
-```Example
+```
 data-transcript-position-style="border-bottom: 2px solid orange;"
 ```
 
@@ -121,7 +177,7 @@ data-transcript-position-style="border-bottom: 2px solid orange;"
 
 Sets the width of the transcript in px.
 
-```Example
+```
 data-transcript-width="500"
 ```
 
@@ -129,7 +185,7 @@ data-transcript-width="500"
 
 Sets the height of the transcript in px.
 
-```Example
+```
 data-transcript-height="600"
 ```
 
@@ -137,7 +193,7 @@ data-transcript-height="600"
 
 To autostart playing the video. This can be true or false. Defaults to false.
 
-```Example
+```
 data-autostart=true
 ```
 
@@ -145,7 +201,6 @@ data-autostart=true
 
 To autostart the closed captioning inside the video player.
 
-```Example
+```
 data-autostart-cc="true"
 ```
-
