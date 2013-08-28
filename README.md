@@ -134,7 +134,7 @@ data-speaker-location="Neverland, USA"
 
 ### data-video-srcs
 
-Takes a hash of video titles and their srcs.
+Takes a hash of video titles and their srcs. This hash must be enclosed in single quotes, with the keys and values inside double quotes.
 
 ```
 data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanic_Fall_1999_Low_Quality_144p.mp4","240p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Low_Quality_240p.mp4","360p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4"}'
@@ -174,7 +174,7 @@ data-default-locale="en-US"
 
 ### data-transcripts
 
-The transcripts takes a hash of the locale and the vtt src. WebVTT format must be used.
+The transcripts takes a hash of the locale and the vtt src. WebVTT format must be used. This hash must be enclosed in single quotes, with the keys and values inside double quotes.
 
 ```
 data-transcripts='{"en-US":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit.vtt","hi-IN":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit-bfcoder.vtt"}'
