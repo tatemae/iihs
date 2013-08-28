@@ -34,32 +34,6 @@ td, th {
   background: url(../img/bg_page.jpg) repeat;
 }
 
-.vidinfo {
-  padding: 10px 30px;
-  text-align: center;
-}
-
-.vidinfo-inline {
-  padding: 10px 30px;
-  text-align: center;
-}
-
-.vidinfo-inline .modal-body {
-  background-color: rgba(255,255,255,0.75);
-  border: 1px solid;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-}
-
-.vidinfo-inline .control {
-  float: left;
-}
-
-.bootstrap-select.btn-group .dropdown-menu li {
-  text-align: left;
-}
-
 footer {
   padding: 10px;
 }
