@@ -58,6 +58,45 @@ For an inline player all you need is the Data Attributes in an element with clas
 </div>
 ```
 
+Each of the players require this template be inside the markup:
+
+```
+<div id="player-frame" class="modal hide fade" tabindex="-1" data-width="760">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3></h3>
+  </div>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="player-control">
+          <div id="player_"></div>
+          <div class="player-speaker"></div>
+          <div class="player-speaker-location"></div>
+        </div><!-- player-control -->
+      </div>
+      <div class="span6">
+        <div class="transcript-control">
+          <div class="search-control">
+            <span class="search-count"></span> <input class="search" type="text" size="15" value="Search transcript" />
+          </div>
+          <div class="transcript" class="pane"></div>
+          <div class="transcript-search" class="pane"></div>
+          <div class="control">
+            <div class="control-selector">
+              <select class="selectpicker transcript-locale-selector"></select>
+            </div>
+          </div>
+        </div><!-- transcript-control -->
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <img class="branding" src="" alt="" />
+  </div>
+</div><!--player-frame-->
+```
+
 
 # Data Attributes
 
