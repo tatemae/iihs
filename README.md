@@ -9,9 +9,7 @@ Makes use of the JW Player 6. Takes a video source and transcript and displays t
 Need to include these stylesheet links in the head
 
 ```
-<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/reset.css" />
-<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/style.css" />
-<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/page.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/player.css" />
 <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
 <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
@@ -23,7 +21,7 @@ And need to include these script tags at the bottom of the body
 
 ```
 <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
-<script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
 <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
