@@ -250,8 +250,7 @@ data-autostart-cc=true
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <link rel="stylesheet" type="text/css" href="../css/page.css" />
-    <link rel="stylesheet" type="text/css" href="../css/player.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/player.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
@@ -327,7 +326,7 @@ data-autostart-cc=true
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
     <script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
-    <script type="text/javascript" src="../js/player.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/player.js"></script>
 
 
     <script type="text/javascript">
