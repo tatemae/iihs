@@ -132,7 +132,7 @@ data-speaker-location="Neverland, USA"
 
 ### data-video-srcs
 
-Takes a hash of video titles and their srcs. This hash must be enclosed in single quotes, with the keys and values inside double quotes.
+Takes a hash of video titles and their srcs. This hash must be enclosed in single quotes, with the keys and values inside double quotes. Defaults to the very first source.
 
 ```
 data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanic_Fall_1999_Low_Quality_144p.mp4","240p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Low_Quality_240p.mp4","360p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4"}'
@@ -236,8 +236,8 @@ data-autostart=true
 
 ### data-autostart-cc
 
-To autostart the closed captioning inside the video player.
+To autostart the closed captioning inside the video player. Defaults to false. This will auto start the closed captioning on the transcript that is listed for the data-default-locale. So if we have data-default-locale="en-US" then it will find the transcript for "en-US" and start that trascript up in the closed captioning.
 
 ```
-data-autostart-cc="true"
+data-autostart-cc=true
 ```
