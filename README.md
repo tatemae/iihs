@@ -241,3 +241,100 @@ To autostart the closed captioning inside the video player. Defaults to false. T
 ```
 data-autostart-cc=true
 ```
+
+# All together now
+
+```
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="../css/page.css" />
+    <link rel="stylesheet" type="text/css" href="../css/player.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-glyphicons.css" />
+
+  </head>
+  <body>
+
+    <div
+    class="vidinfo-inline"
+    data-id="walter_lewin"
+    data-title="Some sort of classroom video"
+    data-speaker="Prof. Walter Lewin"
+    data-speaker-location="Neverland, USA"
+    data-autostart=false
+    data-video-srcs='{"144p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanic_Fall_1999_Low_Quality_144p.mp4","240p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Low_Quality_240p.mp4","360p":"https://iihs-tatemae.s3.amazonaws.com/video/Lec_1_801_Physics_I_Classical_Mechanics_Fall_1999_Standard_Quality_360p.mp4"}'
+    data-video-width="320"
+    data-video-height="240"
+    data-preview-src="https://iihs-tatemae.s3.amazonaws.com/img/Walter_Lewin.png"
+    data-default-locale="en-US"
+    data-transcripts='{"en-US":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit.vtt","hi-IN":"https://iihs-tatemae.s3.amazonaws.com/transcripts/lec1-edit-bfcoder.vtt"}'
+    data-transcript-highlight="#FFFFFF"
+    data-branding-src="https://iihs-tatemae.s3.amazonaws.com/img/tatemae_logo.png"
+    data-display-branding=true
+    data-transcript-position-style="border-bottom: 2px solid orange;"
+    data-transcript-width="320"
+    data-transcript-height="210"
+    data-autostart=false
+    data-autostart-cc=true >
+    </div>
+
+    <div id="player-frame" class="modal hide fade" tabindex="-1" data-width="760">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3></h3>
+      </div>
+      <div class="modal-body">
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="player-control">
+              <div id="player_"></div>
+              <div class="player-speaker"></div>
+              <div class="player-speaker-location"></div>
+            </div><!-- player-control -->
+          </div>
+          <div class="span6">
+            <div class="transcript-control">
+              <div class="search-control">
+                <span class="search-count"></span> <input class="search" type="text" size="15" value="Search transcript" />
+              </div>
+              <div class="transcript" class="pane"></div>
+              <div class="transcript-search" class="pane"></div>
+              <div class="control">
+                <div class="control-selector">
+                  <select class="selectpicker transcript-locale-selector"></select>
+                </div>
+              </div>
+            </div><!-- transcript-control -->
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <img class="branding" src="" alt="" />
+      </div>
+    </div><!--player-frame-->
+
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
+    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
+    <script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
+    <script type="text/javascript" src="../js/player.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        SMPlayer.init();
+      });
+    </script>
+  </body>
+</html>
+```
