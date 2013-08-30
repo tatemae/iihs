@@ -1,0 +1,85 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/player.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-select.min.css" />
+<link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-glyphicons.css" />
+
+</head>
+
+<body>
+
+
+<div
+class="vidinfo-inline session-1-0"
+data-id="session-1-0"
+data-title="Science of Learning"
+data-speaker="Lourdes Aleman"
+data-speaker-location=""
+data-autostart="false" data-video-srcs='{
+"540p":"http://d3e1jp5m6rfvu6.cloudfront.net/best-practices-teaching-learning/Session-1.0-Science-of-Learning-540p-800.mp4",
+"720p":"http://d3e1jp5m6rfvu6.cloudfront.net/best-practices-teaching-learning/Session-1.0-Science-of-Learning-HD-720p-2500.mp4"
+}'
+data-video-width="320"
+data-video-height="240"
+data-preview-src="http://d3e1jp5m6rfvu6.cloudfront.net/best-practices-teaching-learning/Session-1.0-Science-of-Learning.png" data-transcripts='{"en-US":"http://d3e1jp5m6rfvu6.cloudfront.net/games-and-simulation-based-learning/Week_1-Scot_Osterweil.vtt"}'
+data-transcript-highlight="#FFFFFF">
+</div>
+
+
+
+<div id="player-frame" class="modal hide fade" tabindex="-1" data-width="100%">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3></h3>
+  </div>
+  <div class="modal-body">
+    <div class="row-fluid">
+      <div class="span6">
+        <div class="player-control">
+          <div id="player_"></div>
+          <div class="player-speaker"></div>
+          <div class="player-speaker-location"></div>
+        </div><!-- player-control -->
+      </div>
+      <div class="span6">
+        <div class="transcript-control">
+          <div class="search-control">
+            <span class="search-count"></span> <input class="search" type="text" size="15" value="Search transcript" />
+          </div>
+          <div class="transcript" class="pane"></div>
+          <div class="transcript-search" class="pane"></div>
+          <div class="control">
+            <div class="control-selector">
+              <select class="selectpicker transcript-locale-selector"></select>
+            </div>
+          </div>
+        </div><!-- transcript-control -->
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <img class="branding" src="" alt="" />
+  </div>
+</div><!--player-frame-->
+
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/parser.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js"></script>
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js"></script>
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
+<script src="http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js"></script> <!-- JW Player -->
+<script src="https://iihs-tatemae.s3.amazonaws.com/js/player.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    SMPlayer.init();
+  });
+</script>
+
+</body>
+</html>
