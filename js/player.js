@@ -45,7 +45,7 @@ SMPlayer.positionListener = function(o) {
   var vid_id = player_id.replace('player_','');
   SMPlayer.segLocId = '#T' + Math.round(SMPlayer.currentPosition);
   if($('.' + vid_id + ' ' + SMPlayer.segLocId).size() > 0) {
-    if (SMPlayer.prevSegLocId != null && SMPlayer.prevSegLocId != SMPlayer.segLocId && !$('.' + vid_id + ' ' + SMPlayer.prevSegLocId).hasClass("passed")) {
+    if (SMPlayer.prevSegLocId !== null && SMPlayer.prevSegLocId != SMPlayer.segLocId && !$('.' + vid_id + ' ' + SMPlayer.prevSegLocId).hasClass("passed")) {
       $('.' + vid_id + ' ' + SMPlayer.prevSegLocId).removeClass("current").addClass("passed");
     }
     if(!$('.' + vid_id + ' ' + SMPlayer.segLocId).hasClass("current")) {
@@ -106,7 +106,7 @@ SMPlayer.sources = function(file_srcs) {
     });
   }
   return sources;
-}
+};
 
 SMPlayer.tracks = function(transcripts, default_locale, autostart_cc) {
   var tracks = [];
@@ -153,7 +153,7 @@ SMPlayer.search = function(string) {
 // perform search
 SMPlayer.doSearch = function(query, id) {
   if (query.length > 0) {
-    $('.' + id + ' .transcript').hide()
+    $('.' + id + ' .transcript').hide();
     $('.' + id + ' .transcript-search').show();
     $('.' + id + ' .transcript-search').empty();
     var hits = $('.' + id + ' .transcript span:contains(' + query + ')').size();
@@ -260,10 +260,10 @@ SMPlayer.init_search = function(vid) {
     $('.' + vid.id + ' .search').css('color', '#000');
   });
   $('.' + vid.id + ' .search').on('blur', function(e) {
-    if ($('.' + vid.id + ' .search').val() == '') {
+    if ($('.' + vid.id + ' .search').val() === '') {
         $('.' + vid.id + ' .search').val('Search transcript').css('color', '#999');
     }
-    if ($('.' + vid.id + ' .transcript:visible').size() == 0) {
+    if ($('.' + vid.id + ' .transcript:visible').size() === 0) {
       $('.' + vid.id + ' .transcript').show();
       $('.' + vid.id + ' .transcript-search').hide();
       $('.' + vid.id + ' .search-count').empty();
@@ -357,6 +357,12 @@ SMPlayer.init_styling = function(vid) {
     transcript_height.innerHTML = '.' + vid.id + ' .transcript { height: ' + vid.transcript_height + 'px; } .' + vid.id + ' .transcript-search { height: ' + vid.transcript_height + 'px; }';
     document.getElementsByTagName('head')[0].appendChild(transcript_height);
   }
+  if (vid.video_width) {
+    var modal_width = document.createElement('style');
+    modal_width.type = 'text/css';
+    modal_width.innerHTML = '.' + vid.id + ' .modal-body { min-width: ' + vid.video_width + 'px; max-width: ' + ((vid.video_width * 2) + 30) + 'px; margin-left: auto; margin-right: auto; } @media (max-width: 769px) { .' + vid.id + ' .modal-body { max-width: ' + vid.video_width + 'px; } }';
+    document.getElementsByTagName('head')[0].appendChild(modal_width);
+  }
 };
 
 // public method to be called in the page within a
@@ -380,7 +386,7 @@ SMPlayer.init = function(opts) {
     e.preventDefault();
     var vidinfo = $(this).closest(".vidinfo");
     var vid = SMPlayer.vid_data(vidinfo);
-    if (vid != null) {
+    if (vid !== null) {
       SMPlayer.update_modal(vid);
       SMPlayer.init_styling(vid);
       SMPlayer.init_search(vid);
@@ -397,7 +403,7 @@ SMPlayer.convert_vtt_to_html = function(parsedVTT, id) {
   var html = "";
   parsedVTT.cues.forEach(function(cue) {
     if (cue.text) {
-      html += "<span id='T" + Math.floor(cue.startTime) + "' data-id='" + id + "'>" + cue.text + "</span> "
+      html += "<span id='T" + Math.floor(cue.startTime) + "' data-id='" + id + "'>" + cue.text + "</span> ";
     }
   });
   return html;

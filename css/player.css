@@ -183,6 +183,10 @@
   border-radius: 15px;
 }
 
+.vidinfo-inline .modal-header {
+  border-bottom: 0px;
+}
+
 .vidinfo-inline .control {
   float: left;
 }
