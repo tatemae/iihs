@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Admin UI</title>
+
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/player-admin.css" />
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-modal.css" />
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-glyphicons.css" />
+
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="text-center">
+        <button class="btn btn-primary btn-large" data-toggle="modal" href="#admin_form">New Video</button>
+      </div>
+
+      <div class="video_elements">
+      </div>
+
+      <pre>
+        <code class="page_html"></code>
+      </pre>
+
+      <div class="page_html_template_a hide">
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;title&gt;OEIT Player&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/player.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-responsive.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-modal.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-select.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/css/bootstrap-glyphicons.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;page-container&quot;&gt;
+          </div>
+      <div class="page_html_template_b hide">
+    &lt;div id=&quot;player-frame&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; data-width=&quot;760&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+        &lt;h3&gt;&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+          &lt;div class=&quot;span6&quot;&gt;
+            &lt;div class=&quot;player-control&quot;&gt;
+              &lt;div id=&quot;player_&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;player-speaker&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;player-speaker-location&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;!-- player-control --&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;span6&quot;&gt;
+            &lt;div class=&quot;transcript-control&quot;&gt;
+              &lt;div class=&quot;search-control&quot;&gt;
+                &lt;span class=&quot;search-count&quot;&gt;&lt;/span&gt;
+                &lt;input class=&quot;search&quot; type=&quot;text&quot; size=&quot;15&quot; value=&quot;Search transcript&quot; /&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;transcript&quot; class=&quot;pane&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;transcript-search&quot; class=&quot;pane&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;control-selector&quot;&gt;
+                  &lt;select class=&quot;selectpicker transcript-locale-selector&quot;&gt;&lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- transcript-control --&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;img class=&quot;branding&quot; src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!--player-frame--&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/parser.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-modal.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-modalmanager.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-select.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js&quot;&gt;&lt;/script&gt;&lt;!-- JW Player --&gt;
+  &lt;script src=&quot;http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/player.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function() {
+      SMPlayer.init();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+
+      <div class="video_element_template hide">
+        <div class="video_element">
+          <div class="row-fluid">
+            <div class="span6">
+
+              <div class="control-group">
+                <label for="data-id" class="control-label">
+                  data-id
+                </label>
+                <div class="controls">
+                  <input disabled=true disabled=true name="data-id" type="text" value="" id="data-id">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-title" class="control-label">
+                  data-title
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-title" type="text" value="" id="data-title">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-speaker" class="control-label">
+                  data-speaker
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-speaker" type="text" value="" id="data-speaker">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-speaker-location" class="control-label">
+                  data-speaker-location
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-speaker-location" type="text" value="" id="data-speaker-location">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-video-srcs" class="control-label">
+                  data-video-srcs
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-video-srcs" type="text" value="" id="data-video-srcs">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-video-width" class="control-label">
+                  data-video-width
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-video-width" type="text" value="" id="data-video-width">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-video-width" class="control-label">
+                  data-video-width
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-video-width" type="text" value="" id="data-video-width">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-preview-src" class="control-label">
+                  data-preview-src
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-preview-src" type="text" value="" id="data-preview-src">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-default-locale" class="control-label">
+                  data-default-locale
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-default-locale" type="text" value="" id="data-default-locale">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-transcripts" class="control-label">
+                  data-transcripts
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-transcripts" type="text" value="" id="data-transcripts">
+                </div>
+              </div>
+
+            </div>
+
+            <div class="span6">
+
+              <div class="control-group">
+                <label for="data-branding-src" class="control-label">
+                  data-branding-src
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-branding-src" type="text" value="" id="data-branding-src">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-display-branding" class="control-label">
+                  data-display-branding
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-display-branding" type="text" value="" id="data-display-branding">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-transcript-highlight" class="control-label">
+                  data-transcript-highlight
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-transcript-highlight" type="text" value="" id="data-transcript-highlight">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-transcript-position-style" class="control-label">
+                  data-transcript-position-style
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-transcript-position-style" type="text" value="" id="data-transcript-position-style">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-transcript-width" class="control-label">
+                  data-transcript-width
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-transcript-width" type="text" value="" id="data-transcript-width">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-transcript-height" class="control-label">
+                  data-transcript-height
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-transcript-height" type="text" value="" id="data-transcript-height">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-autostart" class="control-label">
+                  data-autostart
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-autostart" type="text" value="" id="data-autostart">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-autostart-cc" class="control-label">
+                  data-autostart-cc
+                </label>
+                <div class="controls">
+                  <input disabled=true name="data-autostart-cc" type="text" value="" id="data-autostart-cc">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button class="edit_video btn btn-primary btn-large" data-toggle="modal" href="#admin_form">Edit Video</button>
+            <button class="delete_video btn btn-primary btn-large">Delete Video</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="admin_form" class="modal hide fade" tabindex="-1" data-width="760">
+        <form id="new_video_form">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Admin UI</h3>
+          </div>
+          <div class="modal-body">
+            <div class="row-fluid">
+              <div class="span6">
+                <h4>Data Attributes</h4>
+
+                <div class="control-group">
+                  <label for="data-id" class="control-label">
+                    data-id
+                  </label>
+                  <div class="controls">
+                    <input name="data-id" type="text" value="" id="data-id">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-title" class="control-label">
+                    data-title
+                  </label>
+                  <div class="controls">
+                    <input name="data-title" type="text" value="" id="data-title">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-speaker" class="control-label">
+                    data-speaker
+                  </label>
+                  <div class="controls">
+                    <input name="data-speaker" type="text" value="" id="data-speaker">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-speaker-location" class="control-label">
+                    data-speaker-location
+                  </label>
+                  <div class="controls">
+                    <input name="data-speaker-location" type="text" value="" id="data-speaker-location">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-video-srcs" class="control-label">
+                    data-video-srcs
+                  </label>
+                  <div class="controls">
+                    <input name="data-video-srcs" type="text" value="" id="data-video-srcs">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-video-width" class="control-label">
+                    data-video-width
+                  </label>
+                  <div class="controls">
+                    <input name="data-video-width" type="text" value="" id="data-video-width">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-video-width" class="control-label">
+                    data-video-width
+                  </label>
+                  <div class="controls">
+                    <input name="data-video-width" type="text" value="" id="data-video-width">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-preview-src" class="control-label">
+                    data-preview-src
+                  </label>
+                  <div class="controls">
+                    <input name="data-preview-src" type="text" value="" id="data-preview-src">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-default-locale" class="control-label">
+                    data-default-locale
+                  </label>
+                  <div class="controls">
+                    <input name="data-default-locale" type="text" value="" id="data-default-locale">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-transcripts" class="control-label">
+                    data-transcripts
+                  </label>
+                  <div class="controls">
+                    <input name="data-transcripts" type="text" value="" id="data-transcripts">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="span6">
+                <h4>Data Attributes</h4>
+
+                <div class="control-group">
+                  <label for="data-branding-src" class="control-label">
+                    data-branding-src
+                  </label>
+                  <div class="controls">
+                    <input name="data-branding-src" type="text" value="" id="data-branding-src">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-display-branding" class="control-label">
+                    data-display-branding
+                  </label>
+                  <div class="controls">
+                    <input name="data-display-branding" type="text" value="" id="data-display-branding">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-transcript-highlight" class="control-label">
+                    data-transcript-highlight
+                  </label>
+                  <div class="controls">
+                    <input name="data-transcript-highlight" type="text" value="" id="data-transcript-highlight">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-transcript-position-style" class="control-label">
+                    data-transcript-position-style
+                  </label>
+                  <div class="controls">
+                    <input name="data-transcript-position-style" type="text" value="" id="data-transcript-position-style">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-transcript-width" class="control-label">
+                    data-transcript-width
+                  </label>
+                  <div class="controls">
+                    <input name="data-transcript-width" type="text" value="" id="data-transcript-width">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-transcript-height" class="control-label">
+                    data-transcript-height
+                  </label>
+                  <div class="controls">
+                    <input name="data-transcript-height" type="text" value="" id="data-transcript-height">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-autostart" class="control-label">
+                    data-autostart
+                  </label>
+                  <div class="controls">
+                    <input name="data-autostart" type="text" value="" id="data-autostart">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label for="data-autostart-cc" class="control-label">
+                    data-autostart-cc
+                  </label>
+                  <div class="controls">
+                    <input name="data-autostart-cc" type="text" value="" id="data-autostart-cc">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn">Close</button>
+            <button type="submit" id="add_video" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+<div id="temp_container"></div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/jquery.scrollTo.min.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap.min.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-modal.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-modalmanager.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/bootstrap-select.min.js"></script>
+    <script src="http://d3e1jp5m6rfvu6.cloudfront.net/oeit-player/js/player-admin.js"></script>
+  </body>
+</html>
