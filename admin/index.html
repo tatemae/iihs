@@ -17,8 +17,84 @@
         <button class="btn btn-primary btn-large" data-toggle="modal" href="#admin_form">New Video</button>
       </div>
 
-      <div class = "video_elements">
+      <div class="video_elements">
       </div>
+
+      <pre>
+        <code class="page_html">
+        </code>
+      </pre>
+
+      <div class="page_html_template_a hide">
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;title&gt;OEIT Player&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/player.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-select.min.css&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-glyphicons.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;page-container&quot;&gt;
+          </div>
+      <div class="page_html_template_b hide">
+    &lt;div id=&quot;player-frame&quot; class=&quot;modal hide fade&quot; tabindex=&quot;-1&quot; data-width=&quot;760&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/button&gt;
+        &lt;h3&gt;&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;div class=&quot;row-fluid&quot;&gt;
+          &lt;div class=&quot;span6&quot;&gt;
+            &lt;div class=&quot;player-control&quot;&gt;
+              &lt;div id=&quot;player_&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;player-speaker&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;player-speaker-location&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;&lt;!-- player-control --&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;span6&quot;&gt;
+            &lt;div class=&quot;transcript-control&quot;&gt;
+              &lt;div class=&quot;search-control&quot;&gt;
+                &lt;span class=&quot;search-count&quot;&gt;&lt;/span&gt;
+                &lt;input class=&quot;search&quot; type=&quot;text&quot; size=&quot;15&quot; value=&quot;Search transcript&quot; /&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;transcript&quot; class=&quot;pane&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;transcript-search&quot; class=&quot;pane&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;control&quot;&gt;
+                &lt;div class=&quot;control-selector&quot;&gt;
+                  &lt;select class=&quot;selectpicker transcript-locale-selector&quot;&gt;&lt;/select&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;&lt;!-- transcript-control --&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;img class=&quot;branding&quot; src=&quot;&quot; alt=&quot;&quot; /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;&lt;!--player-frame--&gt;
+  &lt;/div&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/parser.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://code.jquery.com/jquery-1.10.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/jquery.scrollTo.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;http://jwpsrv.com/library/jLEt7AN+EeO1uxIxOUCPzg.js&quot;&gt;&lt;/script&gt;&lt;!-- JW Player --&gt;
+  &lt;script src=&quot;https://iihs-tatemae.s3.amazonaws.com/js/player.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    $(document).ready(function() {
+      SMPlayer.init();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
 
       <div class="video_element_template hide">
         <div class="video_element">

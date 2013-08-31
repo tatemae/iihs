@@ -32,6 +32,29 @@ $(document).ready(function() {
       video_element.find('#'+key).attr("value", value).val(value);
     });
     $('.video_elements').prepend(video_element.html());
+    var content = htmlEscape(video_element.html());
+    var template_a = $('.page_html_template_a').html();
+    var template_b = $('.page_html_template_b').html();
+    var page_html = template_a + content + template_b;
+    $('.page_html').html(page_html);
+  };
+
+  var htmlEscape = function(str) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+  };
+
+  var htmlUnescape = function(value){
+    return String(value)
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&');
   };
 
   //
