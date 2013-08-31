@@ -102,5 +102,9 @@ $(document).ready(function() {
     }
   });
 
+  $('#admin_form').on('shown', function() {
+    $(this).find('#data-id').select();
+  });
+
   update_page_html();
 });
