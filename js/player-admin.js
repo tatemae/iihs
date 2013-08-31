@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var element_editing;
   $('#new_video_form').submit(function(e) {
     e.preventDefault();
     $('.edit_video').off();
@@ -9,6 +10,7 @@ $(document).ready(function() {
 
     $('.edit_video').on('click', function() {
       var video_element = $(this).closest('.video_element');
+      element_editing = video_element;
       var data = {};
 
       $(video_element).find('input[type=text]').each(function() {
@@ -17,6 +19,7 @@ $(document).ready(function() {
       $.each(data, function(key, value) {
         $('#admin_form form').find('#'+key).attr("value", value).val(value);
       });
+      $('#admin_form form #add_video').text("Update");
     });
     $('.delete_video').on('click', function() {
       $(this).closest('.video_element').remove();
@@ -35,7 +38,13 @@ $(document).ready(function() {
     $.each(data, function(key, value) {
       video_element.find('#'+key).attr("value", value).val(value);
     });
-    $('.video_elements').prepend(video_element.html());
+    if (element_editing) {
+      $(element_editing).html(video_element.html());
+      $('#admin_form form #add_video').text("Add");
+      element_editing = undefined;
+    } else {
+      $('.video_elements').prepend(video_element.html());
+    }
     update_page_html();
   };
 
@@ -87,6 +96,10 @@ $(document).ready(function() {
   // Clear the modal form when it is hidden
   $('#admin_form').on('hidden', function() {
     $(this).find('form').find("input[type=text], textarea").val("");
+    if (element_editing) {
+      $('#admin_form form #add_video').text("Add");
+      element_editing = undefined;
+    }
   });
 
   update_page_html();
