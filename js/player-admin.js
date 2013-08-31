@@ -15,8 +15,6 @@ $(document).ready(function() {
         data[$(this).attr('name')] = $(this).val();
       });
       $.each(data, function(key, value) {
-        // var data_id = asdf.find('#data-id').attr("value");
-        // $('#admin_form form').find('#data-id').attr("value", data_id).val(data_id);
         $('#admin_form form').find('#'+key).attr("value", value).val(value);
       });
     });
