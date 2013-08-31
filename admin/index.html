@@ -13,7 +13,65 @@
   </head>
   <body>
     <div class="page-container">
-      
+      <div class="text-center">
+        <button class="btn btn-primary btn-large" data-toggle="modal" href="#admin_form">New Video</button>
+      </div>
+      <div id="admin_form" class="modal hide fade" tabindex="-1" data-width="760">
+        <form id="new_video_form">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h3>Admin UI</h3>
+        </div>
+        <div class="modal-body">
+          <div class="row-fluid">
+            <div class="span6">
+              <h4>Data Attributes</h4>
+
+              <div class="control-group">
+                <label for="data-id" class="control-label">
+                  data-id
+                </label>
+                <div class="controls">
+                  <input name="data-id" type="text" value="" id="data-id">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-title" class="control-label">
+                  data-title
+                </label>
+                <div class="controls">
+                  <input name="data-title" type="text" value="" id="data-title">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-speaker" class="control-label">
+                  data-speaker
+                </label>
+                <div class="controls">
+                  <input name="data-speaker" type="text" value="" id="data-speaker">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="data-speaker-location" class="control-label">
+                  data-speaker-location
+                </label>
+                <div class="controls">
+                  <input name="data-speaker-location" type="text" value="" id="data-speaker-location">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn">Close</button>
+          <button type="submit" id="add_video" class="btn btn-primary">Add</button>
+        </div>
+      </form>
+      </div>
     </div>
 
 
@@ -24,11 +82,5 @@
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="../js/player-admin.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        SMPlayer.init();
-      });
-    </script>
   </body>
 </html>
