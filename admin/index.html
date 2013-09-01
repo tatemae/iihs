@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Admin UI</title>
 
-    <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/player-admin.css" />
+    <link rel="stylesheet" type="text/css" href="../css/player-admin.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-responsive.min.css" />
     <link rel="stylesheet" type="text/css" href="https://iihs-tatemae.s3.amazonaws.com/css/bootstrap-modal.css" />
@@ -97,7 +97,7 @@
     </div>
 
       <div class="video_element_template hide">
-        <div class="video_element">
+        <div class="video_element form-horizontal">
           <div class="row-fluid">
             <div class="span6">
 
@@ -142,7 +142,7 @@
                   data-video-srcs
                 </label>
                 <div class="controls">
-                  <input disabled=true name="data-video-srcs" type="text" value="" id="data-video-srcs">
+                  <textarea rows=5 disabled=true name="data-video-srcs" type="text" value="" id="data-video-srcs"></textarea>
                 </div>
               </div>
 
@@ -182,18 +182,18 @@
                 </div>
               </div>
 
+            </div>
+
+            <div class="span6">
+
               <div class="control-group">
                 <label for="data-transcripts" class="control-label">
                   data-transcripts
                 </label>
                 <div class="controls">
-                  <input disabled=true name="data-transcripts" type="text" value="" id="data-transcripts">
+                  <textarea rows=5 disabled=true name="data-transcripts" type="text" value="" id="data-transcripts"></textarea>
                 </div>
               </div>
-
-            </div>
-
-            <div class="span6">
 
               <div class="control-group">
                 <label for="data-branding-src" class="control-label">
@@ -277,16 +277,15 @@
       </div>
 
 
-      <div id="admin_form" class="modal hide fade" tabindex="-1" data-width="760">
-        <form id="new_video_form">
+      <div id="admin_form" class="modal hide fade" tabindex="-1" data-width="850">
+        <form id="new_video_form" class="form-horizontal">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3>Admin UI</h3>
+            <h3>Data Attributes</h3>
           </div>
           <div class="modal-body">
             <div class="row-fluid">
               <div class="span6">
-                <h4>Data Attributes</h4>
 
                 <div class="control-group">
                   <label for="data-id" class="control-label">
@@ -329,7 +328,7 @@
                     data-video-srcs
                   </label>
                   <div class="controls">
-                    <input name="data-video-srcs" type="text" value="" id="data-video-srcs">
+                    <textarea rows=5 name="data-video-srcs" type="text" value="" id="data-video-srcs" ></textarea>
                   </div>
                 </div>
 
@@ -369,19 +368,18 @@
                   </div>
                 </div>
 
+              </div>
+
+              <div class="span6">
+
                 <div class="control-group">
                   <label for="data-transcripts" class="control-label">
                     data-transcripts
                   </label>
                   <div class="controls">
-                    <input name="data-transcripts" type="text" value="" id="data-transcripts">
+                    <textarea rows=5 name="data-transcripts" type="text" value="" id="data-transcripts"></textarea>
                   </div>
                 </div>
-
-              </div>
-
-              <div class="span6">
-                <h4>Data Attributes</h4>
 
                 <div class="control-group">
                   <label for="data-branding-src" class="control-label">
@@ -475,6 +473,6 @@
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modal.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-modalmanager.js"></script>
     <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="https://iihs-tatemae.s3.amazonaws.com/js/player-admin.js"></script>
+    <script type="text/javascript" src="../js/player-admin.js"></script>
   </body>
 </html>

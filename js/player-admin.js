@@ -13,7 +13,7 @@ $(document).ready(function() {
       element_editing = video_element;
       var data = {};
 
-      $(video_element).find('input[type=text]').each(function() {
+      $(video_element).find('input[type=text], textarea').each(function() {
         data[$(this).attr('name')] = $(this).val();
       });
       $.each(data, function(key, value) {
@@ -30,13 +30,13 @@ $(document).ready(function() {
   var add_to_page = function(elem) {
     var data = {};
 
-    $(elem).find('input[type=text]').each(function() {
+    $(elem).find('input[type=text], textarea').each(function() {
       data[$(this).attr('name')] = $(this).val();
     });
 
     var video_element = $('.video_element_template').clone();
     $.each(data, function(key, value) {
-      video_element.find('#'+key).attr("value", value).val(value);
+      video_element.find('#'+key).attr("value", value).val(value).text(value);
     });
     if (element_editing) {
       $(element_editing).html(video_element.html());
@@ -62,7 +62,7 @@ $(document).ready(function() {
       var video_div = document.createElement('div');
       var data = {};
 
-      $(video_element).find('input[type=text]').each(function() {
+      $(video_element).find('input[type=text], textarea').each(function() {
         data[$(this).attr('name')] = $(this).val();
       });
       $.each(data, function(key, value) {
