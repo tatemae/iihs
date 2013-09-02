@@ -75,16 +75,23 @@ $(document).ready(function() {
       $('#temp_container').append("\n      ");
     });
     var html = htmlUnescape($('#temp_container').html());
+    html = fixJson(html);
     return htmlEscape(html);
   };
 
-  var htmlEncode = function(value){
+  var fixJson = function(str) {
+    return String(str)
+      .replace(/"{/g, "'{")
+      .replace(/}"/g, "}'");
+  };
+
+  var htmlEncode = function(value) {
     //create a in-memory div, set it's inner text(which jQuery automatically encodes)
     //then grab the encoded contents back out.  The div never exists on the page.
     return $('<div/>').text(value).html();
   };
 
-  var htmlDecode = function(value){
+  var htmlDecode = function(value) {
     return $('<div/>').html(value).text();
   };
 
@@ -97,7 +104,7 @@ $(document).ready(function() {
       .replace(/>/g, '&gt;');
   };
 
-  var htmlUnescape = function(value){
+  var htmlUnescape = function(value) {
     return String(value)
       .replace(/&quot;/g, '"')
       .replace(/&#39;/g, "'")
