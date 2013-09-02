@@ -22,8 +22,10 @@ $(document).ready(function() {
       $('#admin_form form #add_video').text("Update");
     });
     $('.delete_video').on('click', function() {
-      $(this).closest('.video_element').remove();
-      update_page_html();
+      if (confirm("Are you sure?")) {
+        $(this).closest('.video_element').remove();
+        update_page_html();
+      }
     });
   });
 
@@ -60,6 +62,7 @@ $(document).ready(function() {
     $('#temp_container').html('');
     $('.video_elements .video_element').each(function(index, video_element) {
       var video_div = document.createElement('div');
+      video_div.className = "vidinfo-inline";
       var data = {};
 
       $(video_element).find('input[type=text], textarea').each(function() {
