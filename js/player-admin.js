@@ -74,7 +74,18 @@ $(document).ready(function() {
       $('#temp_container').append(video_div);
       $('#temp_container').append("\n      ");
     });
-    return htmlEscape($('#temp_container').html());
+    var html = htmlUnescape($('#temp_container').html());
+    return htmlEscape(html);
+  };
+
+  var htmlEncode = function(value){
+    //create a in-memory div, set it's inner text(which jQuery automatically encodes)
+    //then grab the encoded contents back out.  The div never exists on the page.
+    return $('<div/>').text(value).html();
+  };
+
+  var htmlDecode = function(value){
+    return $('<div/>').html(value).text();
   };
 
   var htmlEscape = function(str) {
