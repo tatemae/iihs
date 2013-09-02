@@ -41,7 +41,7 @@ $(document).ready(function() {
       video_element.find('#'+key).attr("value", value).val(value).text(value);
     });
     if (element_editing) {
-      $(element_editing).html(video_element.html());
+      $(element_editing).html(video_element.find('.video_element').html());
       $('#admin_form form #add_video').text("Add");
       element_editing = undefined;
     } else {
